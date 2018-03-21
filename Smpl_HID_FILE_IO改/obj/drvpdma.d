@@ -1,0 +1,9 @@
+.\obj\drvpdma.o: ..\..\..\Src\Driver\DrvPDMA.c
+.\obj\drvpdma.o: C:\Keil\ARM\RV31\INC\stdio.h
+.\obj\drvpdma.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h
+.\obj\drvpdma.o: ..\..\..\..\CMSIS\CM0\CoreSupport\core_cm0.h
+.\obj\drvpdma.o: C:\Keil\ARM\RV31\INC\stdint.h
+.\obj\drvpdma.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h
+.\obj\drvpdma.o: ..\..\..\Include\System\SysInfra.h
+.\obj\drvpdma.o: ..\..\..\Include\System\ModuleID.h
+.\obj\drvpdma.o: ..\..\..\Include\Driver\DrvPDMA.h

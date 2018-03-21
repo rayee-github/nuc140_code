@@ -1,0 +1,80 @@
+<html>
+<body>
+<pre>
+<h1>猩ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.23.0.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: asd SA, fds, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.23
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.23
+Dialog DLL:      DARMCM1.DLL V1.17.0.0
+Target DLL:      UL2CM3.DLL V1.159.7.0
+Dialog DLL:      TARMCM1.DLL V1.12.0.0
+ 
+<h2>Project:</h2>
+C:\Keil\NuvotonPlatform_Keil\Sample\NUC1xx-LB_002\1車子(有重量)\a.uvproj
+Project File Date:  02/01/2018
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling control.c...
+control.c(19): warning:  #1295-D: Deprecated declaration Init_GPIO - give arg types
+  void Init_GPIO();
+control.c(21): warning:  #1295-D: Deprecated declaration Stop_Move - give arg types
+  void Stop_Move();
+control.c(22): warning:  #1295-D: Deprecated declaration Start_Move - give arg types
+  void Start_Move();
+control.c(81): warning:  #177-D: variable "i"  was declared but never referenced
+  	uint8_t i,j,x=1;
+control.c(81): warning:  #177-D: variable "j"  was declared but never referenced
+  	uint8_t i,j,x=1;
+control.c(81): warning:  #177-D: variable "x"  was declared but never referenced
+  	uint8_t i,j,x=1;
+control.c(181): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  	DrvUART_Write(UART_PORT0,TEXT3,7);
+control.c(187): warning:  #177-D: variable "i"  was declared but never referenced
+  	uint8_t i,j,x=1;
+control.c(187): warning:  #177-D: variable "j"  was declared but never referenced
+  	uint8_t i,j,x=1;
+control.c(187): warning:  #177-D: variable "x"  was declared but never referenced
+  	uint8_t i,j,x=1;
+control.c(344): warning:  #223-D: function "strlen" declared implicitly
+  	sprintf(TEXT3,"AT+CIPSEND=%d\r\n",strlen(output_text));
+control.c(345): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  	DrvUART_Write(UART_PORT0,TEXT3,14);
+control.c(347): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  	DrvUART_Write(UART_PORT0,output_text,strlen(output_text));
+control.c(407): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+  	DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, WIFI_UART_INT_HANDLE);
+control.c(408): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+  	DrvUART_EnableInt(UART_PORT1, DRVUART_RDAINT, RFID_UART_INT_HANDLE);
+control.c(489): warning:  #1-D: last line of file ends without a newline
+  }
+control.c(426): warning:  #128-D: loop is not reachable
+  	while(1)
+control.c(367): warning:  #177-D: variable "i"  was declared but never referenced
+  	int i =10;
+control.c(368): warning:  #177-D: variable "g"  was declared but never referenced
+  	int g=0,f=0;
+control.c(368): warning:  #177-D: variable "f"  was declared but never referenced
+  	int g=0,f=0;
+control.c(370): warning:  #177-D: variable "bInChar"  was declared but never referenced
+  	uint8_t bInChar[2];
+control.c: 21 warnings, 0 errors
+linking...
+Program Size: Code=9012 RO-data=252 RW-data=100 ZI-data=620  
+".\Objects\control.axf" - 0 Error(s), 21 Warning(s).
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

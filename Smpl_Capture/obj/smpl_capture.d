@@ -1,0 +1,9 @@
+.\obj\smpl_capture.o: Smpl_Capture.c
+.\obj\smpl_capture.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\smpl_capture.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h
+.\obj\smpl_capture.o: ..\..\..\..\CMSIS\CM0\CoreSupport\core_cm0.h
+.\obj\smpl_capture.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\smpl_capture.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h
+.\obj\smpl_capture.o: ..\..\..\Include\System\SysInfra.h
+.\obj\smpl_capture.o: ..\..\..\Include\System\ModuleID.h
+.\obj\smpl_capture.o: ..\..\..\Include\NUC1xx-LB_002\LCD_Driver.h

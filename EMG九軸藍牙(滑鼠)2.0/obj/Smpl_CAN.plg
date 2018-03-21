@@ -1,0 +1,17 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Keil\NuvotonPlatform_Keil\Sample\NUC1xx-LB_002\EMG¤E¶bÂÅ¤ú(·Æ¹«)2.0\Smpl_CAN.uvproj
+Project File Date:  05/17/2017
+
+<h2>Output:</h2>
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\EMG¤E¶bÂÅ¤ú(·Æ¹«)2.0\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+linking...
+Program Size: Code=24716 RO-data=1076 RW-data=1716 ZI-data=1364  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 0 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\EMG¤E¶bÂÅ¤ú(·Æ¹«)2.0\\obj\\Smpl_CAN.AXF" 

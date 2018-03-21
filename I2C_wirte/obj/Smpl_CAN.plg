@@ -1,0 +1,1459 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Keil\NuvotonPlatform_Keil\Sample\NUC1xx-LB_002\I2C_wirte\Smpl_CAN.uvproj
+Project File Date:  02/14/2017
+
+<h2>Output:</h2>
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(742): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(785): error:  #20: identifier "sign" is undefined
+Smpl_CAN.c:             roll = atan2(-ax,(sign * sqrt(az * az + mu * ay * ay))); // mu = 0.1 and sign = +1 for positive az2 and -1 for negative
+Smpl_CAN.c:                               ^
+Smpl_CAN.c(785): error:  #20: identifier "mu" is undefined
+Smpl_CAN.c:             roll = atan2(-ax,(sign * sqrt(az * az + mu * ay * ay))); // mu = 0.1 and sign = +1 for positive az2 and -1 for negative
+Smpl_CAN.c:                                                     ^
+Smpl_CAN.c(787): error:  #20: identifier "Xh" is undefined
+Smpl_CAN.c:             Xh = mag_x * cos(pitch) + mag_y * sin(roll)_sin(pitch) - mag_z * cos(roll)_sin(pitch);
+Smpl_CAN.c:             ^
+Smpl_CAN.c(787): error:  #20: identifier "mag_x" is undefined
+Smpl_CAN.c:             Xh = mag_x * cos(pitch) + mag_y * sin(roll)_sin(pitch) - mag_z * cos(roll)_sin(pitch);
+Smpl_CAN.c:                  ^
+Smpl_CAN.c(787): error:  #20: identifier "mag_y" is undefined
+Smpl_CAN.c:             Xh = mag_x * cos(pitch) + mag_y * sin(roll)_sin(pitch) - mag_z * cos(roll)_sin(pitch);
+Smpl_CAN.c:                                       ^
+Smpl_CAN.c(787): error:  #65: expected a ";"
+Smpl_CAN.c:             Xh = mag_x * cos(pitch) + mag_y * sin(roll)_sin(pitch) - mag_z * cos(roll)_sin(pitch);
+Smpl_CAN.c:                                                        ^
+Smpl_CAN.c(788): error:  #20: identifier "Yh" is undefined
+Smpl_CAN.c:             Yh = mag_y * cos(roll) + mag_z * sin(roll);
+Smpl_CAN.c:             ^
+Smpl_CAN.c(788): error:  #20: identifier "mag_z" is undefined
+Smpl_CAN.c:             Yh = mag_y * cos(roll) + mag_z * sin(roll);
+Smpl_CAN.c:                                      ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c: Smpl_CAN.c: 9 warnings, 8 errors
+Target not created
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(717): error:  #65: expected a ";"
+Smpl_CAN.c:     float X h,Xy;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(786): error:  #20: identifier "sign" is undefined
+Smpl_CAN.c:             roll = atan2(-ax,(sign * sqrt(az * az + mu * ay * ay))); // mu = 0.1 and sign = +1 for positive az2 and -1 for negative
+Smpl_CAN.c:                               ^
+Smpl_CAN.c(786): error:  #20: identifier "mu" is undefined
+Smpl_CAN.c:             roll = atan2(-ax,(sign * sqrt(az * az + mu * ay * ay))); // mu = 0.1 and sign = +1 for positive az2 and -1 for negative
+Smpl_CAN.c:                                                     ^
+Smpl_CAN.c(788): error:  #20: identifier "Xh" is undefined
+Smpl_CAN.c:             Xh = mag_x * cos(pitch) + mag_y * sin(roll)_sin(pitch) - mag_z * cos(roll)_sin(pitch);
+Smpl_CAN.c:             ^
+Smpl_CAN.c(788): error:  #20: identifier "mag_x" is undefined
+Smpl_CAN.c:             Xh = mag_x * cos(pitch) + mag_y * sin(roll)_sin(pitch) - mag_z * cos(roll)_sin(pitch);
+Smpl_CAN.c:                  ^
+Smpl_CAN.c(788): error:  #20: identifier "mag_y" is undefined
+Smpl_CAN.c:             Xh = mag_x * cos(pitch) + mag_y * sin(roll)_sin(pitch) - mag_z * cos(roll)_sin(pitch);
+Smpl_CAN.c:                                       ^
+Smpl_CAN.c(788): error:  #65: expected a ";"
+Smpl_CAN.c:             Xh = mag_x * cos(pitch) + mag_y * sin(roll)_sin(pitch) - mag_z * cos(roll)_sin(pitch);
+Smpl_CAN.c:                                                        ^
+Smpl_CAN.c(789): error:  #20: identifier "Yh" is undefined
+Smpl_CAN.c:             Yh = mag_y * cos(roll) + mag_z * sin(roll);
+Smpl_CAN.c:             ^
+Smpl_CAN.c(789): error:  #20: identifier "mag_z" is undefined
+Smpl_CAN.c:             Yh = mag_y * cos(roll) + mag_z * sin(roll);
+Smpl_CAN.c:                                      ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(717): warning:  #177-D: variable "X" was declared but never referenced
+Smpl_CAN.c:     float X h,Xy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 10 warnings, 9 errors
+Target not created
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(717): error:  #65: expected a ";"
+Smpl_CAN.c:     float X h,Xy;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(786): error:  #20: identifier "sign" is undefined
+Smpl_CAN.c:             roll = atan2(-ax,(sign * sqrt(az * az + mu * ay * ay))); // mu = 0.1 and sign = +1 for positive az2 and -1 for negative
+Smpl_CAN.c:                               ^
+Smpl_CAN.c(786): error:  #20: identifier "mu" is undefined
+Smpl_CAN.c:             roll = atan2(-ax,(sign * sqrt(az * az + mu * ay * ay))); // mu = 0.1 and sign = +1 for positive az2 and -1 for negative
+Smpl_CAN.c:                                                     ^
+Smpl_CAN.c(788): error:  #20: identifier "Xh" is undefined
+Smpl_CAN.c:             Xh = hx * cos(pitch) + hy * sin(roll)_sin(pitch) - hz * cos(roll)_sin(pitch);
+Smpl_CAN.c:             ^
+Smpl_CAN.c(788): error:  #65: expected a ";"
+Smpl_CAN.c:             Xh = hx * cos(pitch) + hy * sin(roll)_sin(pitch) - hz * cos(roll)_sin(pitch);
+Smpl_CAN.c:                                                  ^
+Smpl_CAN.c(789): error:  #20: identifier "Yh" is undefined
+Smpl_CAN.c:             Yh = hy * cos(roll) + hz * sin(roll);
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(717): warning:  #177-D: variable "X" was declared but never referenced
+Smpl_CAN.c:     float X h,Xy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 10 warnings, 6 errors
+Target not created
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(717): error:  #65: expected a ";"
+Smpl_CAN.c:     float X h,Xy;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(786): error:  #20: identifier "sign" is undefined
+Smpl_CAN.c:             roll = atan2(-ax,(sign * sqrt(az * az + mu * ay * ay))); // mu = 0.1 and sign = +1 for positive az2 and -1 for negative
+Smpl_CAN.c:                               ^
+Smpl_CAN.c(786): error:  #20: identifier "mu" is undefined
+Smpl_CAN.c:             roll = atan2(-ax,(sign * sqrt(az * az + mu * ay * ay))); // mu = 0.1 and sign = +1 for positive az2 and -1 for negative
+Smpl_CAN.c:                                                     ^
+Smpl_CAN.c(788): error:  #20: identifier "Xh" is undefined
+Smpl_CAN.c:             Xh = hx * cos(pitch) + hy * sin(roll)_sin(pitch) - hz * cos(roll)-sin(pitch);
+Smpl_CAN.c:             ^
+Smpl_CAN.c(788): error:  #65: expected a ";"
+Smpl_CAN.c:             Xh = hx * cos(pitch) + hy * sin(roll)_sin(pitch) - hz * cos(roll)-sin(pitch);
+Smpl_CAN.c:                                                  ^
+Smpl_CAN.c(789): error:  #20: identifier "Yh" is undefined
+Smpl_CAN.c:             Yh = hy * cos(roll) + hz * sin(roll);
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(717): warning:  #177-D: variable "X" was declared but never referenced
+Smpl_CAN.c:     float X h,Xy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 10 warnings, 6 errors
+Target not created
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(717): error:  #65: expected a ";"
+Smpl_CAN.c:     float X h,Xy;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(786): error:  #20: identifier "sign" is undefined
+Smpl_CAN.c:             roll = atan2(-ax,(sign * sqrt(az * az + mu * ay * ay))); // mu = 0.1 and sign = +1 for positive az2 and -1 for negative
+Smpl_CAN.c:                               ^
+Smpl_CAN.c(786): error:  #20: identifier "mu" is undefined
+Smpl_CAN.c:             roll = atan2(-ax,(sign * sqrt(az * az + mu * ay * ay))); // mu = 0.1 and sign = +1 for positive az2 and -1 for negative
+Smpl_CAN.c:                                                     ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(717): warning:  #177-D: variable "X" was declared but never referenced
+Smpl_CAN.c:     float X h,Xy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 10 warnings, 3 errors
+Target not created
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(717): error:  #65: expected a ";"
+Smpl_CAN.c:     float X h,Xy;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(786): error:  #20: identifier "mu" is undefined
+Smpl_CAN.c:             roll = atan2(-ax,(sqrt(az * az + mu * ay * ay))); // mu = 0.1 and sign = +1 for positive az2 and -1 for negative
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(717): warning:  #177-D: variable "X" was declared but never referenced
+Smpl_CAN.c:     float X h,Xy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 10 warnings, 2 errors
+Target not created
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(717): error:  #65: expected a ";"
+Smpl_CAN.c:     float X h,Xy;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(717): warning:  #177-D: variable "X" was declared but never referenced
+Smpl_CAN.c:     float X h,Xy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 10 warnings, 1 error
+Target not created
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(717): error:  #65: expected a ";"
+Smpl_CAN.c:     float X h,Yh;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(717): warning:  #177-D: variable "X" was declared but never referenced
+Smpl_CAN.c:     float X h,Yh;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 10 warnings, 1 error
+Target not created
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(717): error:  #65: expected a ";"
+Smpl_CAN.c:     float X h=0.0,Yh=0.0;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(717): warning:  #177-D: variable "X" was declared but never referenced
+Smpl_CAN.c:     float X h=0.0,Yh=0.0;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 10 warnings, 1 error
+Target not created
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(717): warning:  #177-D: variable "Xh" was declared but never referenced
+Smpl_CAN.c:     float Xh,Yh     ;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(717): warning:  #177-D: variable "Yh" was declared but never referenced
+Smpl_CAN.c:     float Xh,Yh     ;
+Smpl_CAN.c:              ^
+Smpl_CAN.c: Smpl_CAN.c: 11 warnings, 0 errors
+linking...
+Program Size: Code=20748 RO-data=772 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 11 Warning(s).
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(715): warning:  #550-D: variable "hx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                               ^
+Smpl_CAN.c(715): warning:  #550-D: variable "hy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(717): warning:  #177-D: variable "Xh" was declared but never referenced
+Smpl_CAN.c:     float Xh,Yh     ;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(717): warning:  #177-D: variable "Yh" was declared but never referenced
+Smpl_CAN.c:     float Xh,Yh     ;
+Smpl_CAN.c:              ^
+Smpl_CAN.c: Smpl_CAN.c: 13 warnings, 0 errors
+linking...
+Program Size: Code=20676 RO-data=772 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 13 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c: Smpl_CAN.c: 9 warnings, 0 errors
+linking...
+Program Size: Code=22632 RO-data=1056 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 9 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c: Smpl_CAN.c: 9 warnings, 0 errors
+linking...
+Program Size: Code=22836 RO-data=1060 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 9 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(791): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(793): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(795): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hz);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c: Smpl_CAN.c: 12 warnings, 0 errors
+linking...
+Program Size: Code=22536 RO-data=1056 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(791): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(793): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(795): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hz);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c: Smpl_CAN.c: 12 warnings, 0 errors
+linking...
+Program Size: Code=22588 RO-data=1060 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(796): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(798): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(800): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hz);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c: Smpl_CAN.c: 12 warnings, 0 errors
+linking...
+Program Size: Code=22588 RO-data=1060 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(791): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(793): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(795): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hz);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 12 warnings, 0 errors
+linking...
+Program Size: Code=22812 RO-data=1060 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 12 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for core_cm0.c...
+compiling core_cm0.c...
+creating preprocessor file for system_NUC1xx.c...
+compiling system_NUC1xx.c...
+assembling startup_NUC1xx.s...
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 9 warnings, 0 errors
+creating preprocessor file for LCD_Driver.c...
+compiling LCD_Driver.c...
+creating preprocessor file for Ascii_Table.C...
+compiling Ascii_Table.C...
+creating preprocessor file for retarget.c...
+compiling retarget.c...
+creating preprocessor file for DrvGPIO.c...
+compiling DrvGPIO.c...
+creating preprocessor file for DrvSYS.c...
+compiling DrvSYS.c...
+creating preprocessor file for DrvUART.c...
+compiling DrvUART.c...
+creating preprocessor file for EEPROM_24LC64.c...
+compiling EEPROM_24LC64.c...
+creating preprocessor file for DrvI2C.c...
+compiling DrvI2C.c...
+creating preprocessor file for DrvCAN.c...
+compiling DrvCAN.c...
+creating preprocessor file for DrvSPI.c...
+compiling DrvSPI.c...
+linking...
+Program Size: Code=19872 RO-data=880 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 9 Warning(s).
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 9 warnings, 0 errors
+linking...
+Program Size: Code=19924 RO-data=884 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 9 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 9 warnings, 0 errors
+linking...
+Program Size: Code=19872 RO-data=880 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 9 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(792): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(794): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 11 warnings, 0 errors
+linking...
+Program Size: Code=22828 RO-data=1060 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(792): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(794): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 11 warnings, 0 errors
+linking...
+Program Size: Code=23068 RO-data=1060 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(792): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(794): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 11 warnings, 0 errors
+linking...
+Program Size: Code=23016 RO-data=1056 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(796): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(798): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 11 warnings, 0 errors
+linking...
+Program Size: Code=23064 RO-data=1056 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(796): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(798): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 11 warnings, 0 errors
+linking...
+Program Size: Code=23064 RO-data=1056 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(797): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(799): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 11 warnings, 0 errors
+linking...
+Program Size: Code=23064 RO-data=1056 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(792): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(794): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 11 warnings, 0 errors
+linking...
+Program Size: Code=23064 RO-data=1056 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(792): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(794): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 11 warnings, 0 errors
+Smpl_CAN.c - 0 Error(s), 11 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(797): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(799): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 11 warnings, 0 errors
+linking...
+Program Size: Code=23064 RO-data=1056 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(791): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(793): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 11 warnings, 0 errors
+linking...
+Program Size: Code=22948 RO-data=1060 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(796): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hx);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(798): warning:  #181-D: argument is incompatible with corresponding format string conversion
+Smpl_CAN.c:             sprintf(TEXT2,"%f ",hy);                  
+Smpl_CAN.c:                                 ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 11 warnings, 0 errors
+linking...
+Program Size: Code=23004 RO-data=1060 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 11 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 9 warnings, 0 errors
+linking...
+Program Size: Code=23004 RO-data=1060 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 9 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(270): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(743): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(714): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                      ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                         ^
+Smpl_CAN.c(715): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     int16_t ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                            ^
+Smpl_CAN.c(716): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c: Smpl_CAN.c: 9 warnings, 0 errors
+linking...
+Program Size: Code=23084 RO-data=1060 RW-data=1768 ZI-data=1320  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 9 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C_wirte\\obj\\Smpl_CAN.AXF" 

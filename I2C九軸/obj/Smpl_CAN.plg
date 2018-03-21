@@ -1,0 +1,1448 @@
+<html>
+<body>
+<pre>
+<h1>猩ision Build Log</h1>
+<h2>Project:</h2>
+C:\Keil\NuvotonPlatform_Keil\Sample\NUC1xx-LB_002\I2C九軸\Smpl_CAN.uvproj
+Project File Date:  02/14/2017
+
+<h2>Output:</h2>
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                    ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                          ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 22 warnings, 0 errors
+linking...
+Program Size: Code=23432 RO-data=1056 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 22 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                    ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                          ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 22 warnings, 0 errors
+linking...
+Program Size: Code=23456 RO-data=1056 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 22 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                    ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                          ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 22 warnings, 0 errors
+linking...
+Program Size: Code=23372 RO-data=1060 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 22 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(806): error:  #29: expected an expression
+Smpl_CAN.c:             sprintf(TEXT2,%f %f",Xh,Yh);              
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(806): error:  #8: missing closing quote
+Smpl_CAN.c:             sprintf(TEXT2,%f %f",Xh,Yh);              
+Smpl_CAN.c:                                ^
+Smpl_CAN.c(807): error:  #18: expected a ")"
+Smpl_CAN.c:             print_lcd(3,TEXT2);                             
+Smpl_CAN.c:                               ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(712): warning:  #177-D: variable "Xh" was declared but never referenced
+Smpl_CAN.c:     float Xh,Yh     ;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(712): warning:  #177-D: variable "Yh" was declared but never referenced
+Smpl_CAN.c:     float Xh,Yh     ;
+Smpl_CAN.c:              ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 21 warnings, 3 errors
+Target not created
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(712): warning:  #177-D: variable "Xh" was declared but never referenced
+Smpl_CAN.c:     float Xh,Yh     ;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(712): warning:  #177-D: variable "Yh" was declared but never referenced
+Smpl_CAN.c:     float Xh,Yh     ;
+Smpl_CAN.c:              ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 21 warnings, 0 errors
+linking...
+Program Size: Code=24516 RO-data=852 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 21 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(712): warning:  #177-D: variable "Xh" was declared but never referenced
+Smpl_CAN.c:     float Xh,Yh     ;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(712): warning:  #177-D: variable "Yh" was declared but never referenced
+Smpl_CAN.c:     float Xh,Yh     ;
+Smpl_CAN.c:              ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 21 warnings, 0 errors
+linking...
+Program Size: Code=24512 RO-data=848 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 21 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(712): warning:  #177-D: variable "Xh" was declared but never referenced
+Smpl_CAN.c:     float Xh,Yh     ;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(712): warning:  #177-D: variable "Yh" was declared but never referenced
+Smpl_CAN.c:     float Xh,Yh     ;
+Smpl_CAN.c:              ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 21 warnings, 0 errors
+linking...
+Program Size: Code=24512 RO-data=848 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 21 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(712): warning:  #177-D: variable "Xh" was declared but never referenced
+Smpl_CAN.c:     float Xh,Yh     ;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(712): warning:  #177-D: variable "Yh" was declared but never referenced
+Smpl_CAN.c:     float Xh,Yh     ;
+Smpl_CAN.c:              ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 21 warnings, 0 errors
+linking...
+Program Size: Code=24452 RO-data=852 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 21 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(806): error:  #29: expected an expression
+Smpl_CAN.c:             sprintf(TEXT2,%f %f",Xh,Yh);              
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(806): error:  #8: missing closing quote
+Smpl_CAN.c:             sprintf(TEXT2,%f %f",Xh,Yh);              
+Smpl_CAN.c:                                ^
+Smpl_CAN.c(807): error:  #18: expected a ")"
+Smpl_CAN.c:             print_lcd(3,TEXT2);                             
+Smpl_CAN.c:                               ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                    ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                          ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 22 warnings, 3 errors
+Target not created
+Build target 'Smpl_CAN'
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(806): error:  #29: expected an expression
+Smpl_CAN.c:             sprintf(TEXT2,%f %f",Xh,Yh);              
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(806): error:  #8: missing closing quote
+Smpl_CAN.c:             sprintf(TEXT2,%f %f",Xh,Yh);              
+Smpl_CAN.c:                                ^
+Smpl_CAN.c(807): error:  #18: expected a ")"
+Smpl_CAN.c:             print_lcd(3,TEXT2);                             
+Smpl_CAN.c:                               ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                    ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                          ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 22 warnings, 3 errors
+Target not created
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                    ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                          ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 22 warnings, 0 errors
+linking...
+Program Size: Code=23432 RO-data=1056 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 22 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                    ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                          ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 22 warnings, 0 errors
+linking...
+Program Size: Code=23444 RO-data=1060 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 22 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                    ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                          ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 22 warnings, 0 errors
+linking...
+Program Size: Code=23444 RO-data=1060 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 22 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                    ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                          ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 22 warnings, 0 errors
+linking...
+Program Size: Code=23444 RO-data=1060 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 22 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                    ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                          ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 22 warnings, 0 errors
+linking...
+Program Size: Code=23444 RO-data=1060 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 22 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                    ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                          ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 22 warnings, 0 errors
+linking...
+Program Size: Code=23444 RO-data=1060 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 22 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                    ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                          ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 22 warnings, 0 errors
+linking...
+Program Size: Code=23444 RO-data=1060 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 22 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                    ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                          ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 22 warnings, 0 errors
+linking...
+Program Size: Code=23328 RO-data=1056 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 22 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\I2C九軸\\obj\\Smpl_CAN.AXF" 
+Build target 'Smpl_CAN'
+creating preprocessor file for Smpl_CAN.c...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(181): warning:  #177-D: variable "L" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(181): warning:  #177-D: variable "H" was declared but never referenced
+Smpl_CAN.c:     uint8_t L,H;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(279): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+Smpl_CAN.c:                     DrvUART_Write(UART_PORT0,textout,strlen(textout));  
+Smpl_CAN.c:                                              ^
+Smpl_CAN.c(271): warning:  #177-D: variable "i" was declared but never referenced
+Smpl_CAN.c:     uint8_t i;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(740): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+Smpl_CAN.c:     DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c:                                                   ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test1" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:             ^
+Smpl_CAN.c(708): warning:  #550-D: variable "test2" was set but never used
+Smpl_CAN.c:     uint8_t test1,test2;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gx" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                    ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gy" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(709): warning:  #550-D: variable "gz" was set but never used
+Smpl_CAN.c:     float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c:                          ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aax" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aay" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:               ^
+Smpl_CAN.c(710): warning:  #177-D: variable "aaz" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                   ^
+Smpl_CAN.c(710): warning:  #177-D: variable "axx" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                       ^
+Smpl_CAN.c(710): warning:  #177-D: variable "ayy" was declared but never referenced
+Smpl_CAN.c:     float aax,aay,aaz,axx,ayy;
+Smpl_CAN.c:                           ^
+Smpl_CAN.c(711): warning:  #550-D: variable "temp" was set but never used
+Smpl_CAN.c:     float temp;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:           ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minx" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                     ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxy" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                  ^
+Smpl_CAN.c(714): warning:  #177-D: variable "miny" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                             ^
+Smpl_CAN.c(714): warning:  #177-D: variable "maxz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                          ^
+Smpl_CAN.c(714): warning:  #177-D: variable "minz" was declared but never referenced
+Smpl_CAN.c:     float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c:                                                                    ^
+Smpl_CAN.c: Smpl_CAN.c: 22 warnings, 0 errors
+linking...
+Program Size: Code=23432 RO-data=1056 RW-data=1768 ZI-data=1352  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 22 Warning(s).

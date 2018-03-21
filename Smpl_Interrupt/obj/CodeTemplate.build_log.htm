@@ -1,0 +1,51 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: £gVision V5.23.0.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: asd SA, fds, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.23
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.23
+Dialog DLL:      DARMCM1.DLL V1.17.0.0
+Target DLL:      Nu_Link.dll V1.30
+Dialog DLL:      TARMCM1.DLL V1.12.0.0
+ 
+<h2>Project:</h2>
+C:\Keil\NuvotonPlatform_Keil\Sample\NUC1xx-LB_002\Smpl_Interrupt\Smpl_DrvINT1.uvproj
+Project File Date:  01/31/2018
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Smpl_INT1'
+creating preprocessor file for core_cm0.c...
+creating preprocessor file for system_NUC1xx.c...
+creating preprocessor file for Smpl_DrvINT1.c...
+creating preprocessor file for DrvGPIO.c...
+compiling Smpl_DrvINT1.c...
+Smpl_DrvINT1.c(82): warning:  #1-D: last line of file ends without a newline
+  }
+Smpl_DrvINT1.c(60): warning:  #128-D: loop is not reachable
+      while(1)
+Smpl_DrvINT1.c: 2 warnings, 0 errors
+creating preprocessor file for DrvUART.c...
+creating preprocessor file for DrvSYS.c...
+creating preprocessor file for retarget.c...
+linking...
+Program Size: Code=5544 RO-data=240 RW-data=72 ZI-data=1120  
+After Build - User command #1: fromelf --bin ".\obj\CodeTemplate.axf" --output ".\obj\CodeTemplate.bin"
+After Build - User command #2: fromelf --text -c ".\obj\CodeTemplate.axf" --output ".\obj\CodeTemplate.txt"
+".\obj\CodeTemplate.axf" - 0 Error(s), 2 Warning(s).
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

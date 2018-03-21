@@ -1,0 +1,15 @@
+.\obj\v6mdebug.o: V6MDebug.c
+.\obj\v6mdebug.o: C:\Keil\ARM\RV31\INC\stdio.h
+.\obj\v6mdebug.o: C:\Keil\ARM\RV31\INC\stdint.h
+.\obj\v6mdebug.o: C:\Keil\ARM\RV31\INC\string.h
+.\obj\v6mdebug.o: ..\..\..\Include\Driver\DrvUSB.h
+.\obj\v6mdebug.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h
+.\obj\v6mdebug.o: ..\..\..\..\CMSIS\CM0\CoreSupport\core_cm0.h
+.\obj\v6mdebug.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h
+.\obj\v6mdebug.o: ..\..\..\Include\System\SysInfra.h
+.\obj\v6mdebug.o: ..\..\..\Include\System\ModuleID.h
+.\obj\v6mdebug.o: ..\..\..\Include\Driver\DrvGPIO.h
+.\obj\v6mdebug.o: ..\..\..\Include\Driver\DrvSys.h
+.\obj\v6mdebug.o: ..\..\..\Include\NUC1xx-LB_002\LCD_Driver.h
+.\obj\v6mdebug.o: HIDSysIO.h
+.\obj\v6mdebug.o: V6MDebug.h

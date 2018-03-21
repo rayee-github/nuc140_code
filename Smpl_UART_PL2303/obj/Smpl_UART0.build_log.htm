@@ -1,0 +1,61 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: £gVision V5.23.0.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: asd SA, fds, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.23
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.23
+Dialog DLL:      DARMCM1.DLL V1.17.0.0
+Target DLL:      Nu_Link.dll V1.30
+Dialog DLL:      TARMCM1.DLL V1.12.0.0
+ 
+<h2>Project:</h2>
+C:\Keil\NuvotonPlatform_Keil\Sample\NUC1xx-LB_002\Smpl_UART_PL2303\Smpl_UART0.uvproj
+Project File Date:  06/21/2017
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Smpl_UART0'
+creating preprocessor file for core_cm0.c...
+creating preprocessor file for system_NUC1xx.c...
+creating preprocessor file for LCD_Driver.c...
+creating preprocessor file for Ascii_Table.C...
+creating preprocessor file for Smpl_UART0.c...
+creating preprocessor file for DrvSYS.c...
+compiling Smpl_UART0.c...
+Smpl_UART0.c(31): error:  #20: identifier "bInChar1" is undefined
+  		DrvUART_Write(UART_PORT1,bInChar1,1);	
+Smpl_UART0.c(25): warning:  #177-D: variable "i"  was declared but never referenced
+  	uint8_t i;
+Smpl_UART0.c(75): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+  	DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_UART0.c(46): warning:  #177-D: variable "i"  was declared but never referenced
+  	uint8_t  i =0;
+Smpl_UART0.c(47): warning:  #177-D: variable "dataout"  was declared but never referenced
+  	uint8_t  dataout[8] = "UARTTest";
+Smpl_UART0.c(48): warning:  #177-D: variable "aa"  was declared but never referenced
+  	uint8_t aa[8];
+Smpl_UART0.c(49): warning:  #177-D: variable "j"  was declared but never referenced
+  	uint8_t j=0;
+Smpl_UART0.c(50): warning:  #177-D: variable "a"  was declared but never referenced
+  	uint8_t a[1];
+Smpl_UART0.c: 7 warnings, 1 error
+creating preprocessor file for DrvUART.c...
+creating preprocessor file for DrvGPIO.c...
+".\obj\Smpl_UART0.axf" - 1 Error(s), 7 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

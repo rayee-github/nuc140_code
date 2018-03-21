@@ -1,0 +1,125 @@
+;#<FEEDBACK># ARM Linker, 4.1 [Build 481]: Last Updated: Sat Jan 21 14:48:31 2017
+;VERSION 0.2
+;FILE core_cm0.o
+__REV16 <= USED 0
+__REVSH <= USED 0
+__get_MSP <= USED 0
+__get_PSP <= USED 0
+__set_MSP <= USED 0
+__set_PSP <= USED 0
+;FILE drvgpio.o
+DrvGPIO_Close <= USED 0
+DrvGPIO_ClrBitMask <= USED 0
+DrvGPIO_ClrPortMask <= USED 0
+DrvGPIO_DisableDebounce <= USED 0
+DrvGPIO_DisableDigitalInputBit <= USED 0
+DrvGPIO_DisableEINT0 <= USED 0
+DrvGPIO_DisableEINT1 <= USED 0
+DrvGPIO_DisableInt <= USED 0
+DrvGPIO_EnableDebounce <= USED 0
+DrvGPIO_EnableDigitalInputBit <= USED 0
+DrvGPIO_EnableEINT0 <= USED 0
+DrvGPIO_EnableEINT1 <= USED 0
+DrvGPIO_EnableInt <= USED 0
+DrvGPIO_GetBitMask <= USED 0
+DrvGPIO_GetDebounceSampleCycle <= USED 0
+DrvGPIO_GetDoutBit <= USED 0
+DrvGPIO_GetIntStatus <= USED 0
+DrvGPIO_GetPortBits <= USED 0
+DrvGPIO_GetPortDoutBits <= USED 0
+DrvGPIO_GetPortMask <= USED 0
+DrvGPIO_GetVersion <= USED 0
+DrvGPIO_SetBitMask <= USED 0
+DrvGPIO_SetDebounceTime <= USED 0
+DrvGPIO_SetIntCallback <= USED 0
+DrvGPIO_SetPortBits <= USED 0
+DrvGPIO_SetPortMask <= USED 0
+;FILE drvsys.o
+DrvSYS_ClearClockSwitchStatus <= USED 0
+DrvSYS_ClearResetSource <= USED 0
+DrvSYS_Delay <= USED 0
+DrvSYS_DisableBODLowPowerMode <= USED 0
+DrvSYS_DisableHighPerformanceMode <= USED 0
+DrvSYS_DisableLowVoltReset <= USED 0
+DrvSYS_DisablePOR <= USED 0
+DrvSYS_DisableTemperatureSensor <= USED 0
+DrvSYS_EnableBODLowPowerMode <= USED 0
+DrvSYS_EnableHighPerformanceMode <= USED 0
+DrvSYS_EnableLowVoltReset <= USED 0
+DrvSYS_EnablePOR <= USED 0
+DrvSYS_EnableTemperatureSensor <= USED 0
+DrvSYS_EnterPowerDown <= USED 0
+DrvSYS_GetBODState <= USED 0
+DrvSYS_GetChipClockSourceStatus <= USED 0
+DrvSYS_GetClockSwitchStatus <= USED 0
+DrvSYS_GetHCLKFreq <= USED 0
+DrvSYS_GetPLLContent <= USED 0
+DrvSYS_GetResetSource <= USED 0
+DrvSYS_GetVersion <= USED 0
+DrvSYS_IsProtectedRegLocked <= USED 0
+DrvSYS_LockProtectedReg <= USED 0
+DrvSYS_Open <= USED 0
+DrvSYS_ReadProductID <= USED 0
+DrvSYS_ResetCPU <= USED 0
+DrvSYS_ResetChip <= USED 0
+DrvSYS_ResetIP <= USED 0
+DrvSYS_SelectBODVolt <= USED 0
+DrvSYS_SelectPLLSource <= USED 0
+DrvSYS_SelectSysTickSource <= USED 0
+DrvSYS_SetBODFunction <= USED 0
+DrvSYS_SetClockDivider <= USED 0
+DrvSYS_SetFreqDividerOutput <= USED 0
+DrvSYS_SetIPClock <= USED 0
+DrvSYS_SetPLLContent <= USED 0
+DrvSYS_SetPowerDownWakeUpInt <= USED 0
+DrvSYS_UnlockProtectedReg <= USED 0
+;FILE drvuart.o
+DrvUART_ClearIntFlag <= USED 0
+DrvUART_Close <= USED 0
+DrvUART_DisableInt <= USED 0
+DrvUART_DisablePDMA <= USED 0
+DrvUART_EnableInt <= USED 0
+DrvUART_EnablePDMA <= USED 0
+DrvUART_GetCTSInfo <= USED 0
+DrvUART_GetIntStatus <= USED 0
+DrvUART_GetVersion <= USED 0
+DrvUART_Read <= USED 0
+DrvUART_SetFnIRDA <= USED 0
+DrvUART_SetFnLIN <= USED 0
+DrvUART_SetFnRS485 <= USED 0
+DrvUART_SetRTS <= USED 0
+DrvUART_Write <= USED 0
+;FILE drvusb.o
+DrvUSB_Close <= USED 0
+DrvUSB_CtrlSetupSetConfiguration <= USED 0
+DrvUSB_DisableSelfPower <= USED 0
+DrvUSB_DispatchWakeupEvent <= USED 0
+DrvUSB_EnableSelfPower <= USED 0
+DrvUSB_GetFreeSRAM <= USED 0
+DrvUSB_GetMaxPower <= USED 0
+DrvUSB_GetVersion <= USED 0
+DrvUSB_IsData0 <= USED 0
+DrvUSB_IsRemoteWakeupEnabled <= USED 0
+DrvUSB_IsSelfPowerEnabled <= USED 0
+DrvUSB_Reset <= USED 0
+DrvUSB_SetMaxPower <= USED 0
+DrvUSB_memcpy <= USED 0
+;FILE lcd_driver.o
+Disable_Buzzer <= USED 0
+SysTimerDelay <= USED 0
+;FILE retarget.o
+GetChar <= USED 0
+IsDebugFifoEmpty <= USED 0
+_ttywrch <= USED 0
+fgetc <= USED 0
+kbhit <= USED 0
+;FILE scankey.o
+CloseKeyPad <= USED 0
+;FILE seven_segment.o
+;FILE smpl_vcom.o
+;FILE startup_nuc1xx.o
+;FILE system_nuc1xx.o
+;FILE vcom_api.o
+;FILE vcomsys.o
+VCOM_Close <= USED 0
+VCOM_GetVersion <= USED 0

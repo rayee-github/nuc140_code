@@ -1,0 +1,11 @@
+.\obj\hidsys.o: ..\..\USB\Smpl_HID\HIDSys.c
+.\obj\hidsys.o: C:\Keil\ARM\RV31\INC\stdio.h
+.\obj\hidsys.o: ..\..\..\Include\Driver\DrvUSB.h
+.\obj\hidsys.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h
+.\obj\hidsys.o: ..\..\..\..\CMSIS\CM0\CoreSupport\core_cm0.h
+.\obj\hidsys.o: C:\Keil\ARM\RV31\INC\stdint.h
+.\obj\hidsys.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h
+.\obj\hidsys.o: ..\..\..\Include\System\SysInfra.h
+.\obj\hidsys.o: ..\..\..\Include\System\ModuleID.h
+.\obj\hidsys.o: ..\..\USB\Smpl_HID\HIDSys.h
+.\obj\hidsys.o: ..\..\USB\Smpl_HID\HID_API.h

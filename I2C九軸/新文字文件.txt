@@ -1,0 +1,1296 @@
+// 	int32_t i32Err =0; 
+// 	uint8_t i = 0;
+//  	STR_UART_T param;
+//     DrvSYS_Open(48000000);
+//     DrvSYS_SetOscCtrl(E_SYS_XTL12M,1);
+//     DrvSYS_SetOscCtrl(E_SYS_OSC22M,1);
+//     DrvSYS_Delay(20000);				/* Delay for Xtal stable */
+//     while(!SYSCLK->CLKSTATUS.XTL12M_STB);
+//     while(!SYSCLK->CLKSTATUS.OSC22M_STB);
+//     DrvSYS_SelectHCLKSource(0);
+	/* Init GPIO and configure UART0 */
+// #if (IS_DEBUG)
+// 	DrvGPIO_InitFunction(E_FUNC_UART0);
+//   	param.u32BaudRate        = 115200;
+//     param.u8cDataBits        = DRVUART_DATABITS_8;
+//     param.u8cStopBits        = DRVUART_STOPBITS_1;
+//     param.u8cParity          = DRVUART_PARITY_NONE;
+//     param.u8cRxTriggerLevel  = DRVUART_FIFO_1BYTES;
+//     param.u8TimeOut        	 = 0;
+//     DrvUART_Open(UART_PORT0, &param);
+// #endif
+// 	DrvGPIO_InitFunction(E_FUNC_I2C1);
+// 	DrvGPIO_Open(E_GPB, 15, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPB, 14, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPB, 13, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPA, 13, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPA, 14, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPC, 3, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPC, 0, E_IO_OUTPUT);
+// 	DrvGPIO_Open(E_GPC, 1, E_IO_OUTPUT);
+// 	DrvGPIO_Open(E_GPC, 2, E_IO_OUTPUT);
+//     DrvGPIO_EnableEINT1(E_IO_BOTH_EDGE, E_MODE_EDGE, EINT1Callback);
+// 	DrvGPIO_EnableEINT0(E_IO_BOTH_EDGE, E_MODE_EDGE, EINT0Callback);
+// 	DrvGPIO_EnableInt(E_GPC,3,E_IO_BOTH_EDGE,E_MODE_EDGE);
+// 	DrvGPIO_EnableInt(E_GPB,13,E_IO_BOTH_EDGE,E_MODE_EDGE);
+// 	DrvGPIO_EnableInt(E_GPA,13,E_IO_BOTH_EDGE,E_MODE_EDGE);
+// 	DrvGPIO_EnableInt(E_GPA,14,E_IO_BOTH_EDGE,E_MODE_EDGE);
+// 	DrvGPIO_SetIntCallback(pfGPABCallback,pfGPCDECallback);
+// 	LcdInit();
+//  	DrvGPIO_Open(E_GPB,12,E_IO_OUTPUT);// CAN Transceiver setting
+//     DrvGPIO_ClrBit(E_GPB,12);
+// 	/* Select CAN Multi-Function */
+// 	DrvGPIO_InitFunction(E_FUNC_CAN0);
+//     DrvCAN_Init();
+//     i32Err = DrvCAN_Open(500);// set CAN speed
+// #if (IS_DEBUG)	
+//     if(i32Err<0)printf("Set CAN bit rate is fail\n");
+// #endif
+//     SetMaskFilter();
+// 	Write_24LC64(0x00000001,0);
+// 	for(i = 0; i<6 ; i++)
+// 	{
+// 		Write_24LC64(0x00000001 + (i+1) ,0);
+// 		Write_24LC64(0x00000007 + (i+1) ,0);
+// 	}
+// 	
+// 	memoryNum = Read_24LC64(0x00000001);
+
+// 	GPC_0 = 0;
+// 	GPC_1 = 0;
+// 	GPC_2 = 0;
+// 	LcdSendCmd(0x34);
+// 	Delay(DELAY);
+// 	i = 0;
+// 	while(i < 10)
+// 	{
+// 		if(count_S == 1)
+// 		{
+// 			if(i%2)LcdDrawPicture(page2);
+// 			else LcdDrawPicture(page3);
+// 			i++;
+// 			LcdSendCmd(0x36);
+// 			Delay(DELAY);
+// 			count_S = 0;
+// 		}
+// 	}
+// 	timer2 = 0;
+// 	LcdFirstPrint();
+
+// 	while(1)
+// 	{
+// 		if(gpb13Num > 0)
+// 		{
+// 		}
+// 		else
+// 		{
+// 			if(timer2 < TIME0)
+// 			{
+// 				if(timer2 == 0)
+// 				{
+// 					LcdFirstPrint();
+// 					timer2 = 1;
+// 				}
+// 				if(count_S == 1)
+// 				{
+// 					if(strlen(Msg01) > 6)LcdMarquee(First,Msg01);
+// 					else LcdBlinking(First,Msg01);
+// 					if(strlen(Msg02) > 6)LcdMarquee(Second,Msg02);
+// 					else LcdBlinking(Second,Msg02);
+// 					if(strlen(Msg03) > 6)LcdMarquee(Third,Msg03);
+// 					else LcdBlinking(Third,Msg03);
+// 					if(strlen(Msg04) > 6)LcdMarquee(Fourth,Msg04);
+// 					else LcdBlinking(Fourth,Msg04);
+// 					count_S = 0;
+// 				}
+// 			}
+// 			else if(timer2 == TIME0)
+// 			{
+// 				Delay(1000);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				LcdSendCmd(0X01);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				LcdSendCmd(0x34);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				LcdDrawPicture(page0);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				LcdSendCmd(0x36);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				Delay(1000);
+// 				Delay(1000);
+// 			}
+// 			else if(timer2 > TIME0 && timer2 <= TIME1)
+// 			{
+// // 				if(count_S == 1)
+// // 				{
+// // 					if(timer2%2)LcdDrawPicture(page0);
+// // 					else LcdDrawPicture(page1);
+// // 					LcdSendCmd(0x36);
+// // 					Delay(DELAY);
+// // 					count_S = 0;
+// // 				}
+// 			}
+// 			else if(timer2 > TIME1)
+// 			{
+// 				timer2 = 0;
+// 			}
+// 		}
+// 	}
+
+// void CAN_CallbackFn(uint32_t u32IIDR)
+// {
+//     if(u32IIDR==2)
+//     {
+//         DrvCAN_ReadMsgObj(1,TRUE,&rrMsg);
+//         CAN_ShowMsg(&rrMsg);
+//     }
+//     if(u32IIDR==5+1)
+//     {
+//         DrvCAN_ReadMsgObj(5,TRUE,&rrMsg);
+//         CAN_ShowMsg(&rrMsg);
+//     }
+//     if(u32IIDR==0x31+1)
+//     {
+//         DrvCAN_ReadMsgObj(31,TRUE,&rrMsg);
+//         CAN_ShowMsg(&rrMsg);
+//     }
+// }
+
+// void CAN_ShowMsg(STR_CANMSG_T* Msg)
+// {
+// 	uint8_t i = 0;
+// 	uint8_t id = Msg->Id&0xFF;
+// 	
+// 	if(Msg->Data[0] == 0x01)
+// 	{
+// 		if(Check04[id] == 0x00)
+// 		{
+// 			if(Msg->Data[1] == 0x02)
+// 			{
+// 				if(strlen(Msg04) == 0) sprintf(Msg04,"%c%c±Ñ",(id/10)+0x30,(id%10)+0x30);
+// 				else sprintf(Msg04+strlen(Msg04),"  %c%c±Ñ",(id/10)+0x30,(id%10)+0x30);
+// 				Check04[id] = 0x01;
+// 			}
+// 			else if(Msg->Data[1] == 0x01)
+// 			{
+// 				Check04[id] = 0x01;
+// 			}
+// 		}
+// 	}
+// 	else if(Msg->Data[0] == 0x02)
+// 	{
+// 		if(Msg->Data[1] == 0x02)
+// 		{
+// 			if(Check01[id] == 0x00)
+// 			{
+// 				GPC_0 = 1;
+// 				if(strlen(Msg01) == 0)
+// 				{
+// 					if(id < 10)sprintf(Msg01,"%c",id+0x30);
+// 					else sprintf(Msg01,"%c%c",(id/10)+0x30,(id%10)+0x30);
+// 				}
+// 				else
+// 				{
+// 					if(id < 10)sprintf(Msg01+strlen(Msg01),",%c",id+0x30);
+// 					else sprintf(Msg01+strlen(Msg01),",%c%c",(id/10)+0x30,(id%10)+0x30);
+// 				}
+// 				Check01[id] = 0x01;
+// 				CheckNum = 9;
+// 				if(memoryNum < 6)
+// 				{
+// 					memoryNum++;
+// 					Write_24LC64(0x00000001,memoryNum);
+// 					Write_24LC64(0x00000001 + memoryNum,id);
+// 					Write_24LC64(0x00000007 + memoryNum,0x01);
+// 				}
+// 				else
+// 				{
+// 					for(i=0;i<5;i++)
+// 					{
+// 						memoryData[i][0] = Read_24LC64(0x00000001 + (i+2));
+// 						memoryData[i][1] = Read_24LC64(0x00000007 + (i+2));
+// 					}
+// 					memoryData[5][0] = id;
+// 					memoryData[5][1] = 0x01;
+// 					for(i=0;i<6;i++)
+// 					{
+// 						Write_24LC64(0x00000001 + (i+1),memoryData[i][0]);
+// 						Write_24LC64(0x00000007 + (i+1),memoryData[i][1]);
+// 					}
+// 				}
+// 			}
+
+// 		}
+// 		if(Msg->Data[2] == 0x02)
+// 		{
+// 			if(Check02[id] == 0x00)
+// 			{
+// 				GPC_1 = 1;
+// 				if(strlen(Msg02) == 0)
+// 				{
+// 					if(id < 10)sprintf(Msg02,"%c",id+0x30);
+// 					else sprintf(Msg02,"%c%c",(id/10)+0x30,(id%10)+0x30);
+// 				}
+// 				else
+// 				{
+// 					if(id < 10)sprintf(Msg02+strlen(Msg02),",%c",id+0x30);
+// 					else sprintf(Msg02+strlen(Msg02),",%c%c",(id/10)+0x30,(id%10)+0x30);
+// 				}
+// 				Check02[id] = 0x01;
+// 				CheckNum = 9;
+// 				if(memoryNum < 6)
+// 				{
+// 					memoryNum++;
+// 					Write_24LC64(0x00000001,memoryNum);
+// 					Write_24LC64(0x00000001 + memoryNum,id);
+// 					Write_24LC64(0x00000007 + memoryNum,0x02);
+// 				}
+// 				else
+// 				{
+// 					for(i=0;i<5;i++)
+// 					{
+// 						memoryData[i][0] = Read_24LC64(0x00000001 + (i+2));
+// 						memoryData[i][1] = Read_24LC64(0x00000007 + (i+2));
+// 					}
+// 					memoryData[5][0] = id;
+// 					memoryData[5][1] = 0x02;
+// 					for(i=0;i<6;i++)
+// 					{
+// 						Write_24LC64(0x00000001 + (i+1),memoryData[i][0]);
+// 						Write_24LC64(0x00000007 + (i+1),memoryData[i][1]);
+// 					}
+// 				}
+// 			}
+// 		}
+// 		if(Msg->Data[3] == 0x02)
+// 		{
+// 			if(Check03[id] == 0x00)
+// 			{
+// 				GPC_2 = 1;
+// 				if(strlen(Msg03) == 0)
+// 				{
+// 					if(id < 10)sprintf(Msg03,"%c",id+0x30);
+// 					else sprintf(Msg03,"%c%c",(id/10)+0x30,(id%10)+0x30);
+// 				}
+// 				else
+// 				{
+// 					if(id < 10)sprintf(Msg03+strlen(Msg03),",%c",id+0x30);
+// 					else sprintf(Msg03+strlen(Msg03),",%c%c",(id/10)+0x30,(id%10)+0x30);
+// 				}
+// 				Check03[id] = 0x01;
+// 				CheckNum = 9;
+// 				if(memoryNum < 6)
+// 				{
+// 					memoryNum++;
+// 					Write_24LC64(0x00000001,memoryNum);
+// 					Write_24LC64(0x00000001 + memoryNum,id);
+// 					Write_24LC64(0x00000007 + memoryNum,0x03);
+// 				}
+// 				else
+// 				{
+// 					for(i=0;i<5;i++)
+// 					{
+// 						memoryData[i][0] = Read_24LC64(0x00000001 + (i+2));
+// 						memoryData[i][1] = Read_24LC64(0x00000007 + (i+2));
+// 					}
+// 					memoryData[5][0] = id;
+// 					memoryData[5][1] = 0x03;
+// 					for(i=0;i<6;i++)
+// 					{
+// 						Write_24LC64(0x00000001 + (i+1),memoryData[i][0]);
+// 						Write_24LC64(0x00000007 + (i+1),memoryData[i][1]);
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+//     //printf("%d,%d,%d,%d,%d,%d,%d,%d,%d\n",Msg->Id&0xFF,Msg->Data[0],Msg->Data[1],Msg->Data[2],Msg->Data[3],Msg->Data[4],Msg->Data[5],Msg->Data[6],Msg->Data[7]);
+// }
+
+// void pfGPCDECallback(uint32_t u32GPCStatus, uint32_t u32GPDStatus, uint32_t u32GPEStatus)
+// {
+// 	if(u32GPCStatus)
+// 	{
+// 		if(GPA_13 == 1 && GPA_14 == 1)
+// 		{
+// 			if(GPC_3)send05[1] = 0x01;
+// 			else send05[1] = 0x02;
+// 			TestMaskFilter(MASTER,send05);
+// 			Delay(1000000);
+// 			Delay(1000000);
+// 			if(GPC_3)GPC_3 = 0;
+// 			else GPC_3 = 1;
+// 		}
+// 	}
+// }
+
+// void pfGPABCallback(uint32_t u32GPAStatus, uint32_t u32GPBStatus)
+// {
+// 	if(u32GPAStatus)
+// 	{
+// 		if(GPA_13 == 1 && GPA_14 == 1)
+// 		{
+// 		}
+// 		else if(GPA_13 == 1 && GPA_14 == 0)
+// 		{
+// 			send05[1] = 0x01;
+// 			TestMaskFilter(MASTER,send05);
+// 		}
+// 		else if(GPA_13 == 0 && GPA_14 == 1)
+// 		{
+// 			send05[1] = 0x02;
+// 			TestMaskFilter(MASTER,send05);
+// 		}
+// 		Delay(1000000);
+// 		Delay(1000000);
+// 	}
+// 	else if(u32GPBStatus)
+// 	{
+// 		if( gpb13 == 0 && GPB_13 == 0)
+// 		{
+// 			gpb13Num++;
+// 			if(gpb13Num == 7)
+// 			{
+// 				LcdFirstPrint();
+// 				timer2 = 0;
+// 				CheckNum = 0;
+// 				gpb13Num = 0;
+// 			}
+// 			else
+// 			{
+// 				CheckNum = 11;
+// 				data1History = Read_24LC64(0x00000001 + gpb13Num);
+// 				data2History = Read_24LC64(0x00000007 + gpb13Num);
+// 				LcdFirstPrint();
+// 				if(data1History != 0x00)
+// 				{
+// 					LcdHistory((data2History-1),(char)data1History);
+// 				}
+// 			}
+// 			//printf("%d\n",gpb13Num);
+// 			gpb13 = 0x01;
+// 			Delay(100000);
+// 		}
+// 		else if(GPB_13 == 1)
+// 		{
+// 			gpb13 = 0x00;
+// 			Delay(100000);
+// 		}
+// 	}
+// }
+
+//  void EINT0Callback(void)
+// {
+// 	uint8_t i = 0;
+// 	for(i=0; i < LEN; i++)
+// 	{
+// 		Msg01[i] = '\0';
+// 		Msg02[i] = '\0';
+// 		Msg03[i] = '\0';
+// 		Msg04[i] = '\0';
+// 		if(i < 18)
+// 		{
+// 			Check01[i] = 0x00;
+// 			Check02[i] = 0x00;
+// 			Check03[i] = 0x00;
+// 			Check04[i] = 0x00;
+// 		}
+// 	}
+// 	GPC_0 = 0;
+// 	GPC_1 = 0;
+// 	GPC_2 = 0;
+// 	Blink_1 = 0;
+// 	Blink_2 = 0;
+// 	Blink_3 = 0;
+// 	Blink_4 = 0;
+// 	Marquee_1 = 0;
+// 	Marquee_2 = 0;
+// 	Marquee_3 = 0;
+// 	Marquee_4 = 0;
+// 	LcdFirstPrint();
+// 	CheckNum = 0;
+// 	timer = 0;
+// 	timer2 = 0;
+// 	TestMaskFilter(MASTER,send00);
+// }
+// void EINT1Callback(void)
+// {
+// 	uint8_t i = 0;
+// 	for(i=0; i < LEN; i++)
+// 	{
+// 		Msg01[i] = '\0';
+// 		Msg02[i] = '\0';
+// 		Msg03[i] = '\0';
+// 		Msg04[i] = '\0';
+// 		if(i < 18)
+// 		{
+// 			Check01[i] = 0x00;
+// 			Check02[i] = 0x00;
+// 			Check03[i] = 0x00;
+// 			Check04[i] = 0x00;
+// 		}
+// 	}
+// 	send01[1] = 0x01;
+// 	send01[2] = 0x05;
+// 	send01[3] = 0x09;
+// 	send01[4] = 0x0D;
+// 	send02[1] = 0x02;
+// 	send02[2] = 0x06;
+// 	send02[3] = 0x0A;
+// 	send02[4] = 0x0E;
+// 	send03[1] = 0x03;
+// 	send03[2] = 0x07;
+// 	send03[3] = 0x0B;
+// 	send03[4] = 0x0F;
+// 	send04[1] = 0x04;
+// 	send04[2] = 0x08;
+// 	send04[3] = 0x0C;
+// 	send04[4] = 0x10;
+// 	Blink_1 = 0;
+// 	Blink_2 = 0;
+// 	Blink_3 = 0;
+// 	Blink_4 = 0;
+// 	Marquee_1 = 0;
+// 	Marquee_2 = 0;
+// 	Marquee_3 = 0;
+// 	Marquee_4 = 0;
+// 	LcdFirstPrint();
+// 	CheckNum = 1;
+// 	timer = 0;
+// 	TestMaskFilter(MASTER,send01);
+// }
+// void Delay(int count)
+// {
+// 	while(count--)
+// 	{
+// 		__NOP;
+// 	}
+// }
+
+// void data_write(uint8_t data)
+// {
+// 	GPC_8 = (data >> 7) & 0x01;
+// 	GPC_9 = (data >> 6) & 0x01;
+// 	GPC_10 = (data >> 5) & 0x01;
+// 	GPC_11 = (data >> 4) & 0x01;
+// 	GPC_12 = (data >> 3) & 0x01;
+// 	GPC_13 = (data >> 2) & 0x01;
+// 	GPE_0 = (data >> 1) & 0x01;
+// 	GPE_1 = (data >> 0) & 0x01;
+// }
+
+// uint8_t data_read(void)
+// {
+// 	uint8_t data = 0x00;
+// 	data |= GPC_8;
+// 	data = data << 1;
+// 	data |= GPC_9;
+// 	data = data << 1;
+// 	data |= GPC_10;
+// 	data = data << 1;
+// 	data |= GPC_11;
+// 	data = data << 1;
+// 	data |= GPC_12;
+// 	data = data << 1;
+// 	data |= GPC_13;
+// 	data = data << 1;
+// 	data |= GPE_0;
+// 	data = data << 1;
+// 	data |= GPE_1;
+// 	return data;
+// }
+
+// void set_read(void)
+// {
+// 	RW = 1;
+// 	DrvGPIO_Open(E_GPE, 1,  E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPE, 0,  E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPC, 13, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPC, 12, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPC, 11, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPC, 10, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPC, 9, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPC, 8, E_IO_INPUT);
+// }
+
+// void set_write(void)
+// {
+// 	RW = 0;
+// 	DrvGPIO_Open(E_GPE, 1,  E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPE, 0,  E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPC, 13, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPC, 12, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPC, 11, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPC, 10, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPC, 9, E_IO_INPUT);
+// 	DrvGPIO_Open(E_GPC, 8, E_IO_INPUT);
+// }
+
+// void LcdChackBusy(void)
+// {
+// 	int TimeOut = 0;
+// 	SET_INC;
+// 	SET_READ;
+// 	CLR_EN;
+// 	SET_EN;
+// 	while((DATA_Read & 0x80) && (++TimeOut != 0));
+// 	CLR_EN;
+// 	SET_INC;
+// 	SET_READ;
+// }
+
+// void LcdSendCmd(uint8_t cmd)
+// {
+// 	LcdChackBusy();
+// 	SET_INC;
+// 	SET_WRITE;
+// 	CLR_EN;
+// 	DATA_Write(cmd);
+// 	__NOP();
+// 	Delay(DELAY);
+// 	__NOP();
+// 	SET_EN;
+// 	__NOP();
+// 	Delay(DELAY);
+// 	__NOP();
+// 	CLR_EN;
+// 	SET_READ;
+// 	SET_INC;
+// }
+
+// void LcdSendData(uint8_t data)
+// {
+// 	LcdChackBusy();
+// 	SET_DATA;
+// 	SET_WRITE;
+// 	CLR_EN;
+// 	DATA_Write(data);
+// 	__NOP();
+// 	Delay(DELAY);
+// 	__NOP();
+// 	SET_EN;
+// 	__NOP();
+// 	Delay(DELAY);
+// 	__NOP();
+// 	CLR_EN;
+// 	SET_READ;
+// 	SET_INC;
+// }
+
+// void LcdInit(void)
+// {
+// 	DrvGPIO_Open(E_GPE, 4, E_IO_OUTPUT);
+// 	DrvGPIO_Open(E_GPE, 3, E_IO_OUTPUT);
+// 	DrvGPIO_Open(E_GPE, 2, E_IO_OUTPUT);
+// 	LcdSendCmd(0x30);
+// 	Delay(DELAY);
+// 	LcdSendCmd(0x01);
+// 	Delay(DELAY);
+// 	LcdSendCmd(0x06);
+// 	Delay(DELAY);
+// 	LcdSendCmd(0x0C);
+// 	Delay(DELAY);
+// }
+
+// void LcdFirstPrint(void)
+// {
+// 	LcdSendCmd(0x30);
+// 	Delay(DELAY);
+// 	LcdSendCmd(0x01);
+// 	Delay(DELAY);
+// 	LcdPutString(0,First,(uint8_t *)str01);
+// 	LcdPutString(0,Second,(uint8_t *)str02);
+// 	LcdPutString(0,Third,(uint8_t *)str03);
+//  	LcdPutString(0,Fourth,(uint8_t *)str04);
+// }
+
+// void LcdScreen2(void)
+// {
+// 	LcdSendCmd(0x01);
+// 	LcdPutString(1,Second,"·R³Ã¬ì§Þ");
+// 	LcdSetAddress(0,Second);
+// 	LcdSendData(0xA1);
+// 	LcdSendData(0x6D);
+// 	LcdSetAddress(5,Second);
+// 	LcdSendData(0xA1);
+// 	LcdSendData(0x6E);
+// 	LcdPutString(3,Third, "Å@§A¤@¥@");
+// 	LcdSetAddress(2,Third);
+// 	LcdSendData(0xA1);
+// 	LcdSendData(0x6D);
+// 	LcdSetAddress(7,Third);
+// 	LcdSendData(0xA1);
+// 	LcdSendData(0x6E);
+// }
+
+// void LcdScreen(uint8_t screen)
+// {
+// 	LcdPutString(1,Second,"·R³Ã¬ì§Þ");
+// 	LcdSetAddress(0,Second);
+// 	LcdSendData(0xA1);
+// 	LcdSendData(0x6D);
+// 	LcdSetAddress(5,Second);
+// 	LcdSendData(0xA1);
+// 	LcdSendData(0x6E);
+// 	LcdPutString(3,Third, "Å@§A¤@¥@");
+// 	LcdSetAddress(2,Third);
+// 	LcdSendData(0xA1);
+// 	LcdSendData(0x6D);
+// 	LcdSetAddress(7,Third);
+// 	LcdSendData(0xA1);
+// 	LcdSendData(0x6E);
+// 	if(screen%2==0)
+// 	{
+// 		LcdSetAddress(0,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		LcdSetAddress(1,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		LcdSetAddress(2,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		LcdSetAddress(3,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		LcdSetAddress(4,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		LcdSetAddress(5,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		LcdSetAddress(6,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		LcdSetAddress(7,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		
+// 		LcdSetAddress(0,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		LcdSetAddress(1,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		LcdSetAddress(2,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		LcdSetAddress(3,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		LcdSetAddress(4,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		LcdSetAddress(5,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		LcdSetAddress(6,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		LcdSetAddress(7,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		
+// 		screen = 1;
+// 	}
+// 	else
+// 	{
+// 		LcdSetAddress(0,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		LcdSetAddress(1,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		LcdSetAddress(2,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		LcdSetAddress(3,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		LcdSetAddress(4,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		LcdSetAddress(5,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		LcdSetAddress(6,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		LcdSetAddress(7,Fourth);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		
+// 		LcdSetAddress(0,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		LcdSetAddress(1,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		LcdSetAddress(2,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		LcdSetAddress(3,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		LcdSetAddress(4,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		LcdSetAddress(5,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		LcdSetAddress(6,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBD);
+// 		LcdSetAddress(7,First);
+// 		LcdSendData(0xA1);
+// 		LcdSendData(0xBC);
+// 		screen = 0;
+// 	}
+// }
+
+
+// void LcdSetAddress(uint8_t x,uint8_t y)
+// {
+// 	uint8_t addr = 0;
+// 	switch(y)
+// 	{
+// 		case 0:addr = 0x80 + x;break;
+// 		case 1:addr = 0x90 + x;break;
+// 		case 2:addr = 0x88 + x;break;
+// 		case 3:addr = 0x98 + x;break;
+// 		default:break;
+// 	}
+// 	LcdSendCmd(addr);
+// }
+
+// void LcdPutString(uint8_t x,uint8_t y,uint8_t* data)
+// {
+// 	LcdSetAddress(x,y);
+// 	while(*data != '\0')
+// 	{
+// 		LcdSendData(*data++);
+// 	}
+// }
+
+// void LcdBlinking(uint8_t y,char data[])
+// {
+// 	uint8_t Blink = 0;
+// 	char Blink_Data[9];
+// 	switch(y)
+// 	{
+// 		case 0:Blink = Blink_1;break;
+// 		case 1:Blink = Blink_2;break;
+// 		case 2:Blink = Blink_3;break;
+// 		case 3:Blink = Blink_4;break;
+// 	}
+// 	if(Blink == 0)
+// 	{
+// 		sprintf(Blink_Data,"¡G%c%c%c%c%c%c",data[0],data[1],data[2],data[3],data[4],data[5]);
+// 		LcdPutString(startX,y,(uint8_t *)Blink_Data);
+// 		Blink = 1;
+// 	}else
+// 	{
+// 		LcdPutString(startX,y,(uint8_t *)"¡G      ");
+// 		Blink = 0;
+// 	}
+// 	switch(y)
+// 	{
+// 		case 0:Blink_1 = Blink;break;
+// 		case 1:Blink_2 = Blink;break;
+// 		case 2:Blink_3 = Blink;break;
+// 		case 3:Blink_4 = Blink;break;
+// 	}
+// }
+
+// void LcdHistory(uint8_t y,char data)
+// {
+// 	char Blink_Data[4];
+// 	if(data < 10)sprintf(Blink_Data,"¡G%c",data+0x30);
+// 	else sprintf(Blink_Data,"¡G%c%c",(data/10)+0x30,(data%10)+0x30);
+// 	LcdPutString(startX,y,(uint8_t *)Blink_Data);
+// }
+
+// void LcdMarquee(uint8_t y,char data[])
+// {
+// 	uint8_t location_x1 = 0;
+// 	char Marquee_Data[9]="         ";
+// 	switch(y)
+// 	{
+// 		case 0:location_x1 = Marquee_1;break;
+// 		case 1:location_x1 = Marquee_2;break;
+// 		case 2:location_x1 = Marquee_3;break;
+// 		case 3:location_x1 = Marquee_4;break;
+// 	}
+// 	if(location_x1 <= (strlen(data)-6))
+// 	{
+// 		sprintf(Marquee_Data,"¡G%c%c%c%c%c%c",data[location_x1+0],data[location_x1+1],data[location_x1+2],data[location_x1+3],data[location_x1+4],data[location_x1+5]);
+// 		LcdPutString(startX,y,(uint8_t *)Marquee_Data);
+// 		LcdPutString(startX,y,(uint8_t *)Marquee_Data);
+// 		if(y == 3)location_x1+=2;
+// 		else location_x1+=1;
+// 	}
+// 	else
+// 	{
+// 		location_x1 = 0;
+// 	}
+// 	switch(y)
+// 	{
+// 		case 0:Marquee_1 = location_x1;break;
+// 		case 1:Marquee_2 = location_x1;break;
+// 		case 2:Marquee_3 = location_x1;break;
+// 		case 3:Marquee_4 = location_x1;break;
+// 	}
+// }
+
+// void LcdDrawPicture(uint8_t* data)
+// {
+// 	uint8_t i,j,k;
+// 	for(i=0;i<2;i++)
+// 	{
+// 		for(j=0;j<32;j++)
+// 		{
+// 			LcdSendCmd(0x80+j);
+// 			if(i == 0)
+// 			{
+// 				LcdSendCmd(0x80);
+// 			}
+// 			else
+// 			{
+// 				LcdSendCmd(0x88);
+// 			}
+// 			for(k=0;k<16;k++)
+// 			{
+// 				LcdSendData(*data++);
+// 			}
+// 		}
+// 	}
+// }
+
+// void LcdDrawPoint(uint8_t x,uint8_t y,uint8_t Color)
+// {
+// 	uint8_t Row,Tier,Tier_bit;
+// 	uint8_t ReadOldH,ReadOldL;
+// 	Tier = x >> 4;
+// 	Tier_bit = x & 0x0F;
+// 	if(y < 32)
+// 	{
+// 		Row = y;
+// 	}
+// 	else
+// 	{
+// 		Row = y - 32;
+// 		Tier += 8;
+// 	}
+// 	LcdSendCmd(Row+0x80);
+// 	Delay(DELAY);
+// 	LcdSendCmd(Tier+0x80);
+// 	Delay(DELAY);
+// 	LcdReadByte();
+// 	Delay(DELAY);
+// 	ReadOldH = LcdReadByte();
+// 	Delay(DELAY);
+// 	ReadOldL = LcdReadByte();
+// 	Delay(DELAY);
+// 	LcdSendCmd(Row+0x80);
+// 	Delay(DELAY);
+// 	LcdSendCmd(Tier+0x80);
+// 	Delay(DELAY);
+// 	if(Tier_bit < 8)
+// 	{
+// 		switch(Color)
+// 		{
+// 			case 0:ReadOldH &= (~(0x01 << (7 - Tier_bit))); break;
+// 			case 1:ReadOldH |= (0x01 << (7 - Tier_bit)); break;
+// 			case 2:ReadOldH ^= (0x01 << (7- Tier_bit)); break;
+// 			default:break;
+// 		}
+// 		LcdSendData(ReadOldH);
+// 		Delay(DELAY);
+// 		LcdSendData(ReadOldL);
+// 		Delay(DELAY);
+// 	}
+// 	else
+// 	{
+// 		switch(Color)
+// 		{
+// 			case 0:ReadOldL &= (~(0x01 << (15 - Tier_bit))); break;
+// 			case 1:ReadOldL |= (0x01 << (15 - Tier_bit)); break;
+// 			case 2:ReadOldL ^= (0x01 << (15- Tier_bit)); break;
+// 			default:break;
+// 		}
+// 		LcdSendData(ReadOldH);
+// 		Delay(DELAY);
+// 		LcdSendData(ReadOldL);
+// 		Delay(DELAY);
+// 	}
+// }
+
+// uint8_t LcdReadByte(void)
+// {
+// 	uint8_t data = 0;
+// 	LcdChackBusy();
+// 	DATA_Write(0xFF);
+// 	SET_DATA;
+// 	SET_READ;
+// 	CLR_EN;
+// 	__NOP();
+// 	__NOP();
+// 	SET_EN;
+// 	data = DATA_Read;
+// 	__NOP();
+// 	__NOP();
+// 	CLR_EN;
+// 	return data;
+// }
+
+// void SetMaskFilter(void)
+// {
+//     STR_CANMASK_T MaskMsg;
+// 	DrvCAN_EnableInt(CAN_CON_IE);
+//  	DrvCAN_InstallCallback(CALLBACK_MSG, (CAN_CALLBACK)CAN_CallbackFn);
+// 	/* Set b'0' means don't care*/
+// 	/* Set Messge Object No.0 mask ID */
+// 	MaskMsg.u8Xtd    = 1;
+// 	MaskMsg.u8Dir    = 1;
+// 	MaskMsg.u8IdType = 0;     /* 1:EXT or 0:STD */
+// 	MaskMsg.u32Id 	 = 0x500;
+// 	DrvCAN_SetMsgObjMask(MSG(1),&MaskMsg);
+// 	DrvCAN_SetRxMsgObj(MSG(1), CAN_STD_ID, 0x500 , TRUE);
+// }
+
+// void TestMaskFilter(uint32_t ID,uint8_t *data)
+// {
+//     STR_CANMSG_T tMsg;
+//     /* Send a 11-bits message */
+//     tMsg.FrameType= DATA_FRAME;
+//     tMsg.IdType   = CAN_STD_ID;
+//     tMsg.Id 	  = ID;
+//     tMsg.DLC	  = 0x08;
+//     tMsg.Data[0]  = data[0];
+//     tMsg.Data[1]  = data[1];
+//     tMsg.Data[2]  = data[2];
+//     tMsg.Data[3]  = data[3];
+//     tMsg.Data[4]  = data[4];
+//     tMsg.Data[5]  = data[5];
+//     tMsg.Data[6]  = data[6];
+//     tMsg.Data[7]  = data[7];
+//     if(DrvCAN_SetTxMsgObj(MSG(0),&tMsg) < 0)	 /* Call DrvCAN_SetTxMsgObj() only Confiugre Msg RAM */
+//     {
+//         printf("Set Tx Msg Object failed\n");
+//         return;
+//     }
+//     DrvCAN_SetTxRqst(MSG(0));
+// }
+
+/***********************************************/
+//	Define
+// #define IS_DEBUG 1
+// #define DELAY 1000
+// #define LEN (uint8_t)86
+// #define MASTER	(uint32_t)0x5FF
+// #define Fault 	(uint8_t)0x01
+// #define Safety 	(uint8_t)0x00
+// #define TIME0 (int)60
+// #define TIME1 (int)300
+//	LCD Define
+// #define RS		GPE_4
+// #define	RW		GPE_3
+// #define	E		GPE_2
+// #define	RST		GPD_0
+// #define DATA_Write(N)	data_write((uint8_t)N)
+// #define DATA_Read		(uint8_t)data_read()
+// #define SET_DATA	RS = 1
+// #define SET_INC		RS = 0
+// #define SET_READ	set_read()
+// #define SET_WRITE	set_write()
+// #define SET_EN		E = 1
+// #define CLR_EN		E = 0
+// #define startX (uint8_t)strlen(str01)/2
+// typedef enum 
+// {
+// 	First=0,
+// 	Second,
+// 	Third,
+// 	Fourth
+// }ROW;
+
+// /***********************************************/
+// //	Global variable
+// STR_CANMSG_T rrMsg;
+// char Msg01[LEN];
+// char Msg02[LEN];
+// char Msg03[LEN];
+// char Msg04[LEN];
+// char Msg[9];
+// uint8_t Check01[17];
+// uint8_t Check02[17];
+// uint8_t Check03[17];
+// uint8_t Check04[17];
+// uint8_t CheckNum = 0;
+// uint8_t send00[8] = {0x02,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+// uint8_t send01[8] = {0x01,0x01,0x05,0x09,0x0D,0x00,0x00,0x00};
+// uint8_t send02[8] = {0x01,0x02,0x06,0x0A,0x0E,0x00,0x00,0x00};
+// uint8_t send03[8] = {0x01,0x03,0x07,0x0B,0x0F,0x00,0x00,0x00};
+// uint8_t send04[8] = {0x01,0x04,0x08,0x0C,0x10,0x00,0x00,0x00};
+// uint8_t send05[8] = {0x03,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+// // Timer
+// uint8_t count_S = 0;
+// int timer = 0;
+// int timer2 = 0;
+// // LCD
+// uint8_t Blink_1 = 0;
+// uint8_t Blink_2 = 0;
+// uint8_t Blink_3 = 0;
+// uint8_t Blink_4 = 0;
+// uint8_t Marquee_1 = 0;
+// uint8_t Marquee_2 = 0;
+// uint8_t Marquee_3 = 0;
+// uint8_t Marquee_4 = 0;
+// // Button
+// uint8_t  gpb13 = 0;
+// uint8_t  gpb13Num = 0;
+// uint8_t data1History = 0;
+// uint8_t data2History = 0;
+
+// // EEPROM
+// uint8_t memoryNum = 0;
+// uint8_t memoryData[6][2];
+// /***********************************************/
+// // Function
+// void Delay(int count);
+// // Timer Function
+// void InitTIMER1(void);
+// // LCD Function
+// void data_write(uint8_t data);
+// uint8_t data_read(void);
+// void set_read(void);
+// void set_write(void);
+// void LcdChackBusy(void);
+// void LcdSendCmd(uint8_t cmd);
+// void LcdSendData(uint8_t data);
+// void LcdInit(void);
+// void LcdSetAddress(uint8_t x,uint8_t y);
+// void LcdPutString(uint8_t x,uint8_t y,uint8_t* data);
+// void LcdFirstPrint(void);
+// void LcdBlinking(uint8_t y,char data[]);
+// void LcdMarquee(uint8_t y,char data[]);
+// void LcdDrawPoint(uint8_t x,uint8_t y,uint8_t Color);
+// uint8_t LcdReadByte(void);
+// void LcdScreen(uint8_t screen);
+// void LcdScreen2(void);
+// void LcdHistory(uint8_t y,char data);
+// void LcdDrawPicture(uint8_t* data);
+// // CAN Function
+// void TestMaskFilter(uint32_t ID,uint8_t *data);
+// void CAN_ShowMsg(STR_CANMSG_T* Msg);
+// void SetMaskFilter(void);
+// /***********************************************/
+// //	String
+// char *str01 = "¥Ë´µª¬ºA";
+// char *str02 = "©I¥sª¬ºA";
+// char *str03 = "¨¾µsª¬ºA";
+// char *str04 = "¬G»Ùª¬ºA";
+
+/***********************************************/
+// 	if(CheckNum > 0 && CheckNum < 9)
+// 	{
+// 		timer++;
+// 		switch(timer)
+// 		{
+// 			case 120:
+// 				TestMaskFilter(MASTER,send02);
+// 				CheckNum = 2;
+// 			break;
+// 			case 240:
+// 				TestMaskFilter(MASTER,send03);
+// 				CheckNum = 3;
+// 			break;
+// 			case 360:
+// 				TestMaskFilter(MASTER,send04);
+// 				CheckNum = 4;
+// 			break;
+// 			case 480:
+// 				if(Check04[1]  == 0x01)	send01[1] = 0x00;
+// 				if(Check04[5]  == 0x01)	send01[2] = 0x00;
+// 				if(Check04[9]  == 0x01)	send01[3] = 0x00;
+// 				if(Check04[13] == 0x01)	send01[4] = 0x00;
+// 				if(Check04[1]  == 0x01 && Check04[5] == 0x01 && Check04[9] == 0x01 && Check04[13] == 0x01)
+// 				{
+// 					timer = 599;
+// 					CheckNum = 5;
+// 				}
+// 				else
+// 				{
+// 					TestMaskFilter(MASTER,send01);
+// 					CheckNum = 5;
+// 				}
+// 			break;
+// 			case 600:
+// 				if(Check04[1] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"01Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  01Â_");
+// 				}
+// 				if(Check04[5] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"05Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  05Â_");
+// 				}
+// 				if(Check04[9] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"09Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  09Â_");
+// 				}
+// 				if(Check04[13] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"13Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  13Â_");
+// 				}
+// 				if(Check04[2]  == 0x01)	send02[1] = 0x00;
+// 				if(Check04[6]  == 0x01)	send02[2] = 0x00;
+// 				if(Check04[10] == 0x01)	send02[3] = 0x00;
+// 				if(Check04[14] == 0x01)	send02[4] = 0x00;
+// 				if(Check04[2]  == 0x01 && Check04[6] == 0x01 && Check04[10] == 0x01 && Check04[14] == 0x01)
+// 				{
+// 					timer = 719;
+// 					CheckNum = 6;
+// 				}
+// 				else
+// 				{
+// 					TestMaskFilter(MASTER,send02);
+// 					CheckNum = 6;
+// 				}
+// 			break;
+// 			case 720:
+// 				if(Check04[2] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"02Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  02Â_");
+// 				}
+// 				if(Check04[6] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"06Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  06Â_");
+// 				}
+// 				if(Check04[10] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"10Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  10Â_");
+// 				}
+// 				if(Check04[14] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"14Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  14Â_");
+// 				}
+// 				if(Check04[3]  == 0x01)	send03[1] = 0x00;
+// 				if(Check04[7]  == 0x01)	send03[2] = 0x00;
+// 				if(Check04[11] == 0x01)	send03[3] = 0x00;
+// 				if(Check04[15] == 0x01)	send03[4] = 0x00;
+// 				if(Check04[3] == 0x01 && Check04[7] == 0x01 && Check04[11] == 0x01 && Check04[15] == 0x01)
+// 				{
+// 					timer = 839;
+// 					CheckNum = 7;
+// 				}
+// 				else
+// 				{
+// 					TestMaskFilter(MASTER,send03);
+// 					CheckNum = 7;	
+// 				}
+// 			break;
+// 			case 840:
+// 				if(Check04[3] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"03Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  03Â_");
+// 				}
+// 				if(Check04[7] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"07Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  07Â_");
+// 				}
+// 				if(Check04[11] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"11Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  11Â_");
+// 				}
+// 				if(Check04[15] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"15Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  15Â_");
+// 				}
+// 				if(Check04[4]  == 0x01)	send04[1] = 0x00;
+// 				if(Check04[8]  == 0x01)	send04[2] = 0x00;
+// 				if(Check04[12] == 0x01)	send04[3] = 0x00;
+// 				if(Check04[16] == 0x01)	send04[4] = 0x00;
+// 				if(Check04[4]  == 0x01 && Check04[8] == 0x01 && Check04[12] == 0x01 && Check04[16] == 0x01)
+// 				{
+// 					timer = 959;
+// 					CheckNum = 8;
+// 				}
+// 				else
+// 				{
+// 					TestMaskFilter(MASTER,send04);
+// 					CheckNum = 8;
+// 				}
+// 			
+// 			break;
+// 			case 960:
+// 				if(Check04[4] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"04Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  04Â_");
+// 				}
+// 				if(Check04[8] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"08Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  08Â_");
+// 				}
+// 				if(Check04[12] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"12Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  12Â_");
+// 				}
+// 				if(Check04[16] == 0x00)
+// 				{
+// 					if(strlen(Msg04) == 0)sprintf(Msg04,"16Â_");
+// 					else sprintf(Msg04+strlen(Msg04),"  16Â_");
+// 				}
+// 				CheckNum = 0;
+// 				timer = 0;
+// 			break;
+// 		}
+// 	}
+// 	else if(CheckNum == 9)
+// 	{
+// 		timer2 = 0;
+// 		CheckNum = 10;
+// 	}
+// 	else if(CheckNum == 10)
+// 	{
+// 		
+// 	}
+// 	else if(CheckNum == 11)
+// 	{
+// 		
+// 	}
+// 	else
+// 	{
+// 		timer2++;
+// 	}
+// 	if(count_S == 0)count_S = 1;

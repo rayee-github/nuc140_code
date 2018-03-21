@@ -1,0 +1,215 @@
+ARM Linker, 4.1 [Build 481] [Standard]
+
+==============================================================================
+
+Small function inlining results
+
+Inlined function __aeabi_idiv0 from aeabi_idiv0.o at offset 0x154 in aeabi_sdiv.o(.text).
+Inlined Instruction: BX       lr
+Inlined function __aeabi_idiv0 from aeabi_idiv0.o at offset 0x154 in aeabi_sdiv_div0.o(.text).
+Inlined Instruction: BX       lr
+Inlined function _platform_pre_stackheap_init from boardinit1.o at offset 0x0 in rtentry2.o(.ARM.Collect$$rtentry$$00000001).
+Inlined Instruction: BX       lr
+Inlined function _fp_init from fpinit.o at offset 0x2 in libinit.o(.ARM.Collect$$libinit$$00000000).
+Inlined Instruction: BX       lr
+Inlined function _platform_pre_lib_shutdown from boardshut.o at offset 0x0 in rtexit2.o(.ARM.Collect$$rtexit$$00000001).
+Inlined Instruction: BX       lr
+Inlined function __ARM_get_argv from no_argv.o at offset 0x2 in argv_veneer.o(.text).
+Inlined Instruction: BX       lr
+Inlined total of 6 calls.
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000000
+
+  Load Region LR_1 (Base: 0x00000000, Size: 0x000030e8, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x000028a4, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x000000c0   Data   RO           55    RESET               startup_nuc1xx.o
+    0x000000c0   0x00000008   Code   RO         1572  * !!!main             c_p.l(__main.o)(c_p.l)
+    0x000000c8   0x00000006   Code   RO         1621    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1636    .ARM.Collect$$libinit$$00000006  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1638    .ARM.Collect$$libinit$$00000008  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1640    .ARM.Collect$$libinit$$0000000A  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1643    .ARM.Collect$$libinit$$0000000D  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1645    .ARM.Collect$$libinit$$0000000F  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1647    .ARM.Collect$$libinit$$00000011  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1649    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1651    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1653    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1655    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1657    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1659    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1661    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1663    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1667    .ARM.Collect$$libinit$$00000028  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1669    .ARM.Collect$$libinit$$0000002A  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1671    .ARM.Collect$$libinit$$0000002C  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000000   Code   RO         1673    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)(c_p.l)
+    0x000000ce   0x00000002   Code   RO         1674    .ARM.Collect$$libinit$$0000002F  c_p.l(libinit2.o)(c_p.l)
+    0x000000d0   0x00000002   Code   RO         1703    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)(c_p.l)
+    0x000000d2   0x00000000   Code   RO         1730    .ARM.Collect$$libshutdown$$00000003  c_p.l(libshutdown2.o)(c_p.l)
+    0x000000d2   0x00000000   Code   RO         1733    .ARM.Collect$$libshutdown$$00000006  c_p.l(libshutdown2.o)(c_p.l)
+    0x000000d2   0x00000000   Code   RO         1736    .ARM.Collect$$libshutdown$$00000009  c_p.l(libshutdown2.o)(c_p.l)
+    0x000000d2   0x00000000   Code   RO         1738    .ARM.Collect$$libshutdown$$0000000B  c_p.l(libshutdown2.o)(c_p.l)
+    0x000000d2   0x00000000   Code   RO         1741    .ARM.Collect$$libshutdown$$0000000E  c_p.l(libshutdown2.o)(c_p.l)
+    0x000000d2   0x00000002   Code   RO         1742    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)(c_p.l)
+    0x000000d4   0x00000000   Code   RO         1574    .ARM.Collect$$rtentry$$00000000  c_p.l(rtentry.o)(c_p.l)
+    0x000000d4   0x00000000   Code   RO         1583    .ARM.Collect$$rtentry$$00000002  c_p.l(rtentry2.o)(c_p.l)
+    0x000000d4   0x00000006   Code   RO         1598    .ARM.Collect$$rtentry$$00000004  c_p.l(rtentry4.o)(c_p.l)
+    0x000000da   0x00000000   Code   RO         1585    .ARM.Collect$$rtentry$$00000009  c_p.l(rtentry2.o)(c_p.l)
+    0x000000da   0x00000004   Code   RO         1586    .ARM.Collect$$rtentry$$0000000A  c_p.l(rtentry2.o)(c_p.l)
+    0x000000de   0x00000000   Code   RO         1588    .ARM.Collect$$rtentry$$0000000C  c_p.l(rtentry2.o)(c_p.l)
+    0x000000de   0x00000008   Code   RO         1589    .ARM.Collect$$rtentry$$0000000D  c_p.l(rtentry2.o)(c_p.l)
+    0x000000e6   0x00000002   Code   RO         1626    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)(c_p.l)
+    0x000000e8   0x00000000   Code   RO         1680    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)(c_p.l)
+    0x000000e8   0x00000004   Code   RO         1681    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)(c_p.l)
+    0x000000ec   0x00000006   Code   RO         1682    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)(c_p.l)
+    0x000000f2   0x00000002   PAD
+    0x000000f4   0x00000064   Code   RO           56  * .text               startup_nuc1xx.o
+    0x00000158   0x0000001c   Code   RO         1558    .text               c_p.l(noretval__2printf.o)(c_p.l)
+    0x00000174   0x0000015a   Code   RO         1566    .text               c_p.l(aeabi_sdiv.o)(c_p.l)
+    0x000002ce   0x00000006   Code   RO         1570    .text               c_p.l(heapauxi.o)(c_p.l)
+    0x000002d4   0x00000028   Code   RO         1580    .text               c_p.l(_printf_char_file.o)(c_p.l)
+    0x000002fc   0x00000030   Code   RO         1602    .text               c_p.l(_printf_char_common.o)(c_p.l)
+    0x0000032c   0x0000003e   Code   RO         1604    .text               c_p.l(sys_stackheap_outer.o)(c_p.l)
+    0x0000036a   0x00000022   Code   RO         1607    .text               c_p.l(__printf_nopercent.o)(c_p.l)
+    0x0000038c   0x0000000c   Code   RO         1609    .text               c_p.l(exit.o)(c_p.l)
+    0x00000398   0x00000008   Code   RO         1622    .text               c_p.l(libspace.o)(c_p.l)
+    0x000003a0   0x0000000c   Code   RO         1677    .text               c_p.l(sys_exit.o)(c_p.l)
+    0x000003ac   0x00000002   Code   RO         1693    .text               c_p.l(use_no_semi.o)(c_p.l)
+    0x000003ae   0x00000002   PAD
+    0x000003b0   0x00000028   Code   RO          685    i.BOD_IRQHandler    drvsys.o
+    0x000003d8   0x000000d4   Code   RO          988    i.BaudRateCalculator  drvuart.o
+    0x000004ac   0x00000010   Code   RO           60    i.Delay             smpl_hid_io.o
+    0x000004bc   0x00000758   Code   RO          467    i.DrvGPIO_InitFunction  drvgpio.o
+    0x00000c14   0x00000008   Code   RO          703    i.DrvSYS_GetExtClockFreq  drvsys.o
+    0x00000c1c   0x00000078   Code   RO          705    i.DrvSYS_GetPLLClockFreq  drvsys.o
+    0x00000c94   0x00000038   Code   RO          717    i.DrvSYS_SelectHCLKSource  drvsys.o
+    0x00000ccc   0x00000160   Code   RO          718    i.DrvSYS_SelectIPClockSource  drvsys.o
+    0x00000e2c   0x00000034   Code   RO          727    i.DrvSYS_SetPLLMode  drvsys.o
+    0x00000e60   0x00000264   Code   RO          998    i.DrvUART_Open      drvuart.o
+    0x000010c4   0x00000098   Code   RO         1133    i.DrvUSB_BusResetCallback  drvusb.o
+    0x0000115c   0x00000044   Code   RO         1135    i.DrvUSB_ClrCtrlReady  drvusb.o
+    0x000011a0   0x00000044   Code   RO         1136    i.DrvUSB_ClrCtrlReadyAndTrigStall  drvusb.o
+    0x000011e4   0x00000050   Code   RO         1137    i.DrvUSB_CtrlDataInAck  drvusb.o
+    0x00001234   0x00000020   Code   RO         1138    i.DrvUSB_CtrlDataInDefault  drvusb.o
+    0x00001254   0x0000003c   Code   RO         1139    i.DrvUSB_CtrlDataInSetAddress  drvusb.o
+    0x00001290   0x00000050   Code   RO         1140    i.DrvUSB_CtrlDataOutAck  drvusb.o
+    0x000012e0   0x00000020   Code   RO         1141    i.DrvUSB_CtrlDataOutDefault  drvusb.o
+    0x00001300   0x0000009c   Code   RO         1142    i.DrvUSB_CtrlSetupAck  drvusb.o
+    0x0000139c   0x000000bc   Code   RO         1143    i.DrvUSB_CtrlSetupClearSetFeature  drvusb.o
+    0x00001458   0x00000014   Code   RO         1144    i.DrvUSB_CtrlSetupGetConfiguration  drvusb.o
+    0x0000146c   0x00000012   Code   RO         1145    i.DrvUSB_CtrlSetupGetInterface  drvusb.o
+    0x0000147e   0x00000002   PAD
+    0x00001480   0x00000080   Code   RO         1146    i.DrvUSB_CtrlSetupGetStatus  drvusb.o
+    0x00001500   0x00000040   Code   RO         1147    i.DrvUSB_CtrlSetupSetAddress  drvusb.o
+    0x00001540   0x00000074   Code   RO         1148    i.DrvUSB_CtrlSetupSetConfiguration  drvusb.o
+    0x000015b4   0x00000028   Code   RO         1149    i.DrvUSB_CtrlSetupSetInterface  drvusb.o
+    0x000015dc   0x000000d8   Code   RO         1150    i.DrvUSB_DataIn     drvusb.o
+    0x000016b4   0x0000005c   Code   RO         1151    i.DrvUSB_DataOutTrigger  drvusb.o
+    0x00001710   0x0000000c   Code   RO         1152    i.DrvUSB_DisableRemoteWakeup  drvusb.o
+    0x0000171c   0x00000010   Code   RO         1154    i.DrvUSB_DisableUsb  drvusb.o
+    0x0000172c   0x0000000c   Code   RO         1159    i.DrvUSB_EnableRemoteWakeup  drvusb.o
+    0x00001738   0x00000010   Code   RO         1161    i.DrvUSB_EnableUsb  drvusb.o
+    0x00001748   0x00000030   Code   RO         1162    i.DrvUSB_GetEpId    drvusb.o
+    0x00001778   0x00000034   Code   RO         1163    i.DrvUSB_GetEpIdentity  drvusb.o
+    0x000017ac   0x00000030   Code   RO         1166    i.DrvUSB_GetOutData  drvusb.o
+    0x000017dc   0x0000000c   Code   RO         1167    i.DrvUSB_GetSetupBuffer  drvusb.o
+    0x000017e8   0x0000000c   Code   RO         1168    i.DrvUSB_GetUsbState  drvusb.o
+    0x000017f4   0x00000010   Code   RO         1171    i.DrvUSB_InstallClassDevice  drvusb.o
+    0x00001804   0x00000054   Code   RO         1172    i.DrvUSB_InstallCtrlHandler  drvusb.o
+    0x00001858   0x00000084   Code   RO         1177    i.DrvUSB_PreDispatchBusEvent  drvusb.o
+    0x000018dc   0x00000168   Code   RO         1178    i.DrvUSB_PreDispatchEPEvent  drvusb.o
+    0x00001a44   0x00000088   Code   RO         1179    i.DrvUSB_PreDispatchEvent  drvusb.o
+    0x00001acc   0x00000042   Code   RO         1180    i.DrvUSB_PreDispatchFDTEvent  drvusb.o
+    0x00001b0e   0x00000002   Code   RO         1181    i.DrvUSB_PreDispatchWakeupEvent  drvusb.o
+    0x00001b10   0x00000068   Code   RO         1182    i.DrvUSB_Reset      drvusb.o
+    0x00001b78   0x0000000c   Code   RO         1184    i.DrvUSB_SetUsbState  drvusb.o
+    0x00001b84   0x00000024   Code   RO          475    i.EINT0_IRQHandler  drvgpio.o
+    0x00001ba8   0x00000024   Code   RO          476    i.EINT1_IRQHandler  drvgpio.o
+    0x00001bcc   0x0000003c   Code   RO          477    i.GPAB_IRQHandler   drvgpio.o
+    0x00001c08   0x00000040   Code   RO          478    i.GPCDE_IRQHandler  drvgpio.o
+    0x00001c48   0x00000048   Code   RO         1005    i.GetUartClk        drvuart.o
+    0x00001c90   0x00000094   Code   RO          178    i.HID_CtrlGetDescriptorIn  hidsysio.o
+    0x00001d24   0x0000001c   Code   RO          179    i.HID_CtrlGetDescriptorOut  hidsysio.o
+    0x00001d40   0x0000011c   Code   RO          180    i.HID_CtrlSetupGetDescriptor  hidsysio.o
+    0x00001e5c   0x0000003c   Code   RO          181    i.HID_CtrlSetupGetReport  hidsysio.o
+    0x00001e98   0x00000018   Code   RO          182    i.HID_CtrlSetupSetIdle  hidsysio.o
+    0x00001eb0   0x00000018   Code   RO          183    i.HID_CtrlSetupSetProtocol  hidsysio.o
+    0x00001ec8   0x0000002e   Code   RO          184    i.HID_CtrlSetupSetReport  hidsysio.o
+    0x00001ef6   0x00000002   PAD
+    0x00001ef8   0x0000002c   Code   RO          109    i.HID_Init          hid_api.o
+    0x00001f24   0x00000028   Code   RO          186    i.HID_IntInCallback  hidsysio.o
+    0x00001f4c   0x0000002c   Code   RO          187    i.HID_IntOutCallback  hidsysio.o
+    0x00001f78   0x00000018   Code   RO          188    i.HID_IsConfigureValue  hidsysio.o
+    0x00001f90   0x0000006c   Code   RO          189    i.HID_Open          hidsysio.o
+    0x00001ffc   0x00000070   Code   RO          190    i.HID_PrepareDescriptors  hidsysio.o
+    0x0000206c   0x00000012   Code   RO          191    i.HID_Reset         hidsysio.o
+    0x0000207e   0x00000002   PAD
+    0x00002080   0x00000028   Code   RO          192    i.HID_SetReportBuf  hidsysio.o
+    0x000020a8   0x0000001c   Code   RO          193    i.HID_SetReportDescriptor  hidsysio.o
+    0x000020c4   0x00000018   Code   RO          194    i.HID_Start         hidsysio.o
+    0x000020dc   0x00000012   Code   RO          195    i.HID_UsbStartCallBack  hidsysio.o
+    0x000020ee   0x00000002   PAD
+    0x000020f0   0x00000218   Code   RO          377    i.Initial_pannel    lcd_driver.o
+    0x00002308   0x00000028   Code   RO          733    i.PWRWU_IRQHandler  drvsys.o
+    0x00002330   0x0000000c   Code   RO         1491    i.SendChar          retarget.o
+    0x0000233c   0x00000030   Code   RO         1492    i.SendChar_ToUART   retarget.o
+    0x0000236c   0x000000f4   Code   RO          378    i.SetPACA           lcd_driver.o
+    0x00002460   0x00000078   Code   RO          379    i.Show_Word         lcd_driver.o
+    0x000024d8   0x000000a0   Code   RO           17    i.SystemCoreClockUpdate  system_nuc1xx.o
+    0x00002578   0x00000002   Code   RO           18    i.SystemInit        system_nuc1xx.o
+    0x0000257a   0x00000002   PAD
+    0x0000257c   0x0000003c   Code   RO         1008    i.UART02_IRQHandler  drvuart.o
+    0x000025b8   0x00000020   Code   RO         1009    i.UART1_IRQHandler  drvuart.o
+    0x000025d8   0x00000020   Code   RO         1188    i.USBD_IRQHandler   drvusb.o
+    0x000025f8   0x00000018   Code   RO         1189    i.WordsCpy          drvusb.o
+    0x00002610   0x00000058   Code   RO          381    i.WriteData         lcd_driver.o
+    0x00002668   0x00000020   Code   RO          197    i._HID_CLR_CTRL_READY_AND_TRIG_STALL  hidsysio.o
+    0x00002688   0x0000001a   Code   RO          674    i.__ARM_common_switch8  drvgpio.o
+    0x000026a2   0x00000028   Code   RO          382    i.clr_all_pannal    lcd_driver.o
+    0x000026ca   0x00000008   Code   RO         1494    i.ferror            retarget.o
+    0x000026d2   0x00000010   Code   RO         1496    i.fputc             retarget.o
+    0x000026e2   0x00000002   PAD
+    0x000026e4   0x000000e8   Code   RO           61    i.main              smpl_hid_io.o
+    0x000027cc   0x00000028   Code   RO          383    i.print_lcd         lcd_driver.o
+    0x000027f4   0x0000009f   Data   RO          116    .constdata          hid_api.o
+    0x00002893   0x00000001   PAD
+    0x00002894   0x00000010   Data   RO          734    .constdata          drvsys.o
+    0x000028a4   0x00000000   Data   RO         1743    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Base: 0x20000000, Size: 0x00000844, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x0000001c   Data   RW           19    .data               system_nuc1xx.o
+    0x2000001c   0x000001f1   Data   RW          199    .data               hidsysio.o
+    0x2000020d   0x00000003   PAD
+    0x20000210   0x00000010   Data   RW          384    .data               lcd_driver.o
+    0x20000220   0x000005f0   Data   RW          437    .data               ascii_table.o
+    0x20000810   0x00000010   Data   RW          482    .data               drvgpio.o
+    0x20000820   0x00000008   Data   RW          735    .data               drvsys.o
+    0x20000828   0x0000000c   Data   RW         1010    .data               drvuart.o
+    0x20000834   0x00000008   Data   RW         1191    .data               drvusb.o
+    0x2000083c   0x00000008   Data   RW         1498    .data               retarget.o
+
+
+    Execution Region ER_ZI (Base: 0x20000844, Size: 0x0000058c, Max: 0xffffffff, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000844   0x00000040   Zero   RW          115    .bss                hid_api.o
+    0x20000884   0x00000028   Zero   RW          198    .bss                hidsysio.o
+    0x200008ac   0x000000c0   Zero   RW         1190    .bss                drvusb.o
+    0x2000096c   0x00000060   Zero   RW         1623    .bss                c_p.l(libspace.o)(c_p.l)
+    0x200009cc   0x00000004   PAD
+    0x200009d0   0x00000000   Zero   RW           54    HEAP                startup_nuc1xx.o
+    0x200009d0   0x00000400   Zero   RW           53    STACK               startup_nuc1xx.o
+

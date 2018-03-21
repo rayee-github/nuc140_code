@@ -1,0 +1,146 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: £gVision V5.23.0.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: asd SA, fds, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.23
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.23
+Dialog DLL:      DARMCM1.DLL V1.17.0.0
+Target DLL:      Nu_Link.dll V1.30
+Dialog DLL:      TARMCM1.DLL V1.12.0.0
+ 
+<h2>Project:</h2>
+C:\Keil\NuvotonPlatform_Keil\Sample\NUC1xx-LB_002\ºÚ2\Smpl_CAN.uvproj
+Project File Date:  05/22/2017
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Smpl_CAN'
+creating preprocessor file for core_cm0.c...
+creating preprocessor file for system_NUC1xx.c...
+compiling core_cm0.c...
+assembling startup_NUC1xx.s...
+creating preprocessor file for Smpl_CAN.c...
+compiling system_NUC1xx.c...
+creating preprocessor file for LCD_Driver.c...
+creating preprocessor file for Ascii_Table.C...
+compiling LCD_Driver.c...
+compiling Ascii_Table.C...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(166): warning:  #177-D: variable "i"  was declared but never referenced
+  	uint8_t i;
+Smpl_CAN.c(175): warning:  #177-D: variable "i"  was declared but never referenced
+  	uint8_t i;
+Smpl_CAN.c(247): warning:  #177-D: variable "L"  was declared but never referenced
+  	uint8_t L,H;
+Smpl_CAN.c(247): warning:  #177-D: variable "H"  was declared but never referenced
+  	uint8_t L,H;
+Smpl_CAN.c(620): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+  DrvUART_EnableInt(UART_PORT1, DRVUART_RDAINT, UART_INT_HANDLE);  
+Smpl_CAN.c(670): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  					DrvUART_Write(UART_PORT0,textout,strlen(textout));
+Smpl_CAN.c(677): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  				DrvUART_Write(UART_PORT0,textout,strlen(textout));
+Smpl_CAN.c(698): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  					DrvUART_Write(UART_PORT0,textout,strlen(textout));
+Smpl_CAN.c(705): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "uint8_t *"
+  				DrvUART_Write(UART_PORT0,textout,strlen(textout));
+Smpl_CAN.c(575): warning:  #177-D: variable "adc_value"  was declared but never referenced
+  	char adc_value[15]="ADC Value:";
+Smpl_CAN.c(576): warning:  #177-D: variable "temperature_ADC_value"  was declared but never referenced
+  	int32_t temperature_ADC_value;           
+Smpl_CAN.c(577): warning:  #177-D: variable "ADC_result"  was declared but never referenced
+  	uint16_t ADC_result;
+Smpl_CAN.c(578): warning:  #177-D: variable "test1"  was declared but never referenced
+  	uint8_t	test1,test2;
+Smpl_CAN.c(578): warning:  #177-D: variable "test2"  was declared but never referenced
+  	uint8_t	test1,test2;
+Smpl_CAN.c(580): warning:  #177-D: variable "ud"  was declared but never referenced
+  	int ud,rl;
+Smpl_CAN.c(580): warning:  #177-D: variable "rl"  was declared but never referenced
+  	int ud,rl;
+Smpl_CAN.c(582): warning:  #177-D: variable "adc1"  was declared but never referenced
+  	int32_t adc1=3000,adc2=3000,adc3=3000;
+Smpl_CAN.c(582): warning:  #177-D: variable "adc2"  was declared but never referenced
+  	int32_t adc1=3000,adc2=3000,adc3=3000;
+Smpl_CAN.c(582): warning:  #177-D: variable "adc3"  was declared but never referenced
+  	int32_t adc1=3000,adc2=3000,adc3=3000;
+Smpl_CAN.c(583): warning:  #550-D: variable "az"  was set but never used
+  	float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c(583): warning:  #550-D: variable "gx"  was set but never used
+  	float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c(583): warning:  #550-D: variable "gy"  was set but never used
+  	float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c(583): warning:  #550-D: variable "gz"  was set but never used
+  	float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c(583): warning:  #550-D: variable "hx"  was set but never used
+  	float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c(583): warning:  #550-D: variable "hy"  was set but never used
+  	float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c(583): warning:  #550-D: variable "hz"  was set but never used
+  	float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c(584): warning:  #177-D: variable "temp"  was declared but never referenced
+  	float temp;
+Smpl_CAN.c(585): warning:  #177-D: variable "Xh"  was declared but never referenced
+  	float Xh,Yh	;
+Smpl_CAN.c(585): warning:  #177-D: variable "Yh"  was declared but never referenced
+  	float Xh,Yh	;
+Smpl_CAN.c(586): warning:  #177-D: variable "mx"  was declared but never referenced
+  	float mx=0.0f,mi=0.0f;
+Smpl_CAN.c(586): warning:  #177-D: variable "mi"  was declared but never referenced
+  	float mx=0.0f,mi=0.0f;
+Smpl_CAN.c(587): warning:  #177-D: variable "maxx"  was declared but never referenced
+  	float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c(587): warning:  #177-D: variable "minx"  was declared but never referenced
+  	float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c(587): warning:  #177-D: variable "maxy"  was declared but never referenced
+  	float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c(587): warning:  #177-D: variable "miny"  was declared but never referenced
+  	float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c(587): warning:  #177-D: variable "maxz"  was declared but never referenced
+  	float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c(587): warning:  #177-D: variable "minz"  was declared but never referenced
+  	float maxx=0.0f,minx=100.0f ,maxy =0.0f,miny=100.0f ,maxz=0.0f,minz=110.0f;
+Smpl_CAN.c(588): warning:  #177-D: variable "bInChar2"  was declared but never referenced
+  	uint8_t bInChar2[100] = {0xFF};	
+Smpl_CAN.c(216): warning:  #177-D: function "get_ADC_value"  was declared but never referenced
+  static int32_t get_ADC_value(uint8_t ADC_channel_number)
+Smpl_CAN.c: 39 warnings, 0 errors
+creating preprocessor file for retarget.c...
+creating preprocessor file for DrvGPIO.c...
+compiling retarget.c...
+creating preprocessor file for DrvSYS.c...
+creating preprocessor file for DrvUART.c...
+compiling DrvGPIO.c...
+compiling DrvSYS.c...
+creating preprocessor file for EEPROM_24LC64.c...
+compiling DrvUART.c...
+creating preprocessor file for DrvI2C.c...
+creating preprocessor file for DrvCAN.c...
+compiling EEPROM_24LC64.c...
+creating preprocessor file for DrvSPI.c...
+compiling DrvI2C.c...
+creating preprocessor file for DrvADC.c...
+compiling DrvCAN.c...
+compiling DrvSPI.c...
+compiling DrvADC.c...
+linking...
+Program Size: Code=16716 RO-data=452 RW-data=200 ZI-data=1392  
+After Build - User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+After Build - User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 39 Warning(s).
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>

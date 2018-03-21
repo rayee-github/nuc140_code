@@ -1,0 +1,10 @@
+.\obj\smpl_timer_wdt_rtc.o: Smpl_Timer_WDT_RTC.c
+.\obj\smpl_timer_wdt_rtc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\smpl_timer_wdt_rtc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\obj\smpl_timer_wdt_rtc.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h
+.\obj\smpl_timer_wdt_rtc.o: ..\..\..\..\CMSIS\CM0\CoreSupport\core_cm0.h
+.\obj\smpl_timer_wdt_rtc.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\smpl_timer_wdt_rtc.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h
+.\obj\smpl_timer_wdt_rtc.o: ..\..\..\Include\System\SysInfra.h
+.\obj\smpl_timer_wdt_rtc.o: ..\..\..\Include\System\ModuleID.h
+.\obj\smpl_timer_wdt_rtc.o: ..\..\..\Include\NUC1xx-LB_002\LCD_Driver.h

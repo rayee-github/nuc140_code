@@ -1,0 +1,28 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Keil\NuvotonPlatform_Keil\Sample\NUC1xx-LB_002\ÂÅ¤ú±µ¦¬«ü¥O¼ÒÀÀ·Æ¹«2.0\Smpl_CAN.uvproj
+Project File Date:  03/01/2017
+
+<h2>Output:</h2>
+Build target 'Smpl_CAN'
+creating preprocessor file for HID_API.c...
+compiling HID_API.c...
+HID_API.c(496): warning:  #177-D: variable "x" was declared but never referenced
+HID_API.c:   {  char x='a';
+HID_API.c:           ^
+HID_API.c(787): warning:  #177-D: variable "i" was declared but never referenced
+HID_API.c:      int i=0;
+HID_API.c:          ^
+HID_API.c(831): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+HID_API.c:      DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);  
+HID_API.c:                                                    ^
+HID_API.c: HID_API.c: 3 warnings, 0 errors
+linking...
+Program Size: Code=13116 RO-data=1288 RW-data=2184 ZI-data=1512  
+User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 3 Warning(s).
+Load "C:\\Keil\\NuvotonPlatform_Keil\\Sample\\NUC1xx-LB_002\\ÂÅ¤ú±µ¦¬«ü¥O¼ÒÀÀ·Æ¹«2.0\\obj\\Smpl_CAN.AXF" 

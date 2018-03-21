@@ -1,0 +1,242 @@
+#include <stdio.h>
+#include "NUC1xx.h"
+#include "Driver\DrvGPIO.h"
+#include "Driver\DrvUART.h"
+#include "Driver\DrvCAN.h"
+#include "Driver\DrvSYS.h"
+#include "Driver\DrvTIMER.h"
+#include "NUC1xx-LB_002\LCD_Driver.h"
+
+void TestMaskFilter(uint8_t *data);
+void CallAck(void);
+extern char GetChar(void);
+void CAN_ShowMsg(STR_CANMSG_T* Msg);
+STR_CANMSG_T rrMsg;
+// uint8_t isAck = 0;
+
+// void InitTIMER1(void)
+// {
+// 	/* Step 1. Enable and Select Timer clock source */          
+// 	SYSCLK->CLKSEL1.TMR1_S = 0;	//Select 12Mhz for Timer1 clock source 
+// 	SYSCLK->APBCLK.TMR1_EN =1;	//Enable Timer1 clock source
+// 	/* Step 2. Select Operation mode */	
+// 	TIMER1->TCSR.MODE=1;		//Select periodic mode for operation mode
+// 	/* Step 3. Select Time out period = (Period of timer clock input) * (8-bit Prescale + 1) * (24-bit TCMP)*/
+// 	TIMER1->TCSR.PRESCALE=255;	// Set Prescale [0~255]
+// 	TIMER1->TCMPR = 93750;		// Set TCMPR [0~16777215]
+// 	// (1/12000000)*(255+1)*(2765)= 125.01usec or 7999.42Hz
+// 	// (1/12000000)*(255+1)*46875 = 1 sec or 1Hz
+// 	// (1/12000000)*(255+1)*47 = 0.001 sec
+// 	/* Step 4. Enable interrupt */
+// 	TIMER1->TCSR.IE = 1;
+// 	TIMER1->TISR.TIF = 1;		//Write 1 to clear for safty		
+// 	NVIC_EnableIRQ(TMR1_IRQn);	//Enable Timer1 Interrupt
+// 	/* Step 5. Enable Timer module */
+// 	TIMER1->TCSR.CRST = 1;		//Reset up counter
+// 	TIMER1->TCSR.CEN = 1;		//Enable Timer1
+// }
+
+// void TMR1_IRQHandler(void) // Timer1 interrupt subroutine 
+// {
+//     CallAck();
+// 	TIMER1->TISR.TIF =1;
+// }
+
+void CAN_CallbackFn(uint32_t u32IIDR)
+{ 
+// printf("%d",u32IIDR);
+    if(u32IIDR==2)
+    {
+        DrvCAN_ReadMsgObj(1,TRUE,&rrMsg);
+        CAN_ShowMsg(&rrMsg);
+    }
+    if(u32IIDR==5+1)
+    {
+        DrvCAN_ReadMsgObj(5,TRUE,&rrMsg);
+        CAN_ShowMsg(&rrMsg);
+    }
+    if(u32IIDR==0x31+1)
+    {
+        DrvCAN_ReadMsgObj(31,TRUE,&rrMsg);
+        CAN_ShowMsg(&rrMsg);
+    }
+}
+
+int32_t TranUART_Read(E_UART_PORT	u32Port,uint8_t	*pu8RxBuf, uint32_t	u32ReadBytes)
+{
+    uint32_t  u32Count, u32delayno;
+
+	UART_T * tUART;
+
+	tUART = (UART_T *)((uint32_t)UART0 + u32Port);  
+
+    for (u32Count=0; u32Count < u32ReadBytes; u32Count++)
+    {
+		 u32delayno = 0;
+	     while (tUART->FSR.RX_EMPTY ==1)					    /* Check RX empty => failed */	   
+	     {
+	     	u32delayno++;        
+	        if ( u32delayno >= 0x00040000 )
+	        	return E_SUCCESS;
+         }
+         pu8RxBuf[u32Count] = tUART->DATA;					    /* Get Data from UART RX  */
+    }
+    return E_SUCCESS;
+}
+
+uint8_t  comRbuf[13] = {0x00};
+void UART_INT_HANDLE(uint32_t u32IntStatus)
+{
+    if(u32IntStatus & DRVUART_RDAINT)
+	{
+		while(UART0->ISR.RDA_IF==1) 
+		{
+            TranUART_Read(UART_PORT0,comRbuf,13);
+            if(comRbuf[0] == 0x3E && comRbuf[12] == 0x0D)
+            {
+                TestMaskFilter(comRbuf);
+//                 if(isAck == 1)
+//                 {
+//                     isAck = 0;
+//                     NVIC_EnableIRQ(TMR1_IRQn);
+//                 }
+            }
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------*/
+/*  Test Function 													   	 	  */
+/*----------------------------------------------------------------------------*/
+void CAN_ShowMsg(STR_CANMSG_T* Msg)
+{
+    printf("%d,%d,%d,%d,%d,%d,%d,%d,%d\n",Msg->Id,Msg->Data[0],Msg->Data[1],Msg->Data[2],Msg->Data[3],Msg->Data[4],Msg->Data[5],Msg->Data[6],Msg->Data[7]);
+    //((Msg->Id>>8)&0x000000ff),(Msg->Id&0x000000ff)
+//     if(Msg->Data[0] == 0x30 && Msg->Data[1] == 0x19)
+//     {
+//         NVIC_DisableIRQ(TMR1_IRQn);
+//         isAck = 1;
+//     }
+}
+
+// TX send 11-bit message
+void TestMaskFilter(uint8_t *data)
+{
+    STR_CANMSG_T tMsg;
+    /* Send a 11-bits message */
+    tMsg.FrameType= DATA_FRAME;
+    tMsg.IdType   = CAN_STD_ID;
+    tMsg.Id 	  = data[1] << 8 | data[2];
+    tMsg.DLC	  = data[3];
+    tMsg.Data[0]  = data[4];
+    tMsg.Data[1]  = data[5];
+    tMsg.Data[2]  = data[6];
+    tMsg.Data[3]  = data[7];
+    tMsg.Data[4]  = data[8];
+    tMsg.Data[5]  = data[9];
+    tMsg.Data[6]  = data[10];
+    tMsg.Data[7]  = data[11];
+    if(DrvCAN_SetTxMsgObj(MSG(0),&tMsg) < 0)	 /* Call DrvCAN_SetTxMsgObj() only Confiugre Msg RAM */
+    {
+        printf("Set Tx Msg Object failed\n");
+        return;
+    }
+    DrvCAN_SetTxRqst(MSG(0));
+}
+
+
+// void CallAck(void)
+// {
+//     STR_CANMSG_T tMsg;
+//     int i;
+//     /* Send a 11-bits message */
+//     tMsg.FrameType= DATA_FRAME;
+//     tMsg.IdType   = CAN_STD_ID;
+//     tMsg.Id 	  = 0x751;
+//     tMsg.DLC	  = 8;
+//     tMsg.Data[0]  = 02;
+//     tMsg.Data[1]  = 0x3E;
+//     tMsg.Data[2]  = 0x80;
+//     tMsg.Data[3]  = 0x00;
+//     tMsg.Data[4]  = 0x00;
+//     tMsg.Data[5]  = 0x00;
+//     tMsg.Data[6]  = 0x00;
+//     tMsg.Data[7]  = 0x00;
+//     
+//     for(i=0;i<8;i++)
+//         printf("%d",tMsg.Data[i]);
+//     printf("\n");
+//     
+//     if(DrvCAN_SetTxMsgObj(MSG(0),&tMsg) < 0)	 /* Call DrvCAN_SetTxMsgObj() only Confiugre Msg RAM */
+//     {
+//         printf("Set Tx Msg Object failed\n");
+//         return;
+//     }
+//     DrvCAN_SetTxRqst(MSG(0));
+// }
+
+// RX set Mask Filter
+void SetMaskFilter()
+{
+    STR_CANMASK_T MaskMsg;
+	DrvCAN_EnableInt(CAN_CON_IE);
+ 	DrvCAN_InstallCallback(CALLBACK_MSG, (CAN_CALLBACK)CAN_CallbackFn);
+	/* Set b'0' means don't care*/
+	/* Set Messge Object No.0 mask ID */
+	MaskMsg.u8Xtd    = 1;
+	MaskMsg.u8Dir    = 1;
+	MaskMsg.u8IdType = 0;     /* 1:EXT or 0:STD */
+	MaskMsg.u32Id 	 = 0x500;
+	DrvCAN_SetMsgObjMask(MSG(1),&MaskMsg);
+	DrvCAN_SetRxMsgObj(MSG(1), CAN_STD_ID, 0x500 , TRUE);
+}
+
+/*----------------------------------------------------------------------------*/
+/*  MAIN function													   	 	  */
+/*----------------------------------------------------------------------------*/
+int main (void)
+{
+	int32_t CAN_speed = 125; // Kbps 
+    int32_t i32Err =0; 
+ 	STR_UART_T param;		
+    UNLOCKREG();
+    DrvSYS_Open(48000000);
+    DrvSYS_SetOscCtrl(E_SYS_XTL12M,1);
+    DrvSYS_SetOscCtrl(E_SYS_OSC22M,1);
+    DrvSYS_Delay(20000);				/* Delay for Xtal stable */
+    while(!SYSCLK->CLKSTATUS.XTL12M_STB);
+    while(!SYSCLK->CLKSTATUS.OSC22M_STB);
+    DrvSYS_SelectHCLKSource(0);
+	/* Init GPIO and configure UART0 */
+	DrvGPIO_InitFunction(E_FUNC_UART0);
+  	param.u32BaudRate        = 115200;
+    param.u8cDataBits        = DRVUART_DATABITS_8;
+    param.u8cStopBits        = DRVUART_STOPBITS_1;
+    param.u8cParity          = DRVUART_PARITY_NONE;
+    param.u8cRxTriggerLevel  = DRVUART_FIFO_1BYTES;
+    param.u8TimeOut        	 = 0;
+    DrvUART_Open(UART_PORT0, &param);
+    DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);
+    DrvGPIO_Open(E_GPE, 4, E_IO_INPUT);
+    //printf("test\n");
+    //if(GPE_4)CAN_speed = 500;
+   // else 
+    CAN_speed = 125;
+ 	DrvGPIO_Open(E_GPB,12,E_IO_OUTPUT);		// CAN Transceiver setting
+    DrvGPIO_ClrBit(E_GPB,12);
+	/* Select CAN Multi-Function */
+	DrvGPIO_InitFunction(E_FUNC_CAN0);
+    DrvCAN_Init();
+    i32Err = DrvCAN_Open(CAN_speed);				// set CAN speed
+    if(i32Err<0) printf("Set CAN bit rate is fail\n");
+    SetMaskFilter();
+    //InitTIMER1();
+	while(1){/*CallAck();*/}
+}
+
+
+
+
+
+
+

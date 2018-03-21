@@ -1,0 +1,11 @@
+.\obj\hidsysio.o: HIDSysIO.c
+.\obj\hidsysio.o: C:\Keil\ARM\RV31\INC\string.h
+.\obj\hidsysio.o: ..\..\..\Include\Driver\DrvUSB.h
+.\obj\hidsysio.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h
+.\obj\hidsysio.o: ..\..\..\..\CMSIS\CM0\CoreSupport\core_cm0.h
+.\obj\hidsysio.o: C:\Keil\ARM\RV31\INC\stdint.h
+.\obj\hidsysio.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h
+.\obj\hidsysio.o: ..\..\..\Include\System\SysInfra.h
+.\obj\hidsysio.o: ..\..\..\Include\System\ModuleID.h
+.\obj\hidsysio.o: HIDSysIO.h
+.\obj\hidsysio.o: HID_API.h

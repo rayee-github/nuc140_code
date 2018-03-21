@@ -1,0 +1,16 @@
+--cpu Cortex-M0
+".\objects\startup_nuc1xx.o"
+".\objects\core_cm0.o"
+".\objects\system_nuc1xx.o"
+".\objects\control.o"
+".\objects\timer.o"
+".\objects\drvadc.o"
+".\objects\drvgpio.o"
+".\objects\drvsys.o"
+".\objects\drvuart.o"
+".\objects\lcd_driver.o"
+".\objects\ascii_table.o"
+--ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict
+--map --first='startup_NUC1xx.o(RESET)' --datacompressor=off --info=inline --entry Reset_Handler --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\control.map" -o .\Objects\control.axf

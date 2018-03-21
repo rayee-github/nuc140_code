@@ -1,0 +1,50 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Keil\NuvotonPlatform_Keil\Sample\NUC1xx-LB_002\Smpl_HID_FILE_IO§ï\Smpl_HID_FILE_IO.uvproj
+Project File Date:  02/28/2017
+
+<h2>Output:</h2>
+Build target 'Smpl_HID_FILE_IO'
+creating preprocessor file for Smpl_HID_FILE_IO.c...
+Smpl_HID_FILE_IO.c(5): error:  #5: cannot open source input file "HIDSys.h": No such file or directory
+Smpl_HID_FILE_IO.c:   #include "HIDSys.h"
+Smpl_HID_FILE_IO.c:                      ^
+Smpl_HID_FILE_IO.c: Smpl_HID_FILE_IO.c: 0 warnings, 1 error
+compiling Smpl_HID_FILE_IO.c...
+Smpl_HID_FILE_IO.c(5): error:  #5: cannot open source input file "HIDSys.h": No such file or directory
+Smpl_HID_FILE_IO.c:   #include "HIDSys.h"
+Smpl_HID_FILE_IO.c:                      ^
+Smpl_HID_FILE_IO.c: Smpl_HID_FILE_IO.c: 0 warnings, 1 error
+Target not created
+Build target 'Smpl_HID_FILE_IO'
+creating preprocessor file for Smpl_HID_FILE_IO.c...
+compiling Smpl_HID_FILE_IO.c...
+Smpl_HID_FILE_IO.c(293): error:  #20: identifier "HID_MAX_PACKET_SIZE_CTRL" is undefined
+Smpl_HID_FILE_IO.c:     HID_MAX_PACKET_SIZE_CTRL,       // bMaxPacketSize0
+Smpl_HID_FILE_IO.c:     ^
+Smpl_HID_FILE_IO.c(345): error:  #20: identifier "INT_IN_EP_NUM" is undefined
+Smpl_HID_FILE_IO.c:     (INT_IN_EP_NUM | EP_INPUT),     // bEndpointAddress
+Smpl_HID_FILE_IO.c:      ^
+Smpl_HID_FILE_IO.c(348): error:  #20: identifier "HID_MAX_PACKET_SIZE_INT_IN" is undefined
+Smpl_HID_FILE_IO.c:     HID_MAX_PACKET_SIZE_INT_IN & 0x00FF,
+Smpl_HID_FILE_IO.c:     ^
+Smpl_HID_FILE_IO.c(395): warning:  #223-D: function "HID_Open" declared implicitly
+Smpl_HID_FILE_IO.c:     HID_Open();
+Smpl_HID_FILE_IO.c:     ^
+Smpl_HID_FILE_IO.c(400): warning:  #223-D: function "HID_SetReportDescriptor" declared implicitly
+Smpl_HID_FILE_IO.c:     HID_SetReportDescriptor(g_HID_au8MouseReportDescriptor, g_HID_u32MouseReportDescriptorSize);
+Smpl_HID_FILE_IO.c:     ^
+Smpl_HID_FILE_IO.c(403): warning:  #223-D: function "HID_SetReportBuf" declared implicitly
+Smpl_HID_FILE_IO.c:     HID_SetReportBuf(g_au8MouseReport, g_u32MouseReportSize);
+Smpl_HID_FILE_IO.c:     ^
+Smpl_HID_FILE_IO.c(430): error:  #20: identifier "g_HID_sDevice" is undefined
+Smpl_HID_FILE_IO.c:       if(g_HID_sDevice.isReportReady)
+Smpl_HID_FILE_IO.c:          ^
+Smpl_HID_FILE_IO.c(586): error:  #20: identifier "g_HID_sDevice" is undefined
+Smpl_HID_FILE_IO.c:     DrvUSB_DataIn(INT_IN_EP_NUM, g_HID_sDevice.pu8Report, g_HID_sDevice.u32ReportSize);                               
+Smpl_HID_FILE_IO.c:                                  ^
+Smpl_HID_FILE_IO.c: Smpl_HID_FILE_IO.c: 3 warnings, 5 errors
+Target not created

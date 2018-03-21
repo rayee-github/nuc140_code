@@ -1,0 +1,78 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: £gVision V5.23.0.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: asd SA, fds, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.23
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.23
+Dialog DLL:      DARMCM1.DLL V1.17.0.0
+Target DLL:      Nu_Link.dll V1.30
+Dialog DLL:      TARMCM1.DLL V1.12.0.0
+ 
+<h2>Project:</h2>
+C:\Keil\NuvotonPlatform_Keil\Sample\NUC1xx-LB_002\wifi¤â§ú\Smpl_CAN.uvproj
+Project File Date:  05/22/2017
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Smpl_CAN'
+creating preprocessor file for core_cm0.c...
+creating preprocessor file for system_NUC1xx.c...
+creating preprocessor file for Smpl_CAN.c...
+creating preprocessor file for LCD_Driver.c...
+creating preprocessor file for Ascii_Table.C...
+compiling Smpl_CAN.c...
+Smpl_CAN.c(176): warning:  #177-D: variable "L"  was declared but never referenced
+  	uint8_t L,H;
+Smpl_CAN.c(176): warning:  #177-D: variable "H"  was declared but never referenced
+  	uint8_t L,H;
+Smpl_CAN.c(651): warning:  #1-D: last line of file ends without a newline
+  }
+Smpl_CAN.c(509): warning:  #550-D: variable "gx"  was set but never used
+  	float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c(509): warning:  #550-D: variable "gy"  was set but never used
+  	float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c(509): warning:  #177-D: variable "hx"  was declared but never referenced
+  	float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c(509): warning:  #177-D: variable "hy"  was declared but never referenced
+  	float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c(509): warning:  #177-D: variable "hz"  was declared but never referenced
+  	float ax,ay,az,gx,gy,gz,hx,hy,hz;
+Smpl_CAN.c(510): warning:  #177-D: variable "temp"  was declared but never referenced
+  	float temp;
+Smpl_CAN.c(511): warning:  #177-D: variable "Xh"  was declared but never referenced
+  	float Xh,Yh	;
+Smpl_CAN.c(511): warning:  #177-D: variable "Yh"  was declared but never referenced
+  	float Xh,Yh	;
+Smpl_CAN.c(512): warning:  #177-D: variable "d"  was declared but never referenced
+  	int z1[6]={0},d=1;
+Smpl_CAN.c: 12 warnings, 0 errors
+creating preprocessor file for retarget.c...
+creating preprocessor file for DrvGPIO.c...
+creating preprocessor file for DrvSYS.c...
+creating preprocessor file for DrvUART.c...
+creating preprocessor file for EEPROM_24LC64.c...
+creating preprocessor file for DrvI2C.c...
+creating preprocessor file for DrvCAN.c...
+creating preprocessor file for DrvSPI.c...
+creating preprocessor file for DrvADC.c...
+linking...
+Program Size: Code=14508 RO-data=432 RW-data=184 ZI-data=1392  
+After Build - User command #1: fromelf --bin ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.bin"
+After Build - User command #2: fromelf --text -c ".\obj\Smpl_CAN.axf" --output ".\obj\Smpl_CAN.txt"
+".\obj\Smpl_CAN.axf" - 0 Error(s), 12 Warning(s).
+Build Time Elapsed:  00:00:05
+</pre>
+</body>
+</html>
