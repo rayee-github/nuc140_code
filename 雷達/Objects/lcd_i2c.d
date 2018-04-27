@@ -1,0 +1,9 @@
+.\objects\lcd_i2c.o: LCD_i2c.c
+.\objects\lcd_i2c.o: ..\..\..\Include\Driver\DrvI2C.h
+.\objects\lcd_i2c.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h
+.\objects\lcd_i2c.o: ..\..\..\..\CMSIS\CM0\CoreSupport\core_cm0.h
+.\objects\lcd_i2c.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\lcd_i2c.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h
+.\objects\lcd_i2c.o: ..\..\..\Include\System\SysInfra.h
+.\objects\lcd_i2c.o: ..\..\..\Include\System\ModuleID.h
+.\objects\lcd_i2c.o: ..\..\..\Include\Driver\DrvSYS.h

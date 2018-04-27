@@ -59,7 +59,7 @@ Section Cross References
     control.o(i.WIFI_UART_INT_HANDLE) refers to drvuart.o(i.DrvUART_Read) for DrvUART_Read
     control.o(i.WIFI_UART_INT_HANDLE) refers to drvgpio.o(i.DrvGPIO_ClrBit) for DrvGPIO_ClrBit
     control.o(i.WIFI_UART_INT_HANDLE) refers to drvgpio.o(i.DrvGPIO_SetBit) for DrvGPIO_SetBit
-    control.o(i.WIFI_UART_INT_HANDLE) refers to control.o(.data) for move_flag
+    control.o(i.WIFI_UART_INT_HANDLE) refers to control.o(.data) for Car_action
     control.o(i.delay_s) refers to drvsys.o(i.DrvSYS_Delay) for DrvSYS_Delay
     control.o(i.get_ADC_value) refers to rt_memclr.o(.text) for __aeabi_memclr4
     control.o(i.get_ADC_value) refers to drvadc.o(i.DrvADC_StartConvert) for DrvADC_StartConvert
@@ -96,7 +96,6 @@ Section Cross References
     control.o(i.main) refers to drvgpio.o(i.DrvGPIO_InitFunction) for DrvGPIO_InitFunction
     control.o(i.main) refers to lcd_i2c.o(i.init_LCD) for init_LCD
     control.o(i.main) refers to lcd_i2c.o(i.clear_LCD) for clear_LCD
-    control.o(i.main) refers to lcd_i2c.o(i.write_LCD) for write_LCD
     control.o(i.main) refers to drvuart.o(i.DrvUART_Open) for DrvUART_Open
     control.o(i.main) refers to drvuart.o(i.DrvUART_Write) for DrvUART_Write
     control.o(i.main) refers to drvuart.o(i.DrvUART_EnableInt) for DrvUART_EnableInt
@@ -104,11 +103,15 @@ Section Cross References
     control.o(i.main) refers to drvgpio.o(i.DrvGPIO_EnableDebounce) for DrvGPIO_EnableDebounce
     control.o(i.main) refers to drvgpio.o(i.DrvGPIO_SetDebounceTime) for DrvGPIO_SetDebounceTime
     control.o(i.main) refers to control.o(i.InitPWM) for InitPWM
-    control.o(i.main) refers to control.o(i.get_weight) for get_weight
-    control.o(i.main) refers to drvgpio.o(i.DrvGPIO_SetBit) for DrvGPIO_SetBit
     control.o(i.main) refers to control.o(i.WIFI_UART_INT_HANDLE) for WIFI_UART_INT_HANDLE
     control.o(i.main) refers to control.o(i.RFID_UART_INT_HANDLE) for RFID_UART_INT_HANDLE
     control.o(i.main) refers to control.o(i.EINT1Callback) for EINT1Callback
+    control.o(i.servo_ctrl) refers to drvgpio.o(i.DrvGPIO_GetBit) for DrvGPIO_GetBit
+    control.o(i.servo_ctrl) refers to drvgpio.o(i.DrvGPIO_SetBit) for DrvGPIO_SetBit
+    control.o(i.servo_ctrl) refers to drvgpio.o(i.DrvGPIO_ClrBit) for DrvGPIO_ClrBit
+    control.o(i.servo_ctrl) refers to drvsys.o(i.DrvSYS_Delay) for DrvSYS_Delay
+    control.o(i.servo_ctrl) refers to control.o(i.delay_s) for delay_s
+    control.o(i.servo_ctrl) refers to control.o(.data) for count
     timer.o(i.TMR0_IRQHandler) refers to drvgpio.o(i.DrvGPIO_GetBit) for DrvGPIO_GetBit
     timer.o(i.TMR0_IRQHandler) refers to drvgpio.o(i.DrvGPIO_SetBit) for DrvGPIO_SetBit
     timer.o(i.TMR0_IRQHandler) refers to drvgpio.o(i.DrvGPIO_ClrBit) for DrvGPIO_ClrBit
@@ -370,9 +373,8 @@ Removing Unused input sections from the image.
 
     Removing core_cm0.o(.emb_text), (32 bytes).
     Removing control.o(i.ADC_average), (116 bytes).
-    Removing control.o(i.Start_Move), (20 bytes).
-    Removing control.o(i.Stop_Move), (16 bytes).
     Removing control.o(i.get_ADC_value), (66 bytes).
+    Removing control.o(i.servo_ctrl), (708 bytes).
     Removing control.o(.bss), (48 bytes).
     Removing timer.o(i.InitTIMER0), (152 bytes).
     Removing drvadc.o(i.DrvADC_Close), (112 bytes).
@@ -514,7 +516,7 @@ Removing Unused input sections from the image.
     Removing drvi2c.o(i.NVIC_EnableIRQ), (20 bytes).
     Removing drvi2c.o(i.NVIC_SetPriority), (120 bytes).
 
-145 unused section(s) (total 10802 bytes) removed from the image.
+144 unused section(s) (total 11474 bytes) removed from the image.
 
 ==============================================================================
 
@@ -725,7 +727,7 @@ Image Symbol Table
     i.I2C0_IRQHandler                        0x00001c70   Section        0  drvi2c.o(i.I2C0_IRQHandler)
     i.I2C1_IRQHandler                        0x00001cec   Section        0  drvi2c.o(i.I2C1_IRQHandler)
     i.InitPWM                                0x00001d68   Section        0  control.o(i.InitPWM)
-    i.Init_GPIO                              0x00001f04   Section        0  control.o(i.Init_GPIO)
+    i.Init_GPIO                              0x00001f08   Section        0  control.o(i.Init_GPIO)
     i.NVIC_EnableIRQ                         0x00001ff0   Section        0  drvgpio.o(i.NVIC_EnableIRQ)
     NVIC_EnableIRQ                           0x00001ff1   Thumb Code    14  drvgpio.o(i.NVIC_EnableIRQ)
     i.NVIC_EnableIRQ                         0x00002004   Section        0  drvuart.o(i.NVIC_EnableIRQ)
@@ -740,51 +742,51 @@ Image Symbol Table
     i.UART02_IRQHandler                      0x00002300   Section        0  drvuart.o(i.UART02_IRQHandler)
     i.UART1_IRQHandler                       0x0000233c   Section        0  drvuart.o(i.UART1_IRQHandler)
     i.WIFI_UART_INT_HANDLE                   0x0000235c   Section        0  control.o(i.WIFI_UART_INT_HANDLE)
-    i.__ARM_common_switch8                   0x00002464   Section        0  control.o(i.__ARM_common_switch8)
-    i.clear_LCD                              0x00002480   Section        0  lcd_i2c.o(i.clear_LCD)
-    i.delay_s                                0x0000248c   Section        0  control.o(i.delay_s)
-    i.get_weight                             0x000024ac   Section        0  control.o(i.get_weight)
-    i.hex_to_Decimal                         0x0000257c   Section        0  control.o(i.hex_to_Decimal)
-    i.init_LCD                               0x0000267c   Section        0  lcd_i2c.o(i.init_LCD)
-    i.main                                   0x000026cc   Section        0  control.o(i.main)
-    i.send_command                           0x00002878   Section        0  lcd_i2c.o(i.send_command)
-    i.send_data                              0x000028c0   Section        0  lcd_i2c.o(i.send_data)
-    i.writeByte                              0x00002908   Section        0  lcd_i2c.o(i.writeByte)
-    i.write_LCD                              0x000029cc   Section        0  lcd_i2c.o(i.write_LCD)
-    i.write_word                             0x00002a18   Section        0  lcd_i2c.o(i.write_word)
-    .constdata                               0x00002a48   Section       10  control.o(.constdata)
-    .constdata                               0x00002a54   Section       16  drvsys.o(.constdata)
+    i.__ARM_common_switch8                   0x0000244c   Section        0  control.o(i.__ARM_common_switch8)
+    i.clear_LCD                              0x00002468   Section        0  lcd_i2c.o(i.clear_LCD)
+    i.delay_s                                0x00002474   Section        0  control.o(i.delay_s)
+    i.get_weight                             0x00002494   Section        0  control.o(i.get_weight)
+    i.hex_to_Decimal                         0x00002564   Section        0  control.o(i.hex_to_Decimal)
+    i.init_LCD                               0x00002664   Section        0  lcd_i2c.o(i.init_LCD)
+    i.main                                   0x000026b4   Section        0  control.o(i.main)
+    i.send_command                           0x0000283c   Section        0  lcd_i2c.o(i.send_command)
+    i.send_data                              0x00002884   Section        0  lcd_i2c.o(i.send_data)
+    i.writeByte                              0x000028cc   Section        0  lcd_i2c.o(i.writeByte)
+    i.write_LCD                              0x00002990   Section        0  lcd_i2c.o(i.write_LCD)
+    i.write_word                             0x000029dc   Section        0  lcd_i2c.o(i.write_word)
+    .constdata                               0x00002a0c   Section       10  control.o(.constdata)
+    .constdata                               0x00002a18   Section       16  drvsys.o(.constdata)
     .data                                    0x20000000   Section       28  system_nuc1xx.o(.data)
-    .data                                    0x2000001c   Section       16  control.o(.data)
-    .data                                    0x2000002c   Section        8  timer.o(.data)
-    .data                                    0x20000034   Section        8  lcd_i2c.o(.data)
-    .data                                    0x2000003c   Section       12  drvadc.o(.data)
-    g_ptADCCallBack                          0x2000003c   Data           4  drvadc.o(.data)
-    g_ptADCMP0CallBack                       0x20000040   Data           4  drvadc.o(.data)
-    g_ptADCMP1CallBack                       0x20000044   Data           4  drvadc.o(.data)
-    .data                                    0x20000048   Section       16  drvgpio.o(.data)
-    _pfGPABCallback                          0x20000048   Data           4  drvgpio.o(.data)
-    _pfGPCDECallback                         0x2000004c   Data           4  drvgpio.o(.data)
-    _pfEINT0Callback                         0x20000050   Data           4  drvgpio.o(.data)
-    _pfEINT1Callback                         0x20000054   Data           4  drvgpio.o(.data)
-    .data                                    0x20000058   Section        8  drvsys.o(.data)
-    BOD_callbackFn                           0x20000058   Data           4  drvsys.o(.data)
-    PWRWU_callbackFn                         0x2000005c   Data           4  drvsys.o(.data)
-    .data                                    0x20000060   Section       12  drvuart.o(.data)
-    g_pfnUART0callback                       0x20000060   Data           4  drvuart.o(.data)
-    g_pfnUART1callback                       0x20000064   Data           4  drvuart.o(.data)
-    g_pfnUART2callback                       0x20000068   Data           4  drvuart.o(.data)
-    .bss                                     0x2000006c   Section       12  drvadc.o(.bss)
-    g_pu32UserData                           0x2000006c   Data          12  drvadc.o(.bss)
-    .bss                                     0x20000078   Section       32  drvi2c.o(.bss)
-    I2CHandler0                              0x20000078   Data          16  drvi2c.o(.bss)
-    I2CHandler1                              0x20000088   Data          16  drvi2c.o(.bss)
-    .bss                                     0x20000098   Section       96  libspace.o(.bss)
-    HEAP                                     0x200000f8   Section        0  startup_nuc1xx.o(HEAP)
-    STACK                                    0x200000f8   Section      512  startup_nuc1xx.o(STACK)
-    Heap_Mem                                 0x200000f8   Data           0  startup_nuc1xx.o(HEAP)
-    Stack_Mem                                0x200000f8   Data         512  startup_nuc1xx.o(STACK)
-    __initial_sp                             0x200002f8   Data           0  startup_nuc1xx.o(STACK)
+    .data                                    0x2000001c   Section       20  control.o(.data)
+    .data                                    0x20000030   Section        8  timer.o(.data)
+    .data                                    0x20000038   Section        8  lcd_i2c.o(.data)
+    .data                                    0x20000040   Section       12  drvadc.o(.data)
+    g_ptADCCallBack                          0x20000040   Data           4  drvadc.o(.data)
+    g_ptADCMP0CallBack                       0x20000044   Data           4  drvadc.o(.data)
+    g_ptADCMP1CallBack                       0x20000048   Data           4  drvadc.o(.data)
+    .data                                    0x2000004c   Section       16  drvgpio.o(.data)
+    _pfGPABCallback                          0x2000004c   Data           4  drvgpio.o(.data)
+    _pfGPCDECallback                         0x20000050   Data           4  drvgpio.o(.data)
+    _pfEINT0Callback                         0x20000054   Data           4  drvgpio.o(.data)
+    _pfEINT1Callback                         0x20000058   Data           4  drvgpio.o(.data)
+    .data                                    0x2000005c   Section        8  drvsys.o(.data)
+    BOD_callbackFn                           0x2000005c   Data           4  drvsys.o(.data)
+    PWRWU_callbackFn                         0x20000060   Data           4  drvsys.o(.data)
+    .data                                    0x20000064   Section       12  drvuart.o(.data)
+    g_pfnUART0callback                       0x20000064   Data           4  drvuart.o(.data)
+    g_pfnUART1callback                       0x20000068   Data           4  drvuart.o(.data)
+    g_pfnUART2callback                       0x2000006c   Data           4  drvuart.o(.data)
+    .bss                                     0x20000070   Section       12  drvadc.o(.bss)
+    g_pu32UserData                           0x20000070   Data          12  drvadc.o(.bss)
+    .bss                                     0x2000007c   Section       32  drvi2c.o(.bss)
+    I2CHandler0                              0x2000007c   Data          16  drvi2c.o(.bss)
+    I2CHandler1                              0x2000008c   Data          16  drvi2c.o(.bss)
+    .bss                                     0x2000009c   Section       96  libspace.o(.bss)
+    HEAP                                     0x20000100   Section        0  startup_nuc1xx.o(HEAP)
+    STACK                                    0x20000100   Section      512  startup_nuc1xx.o(STACK)
+    Heap_Mem                                 0x20000100   Data           0  startup_nuc1xx.o(HEAP)
+    Stack_Mem                                0x20000100   Data         512  startup_nuc1xx.o(STACK)
+    __initial_sp                             0x20000300   Data           0  startup_nuc1xx.o(STACK)
 
     Global Symbols
 
@@ -961,8 +963,8 @@ Image Symbol Table
     GPCDE_IRQHandler                         0x00001bd9   Thumb Code    68  drvgpio.o(i.GPCDE_IRQHandler)
     I2C0_IRQHandler                          0x00001c71   Thumb Code   114  drvi2c.o(i.I2C0_IRQHandler)
     I2C1_IRQHandler                          0x00001ced   Thumb Code   114  drvi2c.o(i.I2C1_IRQHandler)
-    InitPWM                                  0x00001d69   Thumb Code   396  control.o(i.InitPWM)
-    Init_GPIO                                0x00001f05   Thumb Code   234  control.o(i.Init_GPIO)
+    InitPWM                                  0x00001d69   Thumb Code   400  control.o(i.InitPWM)
+    Init_GPIO                                0x00001f09   Thumb Code   232  control.o(i.Init_GPIO)
     PWRWU_IRQHandler                         0x00002091   Thumb Code    32  drvsys.o(i.PWRWU_IRQHandler)
     RFID_UART_INT_HANDLE                     0x000020b9   Thumb Code    80  control.o(i.RFID_UART_INT_HANDLE)
     SystemCoreClockUpdate                    0x00002115   Thumb Code   132  system_nuc1xx.o(i.SystemCoreClockUpdate)
@@ -970,33 +972,34 @@ Image Symbol Table
     TMR0_IRQHandler                          0x000021b9   Thumb Code   296  timer.o(i.TMR0_IRQHandler)
     UART02_IRQHandler                        0x00002301   Thumb Code    44  drvuart.o(i.UART02_IRQHandler)
     UART1_IRQHandler                         0x0000233d   Thumb Code    24  drvuart.o(i.UART1_IRQHandler)
-    WIFI_UART_INT_HANDLE                     0x0000235d   Thumb Code   248  control.o(i.WIFI_UART_INT_HANDLE)
-    __ARM_common_switch8                     0x00002465   Thumb Code    28  control.o(i.__ARM_common_switch8)
-    clear_LCD                                0x00002481   Thumb Code    10  lcd_i2c.o(i.clear_LCD)
-    delay_s                                  0x0000248d   Thumb Code    26  control.o(i.delay_s)
-    get_weight                               0x000024ad   Thumb Code   186  control.o(i.get_weight)
-    hex_to_Decimal                           0x0000257d   Thumb Code   214  control.o(i.hex_to_Decimal)
-    init_LCD                                 0x0000267d   Thumb Code    70  lcd_i2c.o(i.init_LCD)
-    main                                     0x000026cd   Thumb Code   320  control.o(i.main)
-    send_command                             0x00002879   Thumb Code    72  lcd_i2c.o(i.send_command)
-    send_data                                0x000028c1   Thumb Code    72  lcd_i2c.o(i.send_data)
-    writeByte                                0x00002909   Thumb Code   178  lcd_i2c.o(i.writeByte)
-    write_LCD                                0x000029cd   Thumb Code    74  lcd_i2c.o(i.write_LCD)
-    write_word                               0x00002a19   Thumb Code    38  lcd_i2c.o(i.write_word)
-    Region$$Table$$Base                      0x00002a64   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00002a84   Number         0  anon$$obj.o(Region$$Table)
+    WIFI_UART_INT_HANDLE                     0x0000235d   Thumb Code   206  control.o(i.WIFI_UART_INT_HANDLE)
+    __ARM_common_switch8                     0x0000244d   Thumb Code    28  control.o(i.__ARM_common_switch8)
+    clear_LCD                                0x00002469   Thumb Code    10  lcd_i2c.o(i.clear_LCD)
+    delay_s                                  0x00002475   Thumb Code    26  control.o(i.delay_s)
+    get_weight                               0x00002495   Thumb Code   186  control.o(i.get_weight)
+    hex_to_Decimal                           0x00002565   Thumb Code   214  control.o(i.hex_to_Decimal)
+    init_LCD                                 0x00002665   Thumb Code    70  lcd_i2c.o(i.init_LCD)
+    main                                     0x000026b5   Thumb Code   308  control.o(i.main)
+    send_command                             0x0000283d   Thumb Code    72  lcd_i2c.o(i.send_command)
+    send_data                                0x00002885   Thumb Code    72  lcd_i2c.o(i.send_data)
+    writeByte                                0x000028cd   Thumb Code   178  lcd_i2c.o(i.writeByte)
+    write_LCD                                0x00002991   Thumb Code    74  lcd_i2c.o(i.write_LCD)
+    write_word                               0x000029dd   Thumb Code    38  lcd_i2c.o(i.write_word)
+    Region$$Table$$Base                      0x00002a28   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00002a48   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x20000000   Data           4  system_nuc1xx.o(.data)
     CyclesPerUs                              0x20000004   Data           4  system_nuc1xx.o(.data)
     gau32ClkSrcTbl                           0x20000008   Data          20  system_nuc1xx.o(.data)
     command                                  0x2000001c   Data           8  control.o(.data)
-    move_flag                                0x20000024   Data           4  control.o(.data)
+    servo                                    0x20000024   Data           4  control.o(.data)
     Car_action                               0x20000028   Data           4  control.o(.data)
-    TimerCounter                             0x2000002c   Data           2  timer.o(.data)
-    pwm                                      0x20000030   Data           4  timer.o(.data)
-    LCDAddr                                  0x20000034   Data           4  lcd_i2c.o(.data)
-    BLEN                                     0x20000038   Data           4  lcd_i2c.o(.data)
-    __libspace_start                         0x20000098   Data          96  libspace.o(.bss)
-    __temporary_stack_top$libspace           0x200000f8   Data           0  libspace.o(.bss)
+    count                                    0x2000002c   Data           4  control.o(.data)
+    TimerCounter                             0x20000030   Data           2  timer.o(.data)
+    pwm                                      0x20000034   Data           4  timer.o(.data)
+    LCDAddr                                  0x20000038   Data           4  lcd_i2c.o(.data)
+    BLEN                                     0x2000003c   Data           4  lcd_i2c.o(.data)
+    __libspace_start                         0x2000009c   Data          96  libspace.o(.bss)
+    __temporary_stack_top$libspace           0x200000fc   Data           0  libspace.o(.bss)
 
 
 
@@ -1006,178 +1009,178 @@ Memory Map of the image
 
   Image Entry point : 0x0000017d
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x00002af0, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00002ab8, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Base: 0x00000000, Size: 0x00002a84, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Base: 0x00000000, Size: 0x00002a48, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x000000c0   Data   RO            3    RESET               startup_nuc1xx.o
-    0x000000c0   0x00000008   Code   RO         1454  * !!!main             c_p.l(__main.o)
-    0x000000c8   0x0000003c   Code   RO         1634    !!!scatter          c_p.l(__scatter.o)
-    0x00000104   0x0000001a   Code   RO         1636    !!handler_copy      c_p.l(__scatter_copy.o)
+    0x000000c0   0x00000008   Code   RO         1448  * !!!main             c_p.l(__main.o)
+    0x000000c8   0x0000003c   Code   RO         1628    !!!scatter          c_p.l(__scatter.o)
+    0x00000104   0x0000001a   Code   RO         1630    !!handler_copy      c_p.l(__scatter_copy.o)
     0x0000011e   0x00000002   PAD
-    0x00000120   0x0000001c   Code   RO         1638    !!handler_zi        c_p.l(__scatter_zi.o)
-    0x0000013c   0x00000002   Code   RO         1443    .ARM.Collect$$_printf_percent$$00000000  c_p.l(_printf_percent.o)
-    0x0000013e   0x0000000a   Code   RO         1441    .ARM.Collect$$_printf_percent$$00000009  c_p.l(_printf_d.o)
-    0x00000148   0x0000000a   Code   RO         1442    .ARM.Collect$$_printf_percent$$0000000A  c_p.l(_printf_u.o)
-    0x00000152   0x00000004   Code   RO         1467    .ARM.Collect$$_printf_percent$$00000017  c_p.l(_printf_percent_end.o)
-    0x00000156   0x00000002   Code   RO         1503    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
-    0x00000158   0x00000000   Code   RO         1517    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1519    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1522    .ARM.Collect$$libinit$$0000000A  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1524    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1526    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1529    .ARM.Collect$$libinit$$00000011  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1531    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1533    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1535    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1537    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1539    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1541    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1543    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1545    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1547    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1549    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1553    .ARM.Collect$$libinit$$0000002C  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1555    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1557    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
-    0x00000158   0x00000000   Code   RO         1559    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
-    0x00000158   0x00000002   Code   RO         1560    .ARM.Collect$$libinit$$00000033  c_p.l(libinit2.o)
-    0x0000015a   0x00000002   Code   RO         1591    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
-    0x0000015c   0x00000000   Code   RO         1617    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
-    0x0000015c   0x00000000   Code   RO         1619    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
-    0x0000015c   0x00000000   Code   RO         1622    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
-    0x0000015c   0x00000000   Code   RO         1625    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
-    0x0000015c   0x00000000   Code   RO         1627    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
-    0x0000015c   0x00000000   Code   RO         1630    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
-    0x0000015c   0x00000002   Code   RO         1631    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
-    0x0000015e   0x00000000   Code   RO         1456    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
-    0x0000015e   0x00000000   Code   RO         1471    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
-    0x0000015e   0x00000006   Code   RO         1483    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
-    0x00000164   0x00000000   Code   RO         1473    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
-    0x00000164   0x00000004   Code   RO         1474    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
-    0x00000168   0x00000000   Code   RO         1476    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
-    0x00000168   0x00000008   Code   RO         1477    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
-    0x00000170   0x00000002   Code   RO         1508    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
-    0x00000172   0x00000000   Code   RO         1564    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
-    0x00000172   0x00000004   Code   RO         1565    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
-    0x00000176   0x00000006   Code   RO         1566    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
+    0x00000120   0x0000001c   Code   RO         1632    !!handler_zi        c_p.l(__scatter_zi.o)
+    0x0000013c   0x00000002   Code   RO         1437    .ARM.Collect$$_printf_percent$$00000000  c_p.l(_printf_percent.o)
+    0x0000013e   0x0000000a   Code   RO         1435    .ARM.Collect$$_printf_percent$$00000009  c_p.l(_printf_d.o)
+    0x00000148   0x0000000a   Code   RO         1436    .ARM.Collect$$_printf_percent$$0000000A  c_p.l(_printf_u.o)
+    0x00000152   0x00000004   Code   RO         1461    .ARM.Collect$$_printf_percent$$00000017  c_p.l(_printf_percent_end.o)
+    0x00000156   0x00000002   Code   RO         1497    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
+    0x00000158   0x00000000   Code   RO         1511    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1513    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1516    .ARM.Collect$$libinit$$0000000A  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1518    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1520    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1523    .ARM.Collect$$libinit$$00000011  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1525    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1527    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1529    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1531    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1533    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1535    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1537    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1539    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1541    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1543    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1547    .ARM.Collect$$libinit$$0000002C  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1549    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1551    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
+    0x00000158   0x00000000   Code   RO         1553    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
+    0x00000158   0x00000002   Code   RO         1554    .ARM.Collect$$libinit$$00000033  c_p.l(libinit2.o)
+    0x0000015a   0x00000002   Code   RO         1585    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
+    0x0000015c   0x00000000   Code   RO         1611    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
+    0x0000015c   0x00000000   Code   RO         1613    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
+    0x0000015c   0x00000000   Code   RO         1616    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
+    0x0000015c   0x00000000   Code   RO         1619    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
+    0x0000015c   0x00000000   Code   RO         1621    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
+    0x0000015c   0x00000000   Code   RO         1624    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
+    0x0000015c   0x00000002   Code   RO         1625    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
+    0x0000015e   0x00000000   Code   RO         1450    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
+    0x0000015e   0x00000000   Code   RO         1465    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
+    0x0000015e   0x00000006   Code   RO         1477    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
+    0x00000164   0x00000000   Code   RO         1467    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
+    0x00000164   0x00000004   Code   RO         1468    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
+    0x00000168   0x00000000   Code   RO         1470    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
+    0x00000168   0x00000008   Code   RO         1471    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
+    0x00000170   0x00000002   Code   RO         1502    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
+    0x00000172   0x00000000   Code   RO         1558    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
+    0x00000172   0x00000004   Code   RO         1559    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
+    0x00000176   0x00000006   Code   RO         1560    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
     0x0000017c   0x00000064   Code   RO            4  * .text               startup_nuc1xx.o
-    0x000001e0   0x00000028   Code   RO         1415    .text               c_p.l(noretval__2sprintf.o)
-    0x00000208   0x0000006c   Code   RO         1417    .text               c_p.l(__printf.o)
-    0x00000274   0x0000006c   Code   RO         1419    .text               c_p.l(_printf_dec.o)
-    0x000002e0   0x00000044   Code   RO         1444    .text               c_p.l(strlen.o)
-    0x00000324   0x0000015a   Code   RO         1448    .text               c_p.l(aeabi_sdiv.o)
-    0x0000047e   0x00000006   Code   RO         1452    .text               c_p.l(heapauxi.o)
-    0x00000484   0x000000b0   Code   RO         1461    .text               c_p.l(_printf_intcommon.o)
-    0x00000534   0x00000030   Code   RO         1463    .text               c_p.l(_printf_char_common.o)
-    0x00000564   0x0000000a   Code   RO         1465    .text               c_p.l(_sputc.o)
-    0x0000056e   0x00000028   Code   RO         1468    .text               c_p.l(rtudiv10.o)
-    0x00000596   0x0000003e   Code   RO         1489    .text               c_p.l(sys_stackheap_outer.o)
-    0x000005d4   0x00000010   Code   RO         1492    .text               c_p.l(exit.o)
-    0x000005e4   0x00000008   Code   RO         1504    .text               c_p.l(libspace.o)
-    0x000005ec   0x0000000c   Code   RO         1561    .text               c_p.l(sys_exit.o)
-    0x000005f8   0x00000002   Code   RO         1580    .text               c_p.l(use_no_semi.o)
-    0x000005fa   0x00000000   Code   RO         1582    .text               c_p.l(indicate_semi.o)
+    0x000001e0   0x00000028   Code   RO         1409    .text               c_p.l(noretval__2sprintf.o)
+    0x00000208   0x0000006c   Code   RO         1411    .text               c_p.l(__printf.o)
+    0x00000274   0x0000006c   Code   RO         1413    .text               c_p.l(_printf_dec.o)
+    0x000002e0   0x00000044   Code   RO         1438    .text               c_p.l(strlen.o)
+    0x00000324   0x0000015a   Code   RO         1442    .text               c_p.l(aeabi_sdiv.o)
+    0x0000047e   0x00000006   Code   RO         1446    .text               c_p.l(heapauxi.o)
+    0x00000484   0x000000b0   Code   RO         1455    .text               c_p.l(_printf_intcommon.o)
+    0x00000534   0x00000030   Code   RO         1457    .text               c_p.l(_printf_char_common.o)
+    0x00000564   0x0000000a   Code   RO         1459    .text               c_p.l(_sputc.o)
+    0x0000056e   0x00000028   Code   RO         1462    .text               c_p.l(rtudiv10.o)
+    0x00000596   0x0000003e   Code   RO         1483    .text               c_p.l(sys_stackheap_outer.o)
+    0x000005d4   0x00000010   Code   RO         1486    .text               c_p.l(exit.o)
+    0x000005e4   0x00000008   Code   RO         1498    .text               c_p.l(libspace.o)
+    0x000005ec   0x0000000c   Code   RO         1555    .text               c_p.l(sys_exit.o)
+    0x000005f8   0x00000002   Code   RO         1574    .text               c_p.l(use_no_semi.o)
+    0x000005fa   0x00000000   Code   RO         1576    .text               c_p.l(indicate_semi.o)
     0x000005fa   0x00000002   PAD
-    0x000005fc   0x0000009c   Code   RO          271    i.ADC_IRQHandler    drvadc.o
+    0x000005fc   0x0000009c   Code   RO          265    i.ADC_IRQHandler    drvadc.o
     0x00000698   0x0000001a   Code   RO           61    i.ADC_initialize    control.o
     0x000006b2   0x00000002   PAD
-    0x000006b4   0x00000028   Code   RO          748    i.BOD_IRQHandler    drvsys.o
-    0x000006dc   0x000000d4   Code   RO         1051    i.BaudRateCalculator  drvuart.o
-    0x000007b0   0x000000e0   Code   RO          298    i.DrvADC_Open       drvadc.o
-    0x00000890   0x0000002c   Code   RO          510    i.DrvGPIO_ClrBit    drvgpio.o
-    0x000008bc   0x00000034   Code   RO          518    i.DrvGPIO_EnableDebounce  drvgpio.o
-    0x000008f0   0x00000098   Code   RO          521    i.DrvGPIO_EnableEINT1  drvgpio.o
-    0x00000988   0x0000002c   Code   RO          523    i.DrvGPIO_GetBit    drvgpio.o
-    0x000009b4   0x00000758   Code   RO          532    i.DrvGPIO_InitFunction  drvgpio.o
-    0x0000110c   0x00000088   Code   RO          533    i.DrvGPIO_Open      drvgpio.o
-    0x00001194   0x0000002c   Code   RO          534    i.DrvGPIO_SetBit    drvgpio.o
-    0x000011c0   0x00000040   Code   RO          536    i.DrvGPIO_SetDebounceTime  drvgpio.o
-    0x00001200   0x00000090   Code   RO         1263    i.DrvI2C_Close      drvi2c.o
-    0x00001290   0x00000054   Code   RO         1264    i.DrvI2C_Ctrl       drvi2c.o
-    0x000012e4   0x000000c8   Code   RO         1272    i.DrvI2C_Open       drvi2c.o
-    0x000013ac   0x0000002c   Code   RO          751    i.DrvSYS_Delay      drvsys.o
-    0x000013d8   0x00000008   Code   RO          766    i.DrvSYS_GetExtClockFreq  drvsys.o
-    0x000013e0   0x00000070   Code   RO          767    i.DrvSYS_GetHCLKFreq  drvsys.o
-    0x00001450   0x00000078   Code   RO          768    i.DrvSYS_GetPLLClockFreq  drvsys.o
-    0x000014c8   0x000000c4   Code   RO          769    i.DrvSYS_GetPLLContent  drvsys.o
-    0x0000158c   0x00000010   Code   RO          772    i.DrvSYS_IsProtectedRegLocked  drvsys.o
-    0x0000159c   0x000000c0   Code   RO          774    i.DrvSYS_Open       drvsys.o
-    0x0000165c   0x00000038   Code   RO          780    i.DrvSYS_SelectHCLKSource  drvsys.o
-    0x00001694   0x00000080   Code   RO          788    i.DrvSYS_SetOscCtrl  drvsys.o
-    0x00001714   0x0000004c   Code   RO          789    i.DrvSYS_SetPLLContent  drvsys.o
-    0x00001760   0x000000fc   Code   RO         1056    i.DrvUART_EnableInt  drvuart.o
-    0x0000185c   0x00000268   Code   RO         1061    i.DrvUART_Open      drvuart.o
-    0x00001ac4   0x00000040   Code   RO         1062    i.DrvUART_Read      drvuart.o
-    0x00001b04   0x00000040   Code   RO         1067    i.DrvUART_Write     drvuart.o
-    0x00001b44   0x00000024   Code   RO          540    i.EINT0_IRQHandler  drvgpio.o
+    0x000006b4   0x00000028   Code   RO          742    i.BOD_IRQHandler    drvsys.o
+    0x000006dc   0x000000d4   Code   RO         1045    i.BaudRateCalculator  drvuart.o
+    0x000007b0   0x000000e0   Code   RO          292    i.DrvADC_Open       drvadc.o
+    0x00000890   0x0000002c   Code   RO          504    i.DrvGPIO_ClrBit    drvgpio.o
+    0x000008bc   0x00000034   Code   RO          512    i.DrvGPIO_EnableDebounce  drvgpio.o
+    0x000008f0   0x00000098   Code   RO          515    i.DrvGPIO_EnableEINT1  drvgpio.o
+    0x00000988   0x0000002c   Code   RO          517    i.DrvGPIO_GetBit    drvgpio.o
+    0x000009b4   0x00000758   Code   RO          526    i.DrvGPIO_InitFunction  drvgpio.o
+    0x0000110c   0x00000088   Code   RO          527    i.DrvGPIO_Open      drvgpio.o
+    0x00001194   0x0000002c   Code   RO          528    i.DrvGPIO_SetBit    drvgpio.o
+    0x000011c0   0x00000040   Code   RO          530    i.DrvGPIO_SetDebounceTime  drvgpio.o
+    0x00001200   0x00000090   Code   RO         1257    i.DrvI2C_Close      drvi2c.o
+    0x00001290   0x00000054   Code   RO         1258    i.DrvI2C_Ctrl       drvi2c.o
+    0x000012e4   0x000000c8   Code   RO         1266    i.DrvI2C_Open       drvi2c.o
+    0x000013ac   0x0000002c   Code   RO          745    i.DrvSYS_Delay      drvsys.o
+    0x000013d8   0x00000008   Code   RO          760    i.DrvSYS_GetExtClockFreq  drvsys.o
+    0x000013e0   0x00000070   Code   RO          761    i.DrvSYS_GetHCLKFreq  drvsys.o
+    0x00001450   0x00000078   Code   RO          762    i.DrvSYS_GetPLLClockFreq  drvsys.o
+    0x000014c8   0x000000c4   Code   RO          763    i.DrvSYS_GetPLLContent  drvsys.o
+    0x0000158c   0x00000010   Code   RO          766    i.DrvSYS_IsProtectedRegLocked  drvsys.o
+    0x0000159c   0x000000c0   Code   RO          768    i.DrvSYS_Open       drvsys.o
+    0x0000165c   0x00000038   Code   RO          774    i.DrvSYS_SelectHCLKSource  drvsys.o
+    0x00001694   0x00000080   Code   RO          782    i.DrvSYS_SetOscCtrl  drvsys.o
+    0x00001714   0x0000004c   Code   RO          783    i.DrvSYS_SetPLLContent  drvsys.o
+    0x00001760   0x000000fc   Code   RO         1050    i.DrvUART_EnableInt  drvuart.o
+    0x0000185c   0x00000268   Code   RO         1055    i.DrvUART_Open      drvuart.o
+    0x00001ac4   0x00000040   Code   RO         1056    i.DrvUART_Read      drvuart.o
+    0x00001b04   0x00000040   Code   RO         1061    i.DrvUART_Write     drvuart.o
+    0x00001b44   0x00000024   Code   RO          534    i.EINT0_IRQHandler  drvgpio.o
     0x00001b68   0x00000008   Code   RO           62    i.EINT1Callback     control.o
-    0x00001b70   0x00000024   Code   RO          541    i.EINT1_IRQHandler  drvgpio.o
-    0x00001b94   0x00000044   Code   RO          542    i.GPAB_IRQHandler   drvgpio.o
-    0x00001bd8   0x0000004c   Code   RO          543    i.GPCDE_IRQHandler  drvgpio.o
-    0x00001c24   0x0000004c   Code   RO         1068    i.GetUartClk        drvuart.o
-    0x00001c70   0x0000007c   Code   RO         1280    i.I2C0_IRQHandler   drvi2c.o
-    0x00001cec   0x0000007c   Code   RO         1281    i.I2C1_IRQHandler   drvi2c.o
-    0x00001d68   0x0000019c   Code   RO           63    i.InitPWM           control.o
-    0x00001f04   0x000000ea   Code   RO           64    i.Init_GPIO         control.o
-    0x00001fee   0x00000002   PAD
-    0x00001ff0   0x00000014   Code   RO          545    i.NVIC_EnableIRQ    drvgpio.o
-    0x00002004   0x00000014   Code   RO         1070    i.NVIC_EnableIRQ    drvuart.o
-    0x00002018   0x00000078   Code   RO          546    i.NVIC_SetPriority  drvgpio.o
-    0x00002090   0x00000028   Code   RO          796    i.PWRWU_IRQHandler  drvsys.o
+    0x00001b70   0x00000024   Code   RO          535    i.EINT1_IRQHandler  drvgpio.o
+    0x00001b94   0x00000044   Code   RO          536    i.GPAB_IRQHandler   drvgpio.o
+    0x00001bd8   0x0000004c   Code   RO          537    i.GPCDE_IRQHandler  drvgpio.o
+    0x00001c24   0x0000004c   Code   RO         1062    i.GetUartClk        drvuart.o
+    0x00001c70   0x0000007c   Code   RO         1274    i.I2C0_IRQHandler   drvi2c.o
+    0x00001cec   0x0000007c   Code   RO         1275    i.I2C1_IRQHandler   drvi2c.o
+    0x00001d68   0x000001a0   Code   RO           63    i.InitPWM           control.o
+    0x00001f08   0x000000e8   Code   RO           64    i.Init_GPIO         control.o
+    0x00001ff0   0x00000014   Code   RO          539    i.NVIC_EnableIRQ    drvgpio.o
+    0x00002004   0x00000014   Code   RO         1064    i.NVIC_EnableIRQ    drvuart.o
+    0x00002018   0x00000078   Code   RO          540    i.NVIC_SetPriority  drvgpio.o
+    0x00002090   0x00000028   Code   RO          790    i.PWRWU_IRQHandler  drvsys.o
     0x000020b8   0x0000005c   Code   RO           65    i.RFID_UART_INT_HANDLE  control.o
     0x00002114   0x000000a0   Code   RO           24    i.SystemCoreClockUpdate  system_nuc1xx.o
     0x000021b4   0x00000002   Code   RO           25    i.SystemInit        system_nuc1xx.o
     0x000021b6   0x00000002   PAD
-    0x000021b8   0x00000148   Code   RO          194    i.TMR0_IRQHandler   timer.o
-    0x00002300   0x0000003c   Code   RO         1071    i.UART02_IRQHandler  drvuart.o
-    0x0000233c   0x00000020   Code   RO         1072    i.UART1_IRQHandler  drvuart.o
-    0x0000235c   0x00000108   Code   RO           68    i.WIFI_UART_INT_HANDLE  control.o
-    0x00002464   0x0000001c   Code   RO          150    i.__ARM_common_switch8  control.o
-    0x00002480   0x0000000a   Code   RO          220    i.clear_LCD         lcd_i2c.o
-    0x0000248a   0x00000002   PAD
-    0x0000248c   0x00000020   Code   RO           69    i.delay_s           control.o
-    0x000024ac   0x000000d0   Code   RO           71    i.get_weight        control.o
-    0x0000257c   0x00000100   Code   RO           72    i.hex_to_Decimal    control.o
-    0x0000267c   0x00000050   Code   RO          221    i.init_LCD          lcd_i2c.o
-    0x000026cc   0x000001ac   Code   RO           73    i.main              control.o
-    0x00002878   0x00000048   Code   RO          222    i.send_command      lcd_i2c.o
-    0x000028c0   0x00000048   Code   RO          223    i.send_data         lcd_i2c.o
-    0x00002908   0x000000c4   Code   RO          224    i.writeByte         lcd_i2c.o
-    0x000029cc   0x0000004a   Code   RO          225    i.write_LCD         lcd_i2c.o
+    0x000021b8   0x00000148   Code   RO          188    i.TMR0_IRQHandler   timer.o
+    0x00002300   0x0000003c   Code   RO         1065    i.UART02_IRQHandler  drvuart.o
+    0x0000233c   0x00000020   Code   RO         1066    i.UART1_IRQHandler  drvuart.o
+    0x0000235c   0x000000f0   Code   RO           66    i.WIFI_UART_INT_HANDLE  control.o
+    0x0000244c   0x0000001c   Code   RO          144    i.__ARM_common_switch8  control.o
+    0x00002468   0x0000000a   Code   RO          214    i.clear_LCD         lcd_i2c.o
+    0x00002472   0x00000002   PAD
+    0x00002474   0x00000020   Code   RO           67    i.delay_s           control.o
+    0x00002494   0x000000d0   Code   RO           69    i.get_weight        control.o
+    0x00002564   0x00000100   Code   RO           70    i.hex_to_Decimal    control.o
+    0x00002664   0x00000050   Code   RO          215    i.init_LCD          lcd_i2c.o
+    0x000026b4   0x00000188   Code   RO           71    i.main              control.o
+    0x0000283c   0x00000048   Code   RO          216    i.send_command      lcd_i2c.o
+    0x00002884   0x00000048   Code   RO          217    i.send_data         lcd_i2c.o
+    0x000028cc   0x000000c4   Code   RO          218    i.writeByte         lcd_i2c.o
+    0x00002990   0x0000004a   Code   RO          219    i.write_LCD         lcd_i2c.o
+    0x000029da   0x00000002   PAD
+    0x000029dc   0x00000030   Code   RO          220    i.write_word        lcd_i2c.o
+    0x00002a0c   0x0000000a   Data   RO           74    .constdata          control.o
     0x00002a16   0x00000002   PAD
-    0x00002a18   0x00000030   Code   RO          226    i.write_word        lcd_i2c.o
-    0x00002a48   0x0000000a   Data   RO           75    .constdata          control.o
-    0x00002a52   0x00000002   PAD
-    0x00002a54   0x00000010   Data   RO          797    .constdata          drvsys.o
-    0x00002a64   0x00000020   Data   RO         1632    Region$$Table       anon$$obj.o
+    0x00002a18   0x00000010   Data   RO          791    .constdata          drvsys.o
+    0x00002a28   0x00000020   Data   RO         1626    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Base: 0x20000000, Size: 0x0000006c, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Base: 0x20000000, Size: 0x00000070, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000000   0x0000001c   Data   RW           26    .data               system_nuc1xx.o
-    0x2000001c   0x00000010   Data   RW           76    .data               control.o
-    0x2000002c   0x00000008   Data   RW          195    .data               timer.o
-    0x20000034   0x00000008   Data   RW          227    .data               lcd_i2c.o
-    0x2000003c   0x0000000c   Data   RW          309    .data               drvadc.o
-    0x20000048   0x00000010   Data   RW          547    .data               drvgpio.o
-    0x20000058   0x00000008   Data   RW          798    .data               drvsys.o
-    0x20000060   0x0000000c   Data   RW         1073    .data               drvuart.o
+    0x2000001c   0x00000014   Data   RW           75    .data               control.o
+    0x20000030   0x00000008   Data   RW          189    .data               timer.o
+    0x20000038   0x00000008   Data   RW          221    .data               lcd_i2c.o
+    0x20000040   0x0000000c   Data   RW          303    .data               drvadc.o
+    0x2000004c   0x00000010   Data   RW          541    .data               drvgpio.o
+    0x2000005c   0x00000008   Data   RW          792    .data               drvsys.o
+    0x20000064   0x0000000c   Data   RW         1067    .data               drvuart.o
 
 
-    Execution Region ER_ZI (Base: 0x2000006c, Size: 0x0000028c, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Base: 0x20000070, Size: 0x00000290, Max: 0xffffffff, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x2000006c   0x0000000c   Zero   RW          308    .bss                drvadc.o
-    0x20000078   0x00000020   Zero   RW         1285    .bss                drvi2c.o
-    0x20000098   0x00000060   Zero   RW         1505    .bss                c_p.l(libspace.o)
-    0x200000f8   0x00000000   Zero   RW            2    HEAP                startup_nuc1xx.o
-    0x200000f8   0x00000200   Zero   RW            1    STACK               startup_nuc1xx.o
+    0x20000070   0x0000000c   Zero   RW          302    .bss                drvadc.o
+    0x2000007c   0x00000020   Zero   RW         1279    .bss                drvi2c.o
+    0x2000009c   0x00000060   Zero   RW         1499    .bss                c_p.l(libspace.o)
+    0x200000fc   0x00000004   PAD
+    0x20000100   0x00000000   Zero   RW            2    HEAP                startup_nuc1xx.o
+    0x20000100   0x00000200   Zero   RW            1    STACK               startup_nuc1xx.o
 
 
 ==============================================================================
@@ -1187,7 +1190,7 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      1988        246         10         16          0     128049   control.o
+      1930        240         10         20          0     128147   control.o
          0          0          0          0          0       4508   core_cm0.o
        380         28          0         12         12       3839   drvadc.o
       2772        200          0         16          0      22581   drvgpio.o
@@ -1200,9 +1203,9 @@ Image component sizes
        328         32          0          8          0        841   timer.o
 
     ----------------------------------------------------------------------
-      9392        902        252        108        556     199192   Object Totals
+      9332        896        252        112        556     199290   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        10          0          2          0          0          0   (incl. Padding)
+         8          0          2          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1243,8 +1246,8 @@ Image component sizes
          2          0          0          0          0         68   use_no_semi.o
 
     ----------------------------------------------------------------------
-      1240         50          0          0         96       1240   Library Totals
-         4          0          0          0          0          0   (incl. Padding)
+      1240         50          0          0        100       1240   Library Totals
+         4          0          0          0          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1253,7 +1256,7 @@ Image component sizes
       1236         50          0          0         96       1240   c_p.l
 
     ----------------------------------------------------------------------
-      1240         50          0          0         96       1240   Library Totals
+      1240         50          0          0        100       1240   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -1262,15 +1265,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     10632        952        252        108        652     197340   Grand Totals
-     10632        952        252        108        652     197340   ELF Image Totals
-     10632        952        252        108          0          0   ROM Totals
+     10572        946        252        112        656     197438   Grand Totals
+     10572        946        252        112        656     197438   ELF Image Totals
+     10572        946        252        112          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                10884 (  10.63kB)
-    Total RW  Size (RW Data + ZI Data)               760 (   0.74kB)
-    Total ROM Size (Code + RO Data + RW Data)      10992 (  10.73kB)
+    Total RO  Size (Code + RO Data)                10824 (  10.57kB)
+    Total RW  Size (RW Data + ZI Data)               768 (   0.75kB)
+    Total ROM Size (Code + RO Data + RW Data)      10936 (  10.68kB)
 
 ==============================================================================
 

@@ -17,13 +17,12 @@
 
 uint8_t command[8] = {0x00};
 int8_t item_quantity[48] = {0};
+int servo=3000;
 void Init_GPIO();
 void delay_s(int time);
-void Stop_Move();
-void Start_Move();
 
-int move_flag=0;
 int Car_action=2;
+int count=0;
 
 void InitPWM(void)
 {
@@ -60,7 +59,7 @@ void InitPWM(void)
 	PWMA->CNR0=40000-1;
 	PWMA->CNR1=40000-1;
 	PWMA->CNR2=40000-1;
-	PWMA->CMR0=2850;
+	PWMA->CMR0=3000;
 	PWMA->CMR1=2850;
 	PWMA->CMR2=2850;
 	//Duty Cycle = (CMR+1)/(CNR+1)=2001/40000=5%
@@ -86,49 +85,40 @@ void WIFI_UART_INT_HANDLE(void)
 	while(UART0->ISR.RDA_IF==1)
 	{
 		DrvUART_Read(UART_PORT0,bInChar,1);
-		if(bInChar[0]==0x11)
-		{
-			move_flag=0;
-			DrvGPIO_ClrBit(E_GPD, 9);
-		}
-		else if(bInChar[0]==0x12)
-		{
-			move_flag=1;
-			DrvGPIO_SetBit(E_GPD, 9);
-		}
-		else if(bInChar[0]=='a')
+		if(bInChar[0]=='a')
 		{
 			Car_action=1;//start
-			DrvGPIO_ClrBit(E_GPC, 15);
-			DrvGPIO_ClrBit(E_GPC, 14);
+			//DrvGPIO_SetBit(E_GPB, 9);
+			DrvGPIO_ClrBit(E_GPD, 10);
 		}
 		else if(bInChar[0]=='b')
 		{
 			Car_action=2;//stop
-			DrvGPIO_SetBit(E_GPC, 15);
-			DrvGPIO_SetBit(E_GPC, 14);
+			DrvGPIO_ClrBit(E_GPB, 9);
+			DrvGPIO_ClrBit(E_GPB, 10);
 		}
 		else if(bInChar[0]=='c')
 		{
 			Car_action=3;//right
-			DrvGPIO_ClrBit(E_GPC, 15);
-			DrvGPIO_SetBit(E_GPC, 14);
+			servo=4400;
+			PWMA->CMR0=servo;
+		}
+		else if(bInChar[0]=='m')
+		{
+			servo=3000;
+			PWMA->CMR0=servo;//mid
 		}
 		else if(bInChar[0]=='d')
 		{
 			Car_action=4;//left
-			DrvGPIO_SetBit(E_GPC, 15);
-			DrvGPIO_ClrBit(E_GPC, 14);
+			servo=2200;
+			PWMA->CMR0=servo;
 		}
 		else if(bInChar[0]=='e')
 		{
 			Car_action=5;//back
-			DrvGPIO_SetBit(E_GPC, 15);
-			DrvGPIO_SetBit(E_GPC, 14);
-		}
-		else
-		{
-			Car_action=6;
+			DrvGPIO_SetBit(E_GPB, 9);
+			DrvGPIO_SetBit(E_GPD, 10);
 		}
 	}
 }
@@ -257,46 +247,30 @@ static int32_t get_ADC_value(uint8_t ADC_channel_number)
 		DrvADC_StartConvert();
 		while(!DrvADC_IsConversionDone());
 		ADC_calibration[i] = DrvADC_GetConversionData(ADC_channel_number); 
-		DrvADC_StopConvert(); 
+		DrvADC_StopConvert();
 	}
 	return (ADC_average(ADC_calibration)); 
-}
-
-/*Stop move*/
-void Stop_Move()
-{
-	//DrvGPIO_ClrBit(E_GPD, 8);
-	//DrvGPIO_ClrBit(E_GPD, 9);
-	PWMA->CMR1=5;
-	PWMA->CMR2=5;
-}
-
-/*Start move*/
-void Start_Move()
-{
-	//DrvGPIO_SetBit(E_GPD, 8);
-	//DrvGPIO_SetBit(E_GPD, 9);
-	PWMA->CMR1=40000;
-	PWMA->CMR2=40000;
 }
 
 /*Init motor's GPIO   */
 void Init_GPIO()
 {
 	//堵フ絬碻格
-	DrvGPIO_Open(E_GPD, 0, E_IO_INPUT); //碻格1
+	//DrvGPIO_Open(E_GPD, 0, E_IO_INPUT); //碻格1
 	DrvGPIO_Open(E_GPD, 1, E_IO_INPUT); //碻格2
 	DrvGPIO_Open(E_GPD, 2, E_IO_INPUT); //碻格3
 	DrvGPIO_Open(E_GPD, 3, E_IO_INPUT); //碻格4
-	DrvGPIO_Open(E_GPD, 4, E_IO_INPUT); //碻格5
+	//DrvGPIO_Open(E_GPD, 4, E_IO_INPUT); //碻格5
 	
 	//WIFI
 	DrvGPIO_Open(E_GPB, 2, E_IO_OUTPUT); //wifi_reset
 	DrvGPIO_SetBit(E_GPB, 2);           //ッ环high
 	
 	//皑笷秨闽
-	DrvGPIO_Open(E_GPD, 9, E_IO_OUTPUT); //皑笷    pb.9
-	DrvGPIO_ClrBit(E_GPD, 9);           //﹍氨ゎ
+	DrvGPIO_Open(E_GPB, 9, E_IO_OUTPUT); //皑笷    pb.9
+	DrvGPIO_ClrBit(E_GPB, 9);           //﹍氨ゎ
+	DrvGPIO_Open(E_GPB, 10, E_IO_OUTPUT); //皑笷    pb.10
+	DrvGPIO_ClrBit(E_GPB, 10);           //﹍氨ゎ
 	
 	//秖
 	DrvGPIO_Open(E_GPB, 15, E_IO_INPUT); //场い耞
@@ -309,20 +283,20 @@ void Init_GPIO()
 	DrvGPIO_ClrBit(E_GPA, 14);   //left
 	
 	//オ锣ボ縊
-	DrvGPIO_Open(E_GPC, 7, E_IO_OUTPUT);//right
+	//DrvGPIO_Open(E_GPC, 6, E_IO_OUTPUT);
+	//DrvGPIO_ClrBit(E_GPC, 6);
+	DrvGPIO_Open(E_GPC, 7, E_IO_OUTPUT);
 	DrvGPIO_ClrBit(E_GPC, 7);
-	DrvGPIO_Open(E_GPC, 6, E_IO_OUTPUT);//left
-	DrvGPIO_ClrBit(E_GPC, 6);
-	
-	//玡秈ボ縊
-	DrvGPIO_Open(E_GPD, 10, E_IO_OUTPUT); 
-	DrvGPIO_ClrBit(E_GPD, 10);
+	DrvGPIO_Open(E_GPC, 8, E_IO_OUTPUT);
+	DrvGPIO_ClrBit(E_GPC, 8);
+	DrvGPIO_Open(E_GPC, 9, E_IO_OUTPUT);
+	DrvGPIO_ClrBit(E_GPC, 9);
+	DrvGPIO_Open(E_GPC, 10, E_IO_OUTPUT);
+	DrvGPIO_SetBit(E_GPC, 10);
 	
 	//タは锣
-	DrvGPIO_Open(E_GPC, 15, E_IO_OUTPUT);//left    pb.10
-	DrvGPIO_ClrBit(E_GPC, 15);
-	DrvGPIO_Open(E_GPC, 14, E_IO_OUTPUT);//right   pb.11
-	DrvGPIO_ClrBit(E_GPC, 14);
+	DrvGPIO_Open(E_GPD, 10, E_IO_OUTPUT);
+	DrvGPIO_ClrBit(E_GPD, 10);
 }
 
 void get_weight()
@@ -387,6 +361,96 @@ void delay_s(int time)
 	}
 }
 
+void servo_ctrl()
+{
+	if(DrvGPIO_GetBit(E_GPD, 1))
+		DrvGPIO_SetBit(E_GPC, 7);
+	else
+		DrvGPIO_ClrBit(E_GPC, 7);
+	if(DrvGPIO_GetBit(E_GPD, 2))
+		DrvGPIO_SetBit(E_GPC, 8);
+	else
+		DrvGPIO_ClrBit(E_GPC, 8);
+	if(DrvGPIO_GetBit(E_GPD, 3))
+		DrvGPIO_SetBit(E_GPC, 9);
+	else
+		DrvGPIO_ClrBit(E_GPC, 9);
+	
+	if(DrvGPIO_GetBit(E_GPD, 1) && DrvGPIO_GetBit(E_GPD, 2) && DrvGPIO_GetBit(E_GPD, 3))//111
+	{
+		count=0;
+		//servo=servo;
+		servo=3000;
+		PWMA->CMR0=servo;
+		//DrvGPIO_SetBit(E_GPD, 10);
+		DrvSYS_Delay(100000);
+		DrvGPIO_ClrBit(E_GPB, 9);
+		DrvGPIO_ClrBit(E_GPB, 10);
+		//DrvGPIO_ClrBit(E_GPD, 10);
+		delay_s(2);
+		//DrvGPIO_SetBit(E_GPB, 9);
+		while(DrvGPIO_GetBit(E_GPD, 1) && DrvGPIO_GetBit(E_GPD, 2) && DrvGPIO_GetBit(E_GPD, 3));
+	}
+	else if(!DrvGPIO_GetBit(E_GPD, 1) && DrvGPIO_GetBit(E_GPD, 2) && !DrvGPIO_GetBit(E_GPD, 3))//010
+	{
+		count=0;
+		servo=3000;
+		DrvGPIO_SetBit(E_GPB, 9);
+		DrvGPIO_SetBit(E_GPB, 10);
+	}
+	else if(!DrvGPIO_GetBit(E_GPD, 1) && !DrvGPIO_GetBit(E_GPD, 2) && DrvGPIO_GetBit(E_GPD, 3))//001
+	{
+		count=0;
+		servo=4400;
+		
+		DrvGPIO_SetBit(E_GPB, 9);
+		DrvGPIO_ClrBit(E_GPB, 10);
+	}
+	else if(DrvGPIO_GetBit(E_GPD, 1) && !DrvGPIO_GetBit(E_GPD, 2) && !DrvGPIO_GetBit(E_GPD, 3))//100
+	{
+		count=0;
+		servo=2200;
+		
+		DrvGPIO_ClrBit(E_GPB, 9);
+		DrvGPIO_SetBit(E_GPB, 10);
+	}
+	else if(!DrvGPIO_GetBit(E_GPD, 1) && DrvGPIO_GetBit(E_GPD, 2) && DrvGPIO_GetBit(E_GPD, 3))//011
+	{
+		count=0;
+		servo=3500;
+		
+		DrvGPIO_SetBit(E_GPB, 9);
+		DrvGPIO_SetBit(E_GPB, 10);
+	}
+	else if(DrvGPIO_GetBit(E_GPD, 1) && DrvGPIO_GetBit(E_GPD, 2) && !DrvGPIO_GetBit(E_GPD, 3))//110
+	{
+		count=0;
+		servo=2580;
+		
+		DrvGPIO_SetBit(E_GPB, 9);
+		DrvGPIO_SetBit(E_GPB, 10);
+	}
+	else 
+	{
+		servo=servo;
+	}
+	if(!DrvGPIO_GetBit(E_GPD, 1) && !DrvGPIO_GetBit(E_GPD, 2) && !DrvGPIO_GetBit(E_GPD, 3))//000
+	{
+		count++;
+		if(count>30)
+		{
+			DrvGPIO_ClrBit(E_GPB, 9);
+			DrvGPIO_ClrBit(E_GPB, 10);
+			while(1)
+			{
+				if(!DrvGPIO_GetBit(E_GPD, 1) && DrvGPIO_GetBit(E_GPD, 2) && !DrvGPIO_GetBit(E_GPD, 3))
+					break;
+			}
+		}
+	}
+	PWMA->CMR0=servo;
+}
+
 int32_t main()
 {
 	int i =10;
@@ -415,7 +479,6 @@ int32_t main()
 	
 	init_LCD();      //LCD﹍て
 	clear_LCD();
-	write_LCD(0, 0, "12345abcde");
 
 	/* UART Setting */
 	sParam.u32BaudRate 		= 115200;
@@ -448,23 +511,11 @@ int32_t main()
 
 	//InitTIMER0();
 	InitPWM();
-	                                       
+	
 	while(1)
 	{
-		get_weight();
-		DrvSYS_Delay(300000);
-		//1250
-		PWMA->CMR0=1050;
-		DrvGPIO_ClrBit(E_GPA, 8);
-		//delay_s(2);
-		DrvSYS_Delay(33000);
-		PWMA->CMR0=1450;//1450;
-		DrvGPIO_SetBit(E_GPA, 8);
-		//delay_s(2);
-		DrvSYS_Delay(33000);
-	}
-	while(1)
-	{
+		DrvUART_Write(UART_PORT0," ",1);
+		servo_ctrl();
 		battery=get_ADC_value(0);
 		Distance_ADC=get_ADC_value(1);
 		sprintf(adc_value,"%d ",battery);
@@ -473,70 +524,29 @@ int32_t main()
 		DrvSYS_Delay(5000);
 		DrvUART_Write(UART_PORT0,adc_value,5);
 		DrvSYS_Delay(100000);*/
-		if(move_flag==1)
+		
+		clear_LCD();
+		write_LCD(0, 0, adc_value);
+		DrvSYS_Delay(10000);
+		if(Distance_ADC>=600)
 		{
-			if(Distance_ADC>=600)
+			if(Car_action==1)
 			{
-				if(Car_action==1)
-				{
-					DrvGPIO_SetBit(E_GPC, 15);
-					DrvGPIO_SetBit(E_GPC, 14);
-					PWMA->CMR1=5;
-					PWMA->CMR2=5;
-					DrvSYS_Delay(330000);
-				}
-				else if(Car_action==2)
-				{
-					PWMA->CMR1=5;
-					PWMA->CMR2=5;
-				}
-				else if(Car_action==3)
-				{
-					PWMA->CMR1=40000;//5
-					PWMA->CMR2=40000;
-				}
-				else if(Car_action==4)
-				{
-					PWMA->CMR1=40000;
-					PWMA->CMR2=40000;//5
-				}
-				else if(Car_action==5)
-				{
-					PWMA->CMR1=40000;
-					PWMA->CMR2=40000;//5
-				}
-				DrvGPIO_ClrBit(E_GPD, 10);
+				//DrvGPIO_SetBit(E_GPD, 10);
+				DrvSYS_Delay(100000);
+				DrvGPIO_ClrBit(E_GPB, 9);
+				DrvGPIO_ClrBit(E_GPB, 10);
+				//DrvGPIO_ClrBit(E_GPD, 10);
+				DrvSYS_Delay(330000);
+				DrvSYS_Delay(330000);
 			}
-			else
+		}
+		else
+		{
+			if(Car_action==1)
 			{
-				if(Car_action==1)
-				{
-					DrvGPIO_ClrBit(E_GPC, 15);
-					DrvGPIO_ClrBit(E_GPC, 14);
-					PWMA->CMR1=40000;
-					PWMA->CMR2=40000;
-				}
-				else if(Car_action==2)
-				{
-					PWMA->CMR1=5;
-					PWMA->CMR2=5;
-				}
-				else if(Car_action==3)
-				{
-					PWMA->CMR1=40000;//5
-					PWMA->CMR2=40000;
-				}
-				else if(Car_action==4)
-				{
-					PWMA->CMR1=40000;
-					PWMA->CMR2=40000;//5
-				}
-				else if(Car_action==5)
-				{
-					PWMA->CMR1=40000;
-					PWMA->CMR2=40000;//5
-				}
-				DrvGPIO_SetBit(E_GPD, 10);
+				DrvGPIO_SetBit(E_GPB, 9);
+				DrvGPIO_SetBit(E_GPB, 10);
 			}
 		}
 	}
