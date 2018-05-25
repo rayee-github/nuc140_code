@@ -87,44 +87,55 @@ void WIFI_UART_INT_HANDLE(void)
 		DrvUART_Read(UART_PORT0,bInChar,1);
 		if(bInChar[0]=='a')
 		{
-			Car_action=1;//start
 			PWMA->CMR1=39999;
 			PWMA->CMR2=39999;
 			DrvGPIO_ClrBit(E_GPB, 9);
 			DrvGPIO_ClrBit(E_GPB, 10);
+			Car_action=1;//start
 		}
 		else if(bInChar[0]=='b')
 		{
-			Car_action=2;//stop
 			PWMA->CMR1=0;
 			PWMA->CMR2=0;
 			DrvGPIO_ClrBit(E_GPB, 9);
 			DrvGPIO_ClrBit(E_GPB, 10);
+			Car_action=2;//stop
 		}
 		else if(bInChar[0]=='c')
 		{
-			Car_action=3;//right
-			servo=4400;
+			PWMA->CMR1=39999;
+			PWMA->CMR2=0;
+			DrvGPIO_ClrBit(E_GPB, 9);
+			DrvGPIO_ClrBit(E_GPB, 10);
 			PWMA->CMR0=servo;
+			servo=4400;
+			Car_action=3;//right
 		}
 		else if(bInChar[0]=='m')
 		{
+			PWMA->CMR1=39999;
+			PWMA->CMR2=39999;
+			DrvGPIO_ClrBit(E_GPB, 9);
+			DrvGPIO_ClrBit(E_GPB, 10);
 			servo=3050;
 			PWMA->CMR0=servo;//mid
 		}
 		else if(bInChar[0]=='d')
 		{
+			PWMA->CMR1=0;
+			PWMA->CMR2=39999;
+			DrvGPIO_ClrBit(E_GPB, 9);
+			DrvGPIO_ClrBit(E_GPB, 10);
 			Car_action=4;//left
 			servo=2200;
 			PWMA->CMR0=servo;
 		}
 		else if(bInChar[0]=='e')
 		{
-			Car_action=5;//back
 			PWMA->CMR1=0;
 			PWMA->CMR2=0;
 			DrvGPIO_SetBit(E_GPB, 9);
-			DrvGPIO_SetBit(E_GPD, 10);
+			DrvGPIO_SetBit(E_GPB, 10);
 		}
 	}
 }
@@ -552,7 +563,7 @@ int32_t main()
 	while(1)
 	{
 		//DrvUART_Write(UART_PORT0," ",1);//ÂÅªÞ¤£¥ð¯v
-		//servo_ctrl();
+		servo_ctrl();
 		Distance_ADC=get_ADC_value(1);
 		battery=get_ADC_value(0);
 		sprintf(adc_value,"%d ",battery);
@@ -562,9 +573,9 @@ int32_t main()
 		DrvUART_Write(UART_PORT0,adc_value,5);
 		DrvSYS_Delay(100000);*/
 		
-		clear_LCD();
+		/*clear_LCD();
 		write_LCD(0, 0, adc_value);
-		DrvSYS_Delay(100000);
+		DrvSYS_Delay(100000);*/
 		
 		DrvSYS_Delay(10000);
 		if(Distance_ADC>=600)

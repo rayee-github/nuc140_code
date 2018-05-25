@@ -26,15 +26,42 @@ Project File Date:  01/30/2018
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Build target 'Target 1'
+Rebuild target 'Target 1'
+assembling startup_NUC1xx.s...
+compiling core_cm0.c...
+compiling system_NUC1xx.c...
+compiling control.c...
+control.c(15): warning:  #1295-D: Deprecated declaration action_GPIO - give arg types
+  void action_GPIO();
+control.c(16): warning:  #1295-D: Deprecated declaration Init_GPIO - give arg types
+  void Init_GPIO();
+control.c(175): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+  	DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);
+control.c(184): warning:  #1-D: last line of file ends without a newline
+  }
+control.c(147): warning:  #177-D: variable "i"  was declared but never referenced
+  	uint8_t i =0;
+control.c(148): warning:  #177-D: variable "char1"  was declared but never referenced
+  	uint8_t char1[8]={0xAA,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xFF};
+control.c: 6 warnings, 0 errors
 compiling Timer.c...
 Timer.c(41): warning:  #1-D: last line of file ends without a newline
   }
 Timer.c: 1 warning, 0 errors
+compiling DrvADC.c...
+compiling DrvGPIO.c...
+compiling DrvSYS.c...
+compiling Ascii_Table.C...
+compiling LCD_Driver.c...
+compiling DrvUART.c...
+..\..\..\Src\Driver\DrvUART.c(900): warning:  #1-D: last line of file ends without a newline
+  }
+..\..\..\Src\Driver\DrvUART.c: 1 warning, 0 errors
 linking...
-Program Size: Code=8048 RO-data=252 RW-data=1624 ZI-data=672  
-".\Objects\control.axf" - 0 Error(s), 1 Warning(s).
-Build Time Elapsed:  00:00:00
+Program Size: Code=7940 RO-data=252 RW-data=1624 ZI-data=672  
+After Build - User command #1: C:\Keil_v5\ARM\ARMCC\bin\fromelf.exe --bin -o ./objects/bin/control.bin ./objects/control.axf
+".\Objects\control.axf" - 0 Error(s), 8 Warning(s).
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

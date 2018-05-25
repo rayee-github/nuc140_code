@@ -62,6 +62,8 @@ void Init_GPIO()
 	int i;
 	DrvGPIO_Open(E_GPA, 6, E_IO_OUTPUT); //wifi_reset
 	DrvGPIO_SetBit(E_GPA, 6);           //¥Ã»·high
+	DrvGPIO_Open(E_GPE, 15, E_IO_OUTPUT); //pin.1
+	DrvGPIO_ClrBit(E_GPE, 15);           
 	for(i=0;i<16;i++)//GPC set0
 	{
 		DrvGPIO_Open(E_GPC, i, E_IO_OUTPUT);
@@ -125,7 +127,7 @@ void action_GPIO()
 	{
 		item_quantity[i]=0;
 	}
-	DrvUART_Write(UART_PORT0,"AT+CIPSEND=4\r\n",14); 
+	DrvUART_Write(UART_PORT0,"AT+CIPSEND=4\r\n",14);
 	DrvSYS_Delay(5000);
 	DrvUART_Write(UART_PORT0,"1_OK",4);
 }
@@ -168,9 +170,15 @@ int32_t main()
 	
 	/* Set UART Configuration */
  	if(DrvUART_Open(UART_PORT0,&sParam) != E_SUCCESS);
-	DrvUART_Write(UART_PORT0,"AT+CIPSTART=\"TCP\",\"192.168.16.254\",8080\r\n",42); 
+	DrvUART_Write(UART_PORT0,"AT+CIPSTART=\"TCP\",\"192.168.16.254\",8080\r\n",42);
 	delay_s(1);
 	DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, UART_INT_HANDLE);
-	InitTIMER0();
-	while(1);
+	//InitTIMER0();
+	while(1)
+	{
+		DrvGPIO_SetBit(E_GPE,15);
+		delay_s(2);
+		DrvGPIO_ClrBit(E_GPE,15);
+		delay_s(2);
+	}
 }
