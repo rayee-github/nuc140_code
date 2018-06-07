@@ -17,7 +17,6 @@
 
 uint8_t command[8] = {0x00};
 int8_t item_quantity[48] = {0};
-int servo=3050;
 void Init_GPIO();
 void delay_s(int time);
 
@@ -107,8 +106,6 @@ void WIFI_UART_INT_HANDLE(void)
 			PWMA->CMR2=0;
 			DrvGPIO_ClrBit(E_GPB, 9);
 			DrvGPIO_ClrBit(E_GPB, 10);
-			PWMA->CMR0=servo;
-			servo=4400;
 			Car_action=3;//right
 		}
 		else if(bInChar[0]=='m')
@@ -117,8 +114,6 @@ void WIFI_UART_INT_HANDLE(void)
 			PWMA->CMR2=39999;
 			DrvGPIO_ClrBit(E_GPB, 9);
 			DrvGPIO_ClrBit(E_GPB, 10);
-			servo=3050;
-			PWMA->CMR0=servo;//mid
 		}
 		else if(bInChar[0]=='d')
 		{
@@ -127,8 +122,6 @@ void WIFI_UART_INT_HANDLE(void)
 			DrvGPIO_ClrBit(E_GPB, 9);
 			DrvGPIO_ClrBit(E_GPB, 10);
 			Car_action=4;//left
-			servo=2200;
-			PWMA->CMR0=servo;
 		}
 		else if(bInChar[0]=='e')
 		{
@@ -271,7 +264,7 @@ static int32_t get_ADC_value(uint8_t ADC_channel_number)
 	return (ADC_average(ADC_calibration)); 
 }
 
-/*Init motor's GPIO   */
+/*Init GPIO   */
 void Init_GPIO()
 {
 	//黑白線循跡
@@ -438,7 +431,6 @@ void servo_ctrl()
 		||(!DrvGPIO_GetBit(E_GPD, 0) && !DrvGPIO_GetBit(E_GPD, 1) && DrvGPIO_GetBit(E_GPD, 2) && !DrvGPIO_GetBit(E_GPD, 3) && !DrvGPIO_GetBit(E_GPD, 4)))//or 11011
 	{
 		stop_count=0;
-		servo=3050;
 		PWMA->CMR1=0;
 		PWMA->CMR2=0;
 		DrvGPIO_ClrBit(E_GPB, 9);
@@ -457,7 +449,6 @@ void servo_ctrl()
 	else if(DrvGPIO_GetBit(E_GPD, 0) && DrvGPIO_GetBit(E_GPD, 1) && !DrvGPIO_GetBit(E_GPD, 2) && DrvGPIO_GetBit(E_GPD, 3) && DrvGPIO_GetBit(E_GPD, 4) )//00100
 	{
 		stop_count=0;
-		servo=3050;
 		PWMA->CMR1=39999;
 		PWMA->CMR2=39999;
 		DrvGPIO_ClrBit(E_GPB, 9);
@@ -467,7 +458,6 @@ void servo_ctrl()
 		||(DrvGPIO_GetBit(E_GPD, 0) && DrvGPIO_GetBit(E_GPD, 1) && DrvGPIO_GetBit(E_GPD, 2) && !DrvGPIO_GetBit(E_GPD, 3) && DrvGPIO_GetBit(E_GPD, 4)))//00010
 	{
 		stop_count=0;
-		servo=4400;
 		PWMA->CMR1=39999;
 		PWMA->CMR2=0;
 		DrvGPIO_ClrBit(E_GPB, 9);
@@ -477,7 +467,6 @@ void servo_ctrl()
 		||(DrvGPIO_GetBit(E_GPD, 0) && !DrvGPIO_GetBit(E_GPD, 1) && DrvGPIO_GetBit(E_GPD, 2) && DrvGPIO_GetBit(E_GPD, 3) && DrvGPIO_GetBit(E_GPD, 4)))//or 01000
 	{
 		stop_count=0;
-		servo=2200;
 		PWMA->CMR1=0;
 		PWMA->CMR2=39999;
 		DrvGPIO_ClrBit(E_GPB, 9);//s
@@ -486,7 +475,6 @@ void servo_ctrl()
 	else if(DrvGPIO_GetBit(E_GPD, 0) && DrvGPIO_GetBit(E_GPD, 1) && DrvGPIO_GetBit(E_GPD, 2) && DrvGPIO_GetBit(E_GPD, 3) && !DrvGPIO_GetBit(E_GPD, 4))//00001
 	{
 		stop_count=0;
-		servo=4400;
 		PWMA->CMR1=39999;
 		PWMA->CMR2=0;
 		DrvGPIO_ClrBit(E_GPB, 9);
@@ -495,7 +483,6 @@ void servo_ctrl()
 	else if(!DrvGPIO_GetBit(E_GPD, 0) && DrvGPIO_GetBit(E_GPD, 1) && DrvGPIO_GetBit(E_GPD, 2) && DrvGPIO_GetBit(E_GPD, 3) && DrvGPIO_GetBit(E_GPD, 4))//10000
 	{
 		stop_count=0;
-		servo=2200;
 		PWMA->CMR1=0;
 		PWMA->CMR2=39999;
 		DrvGPIO_SetBit(E_GPB, 9);
@@ -504,7 +491,6 @@ void servo_ctrl()
 	else if(DrvGPIO_GetBit(E_GPD, 0) && DrvGPIO_GetBit(E_GPD, 1) && !DrvGPIO_GetBit(E_GPD, 2) && !DrvGPIO_GetBit(E_GPD, 3) && DrvGPIO_GetBit(E_GPD, 4))//00110
 	{
 		stop_count=0;
-		servo=3050;//3500
 		PWMA->CMR1=39999;
 		PWMA->CMR2=10000;
 		DrvGPIO_ClrBit(E_GPB, 9); 
@@ -513,15 +499,10 @@ void servo_ctrl()
 	else if(DrvGPIO_GetBit(E_GPD, 0) && !DrvGPIO_GetBit(E_GPD, 1) && !DrvGPIO_GetBit(E_GPD, 2) && DrvGPIO_GetBit(E_GPD, 3) && DrvGPIO_GetBit(E_GPD, 4))//01100
 	{
 		stop_count=0;
-		servo=3050;//2580
 		PWMA->CMR1=10000;
 		PWMA->CMR2=39999;
 		DrvGPIO_ClrBit(E_GPB, 9);
 		DrvGPIO_ClrBit(E_GPB, 10);
-	}
-	else 
-	{
-		servo=servo;
 	}
 	if(DrvGPIO_GetBit(E_GPD, 0) && DrvGPIO_GetBit(E_GPD, 1) && DrvGPIO_GetBit(E_GPD, 2) && DrvGPIO_GetBit(E_GPD, 3) && DrvGPIO_GetBit(E_GPD, 4))//00000
 	{
@@ -539,7 +520,6 @@ void servo_ctrl()
 			}
 		}
 	}
-	 //PWMA->CMR0=servo;
 }
 
 int32_t main()
@@ -570,7 +550,7 @@ int32_t main()
 	
 	init_LCD();      //LCD初始化
 	clear_LCD();
-
+	
 	/* UART Setting */
 	sParam.u32BaudRate 		= 115200;
 	sParam.u8cDataBits 		= DRVUART_DATABITS_8;
@@ -602,7 +582,7 @@ int32_t main()
 
 	//InitTIMER0();
 	InitPWM();
-	
+
 	while(1)
 	{
 		//DrvUART_Write(UART_PORT0," ",1);//藍芽不休眠

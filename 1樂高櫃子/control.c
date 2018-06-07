@@ -1,16 +1,14 @@
 // pin32 GPB0/RX0
 // pin33 GPB1/TX0
+//AA 3C 00 01 02 03 04 05 10 11 12 13 14 15 20 21 22 23 24 25 30 31 32 33 34 35 40 41 42 43 44 45 50 51 52 53 54 55 60 61 62 63 64 65 70 71 72 73 74 75 80 81 82 83 84 85 90 91 92 93 94 95 
 #include <stdio.h>
 #include "Driver\DrvUART.h"
 #include "Driver\DrvGPIO.h"
 #include "Driver\DrvSYS.h"
 #include "Driver\DrvADC.h"
 #include "NUC1xx.h"
-#include "NUC1xx-LB_002\LCD_Driver.h"
 #include "Timer.h"
 
-uint8_t command[8] = {0x00};
-int8_t item_quantity[48] = {0};
 void Init_GPIO();
 void delay_s(int time);
 void LED_control(int *command,int a);
@@ -21,7 +19,7 @@ void UART_INT_HANDLE(void)
 {
 	uint8_t bInChar[1] = {0xFF};
 	uint8_t count[1] = {0xFF};
-	int command[10]={0};
+	int command[70]={0};
 	
 	while(UART0->ISR.RDA_IF==1)
 	{
@@ -29,12 +27,37 @@ void UART_INT_HANDLE(void)
 		if(bInChar[0]==0xAA)
 		{
 			DrvUART_Read(UART_PORT0,count,1);
-			for(int i=0;i<count[0];i++)
+			if(count[0]==0xFF)//¥þ«G
 			{
-				DrvUART_Read(UART_PORT0,bInChar,1);
-				command[i]=bInChar[0];
+				for(int i=0;i<10;i++)
+				{
+					DrvGPIO_ClrBit(E_GPD,i);
+				}
+				for(int i=0;i<6;i++)
+				{
+					DrvGPIO_SetBit(E_GPE,i);
+				}
 			}
-			LED_control(command,count[0]);
+			else if(count[0]==0x00)//¥þ·À
+			{
+				for(int i=0;i<10;i++)
+				{
+					DrvGPIO_SetBit(E_GPD,i);
+				}
+				for(int i=0;i<6;i++)
+				{
+					DrvGPIO_ClrBit(E_GPE,i);
+				}
+			}
+			else
+			{
+				for(int i=0;i<count[0];i++)
+				{
+					DrvUART_Read(UART_PORT0,bInChar,1);
+					command[i]=bInChar[0];
+				}
+				LED_control(command,count[0]);
+			}
 		}
 	}
 }
@@ -56,19 +79,20 @@ void row_column(int row,int column)
 	
 	DrvGPIO_ClrBit(E_GPD,row);
 	DrvGPIO_SetBit(E_GPE,column);
-	delay_s(1);
 	sprintf(bInChar2,"r=%d c=%d\r\n",row,column);
 	DrvUART_Write(UART_PORT0,bInChar2,strlen(bInChar2));
+	
+	while(!DrvGPIO_GetBit(E_GPE,15));
 	
 	for(int i=0;i<10;i++)        //row initial
 		DrvGPIO_SetBit(E_GPD,i);
 	for(int i=0;i<6;i++)         //column initial
 		DrvGPIO_ClrBit(E_GPE,i);
 	
-	//while(DrvGPIO_GetBit(E_GPE,10));
+	DrvSYS_Delay(330000);
 }
 
-/*Init motor's GPIO   */
+/*Init GPIO   */
 void Init_GPIO()
 {
 	for(int i=0;i<10;i++)
@@ -82,7 +106,7 @@ void Init_GPIO()
 		DrvGPIO_ClrBit(E_GPE,i);
 	}
 	
-	DrvGPIO_Open(E_GPE, 10, E_IO_INPUT); //button
+	DrvGPIO_Open(E_GPE, 15, E_IO_INPUT); //button
 }
 
 /* delay 1 secend  */
@@ -119,9 +143,6 @@ int32_t main()
 	
 	while(1)
 	{
-		DrvGPIO_SetBit(E_GPE,15);
-		delay_s(2);
-		DrvGPIO_ClrBit(E_GPE,15);
-		delay_s(2);
+		
 	}
 }

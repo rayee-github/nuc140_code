@@ -1,9 +1,0 @@
-.\objects\drvgpio.o: ..\..\..\Src\Driver\DrvGPIO.c
-.\objects\drvgpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
-.\objects\drvgpio.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\NUC1xx.h
-.\objects\drvgpio.o: ..\..\..\..\CMSIS\CM0\CoreSupport\core_cm0.h
-.\objects\drvgpio.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\drvgpio.o: ..\..\..\..\CMSIS\CM0\DeviceSupport\Nuvoton\NUC1xx\system_NUC1xx.h
-.\objects\drvgpio.o: ..\..\..\Include\System\SysInfra.h
-.\objects\drvgpio.o: ..\..\..\Include\System\ModuleID.h
-.\objects\drvgpio.o: ..\..\..\Include\Driver\DrvGPIO.h

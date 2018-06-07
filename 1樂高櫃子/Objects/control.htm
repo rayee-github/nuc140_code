@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\Objects\control.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\control.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Thu May 24 10:36:02 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060422: Last Updated: Tue Jun 05 12:09:31 2018
 <BR><P>
-<H3>Maximum Stack Usage =        232 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        472 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 UART_INT_HANDLE &rArr; LED_control &rArr; row_column &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 <P>
@@ -355,7 +355,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_d
 </UL>
 
-<P><STRONG><a name="[6e]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 12 bytes, strlen.o(.text))
+<P><STRONG><a name="[6c]"></a>strlen</STRONG> (Thumb, 62 bytes, Stack size 12 bytes, strlen.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = strlen
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;row_column
@@ -487,8 +487,14 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DrvGPIO_ClrBit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;row_column
-<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_INT_HANDLE
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_GPIO
+</UL>
+
+<P><STRONG><a name="[6e]"></a>DrvGPIO_GetBit</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, drvgpio.o(i.DrvGPIO_GetBit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DrvGPIO_GetBit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;row_column
 </UL>
 
 <P><STRONG><a name="[56]"></a>DrvGPIO_InitFunction</STRONG> (Thumb, 1864 bytes, Stack size 8 bytes, drvgpio.o(i.DrvGPIO_InitFunction))
@@ -509,12 +515,12 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = DrvGPIO_SetBit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;row_column
-<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_INT_HANDLE
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_GPIO
 </UL>
 
-<P><STRONG><a name="[6d]"></a>DrvSYS_Delay</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, drvsys.o(i.DrvSYS_Delay))
-<BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_s
+<P><STRONG><a name="[6f]"></a>DrvSYS_Delay</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, drvsys.o(i.DrvSYS_Delay))
+<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;row_column
 </UL>
 
 <P><STRONG><a name="[63]"></a>DrvSYS_GetExtClockFreq</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, drvsys.o(i.DrvSYS_GetExtClockFreq))
@@ -587,7 +593,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_INT_HANDLE
 </UL>
 
-<P><STRONG><a name="[6f]"></a>DrvUART_Write</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, drvuart.o(i.DrvUART_Write))
+<P><STRONG><a name="[6d]"></a>DrvUART_Write</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, drvuart.o(i.DrvUART_Write))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = DrvUART_Write
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;row_column
@@ -658,11 +664,13 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_nuc1xx.o(RESET)
 </UL>
-<P><STRONG><a name="[2d]"></a>UART_INT_HANDLE</STRONG> (Thumb, 114 bytes, Stack size 56 bytes, control.o(i.UART_INT_HANDLE))
-<BR><BR>[Stack]<UL><LI>Max Depth = 232 + Unknown Stack Size
+<P><STRONG><a name="[2d]"></a>UART_INT_HANDLE</STRONG> (Thumb, 208 bytes, Stack size 296 bytes, control.o(i.UART_INT_HANDLE))
+<BR><BR>[Stack]<UL><LI>Max Depth = 472 + Unknown Stack Size
 <LI>Call Chain = UART_INT_HANDLE &rArr; LED_control &rArr; row_column &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvUART_Read
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvGPIO_SetBit
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvGPIO_ClrBit
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_control
 <LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
@@ -674,39 +682,28 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvGPIO_InitFunction
 </UL>
 
-<P><STRONG><a name="[6c]"></a>delay_s</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, control.o(i.delay_s))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = delay_s
-</UL>
-<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvSYS_Delay
-</UL>
-<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;row_column
-<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[3d]"></a>main</STRONG> (Thumb, 108 bytes, Stack size 16 bytes, control.o(i.main))
+<P><STRONG><a name="[3d]"></a>main</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, control.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = main &rArr; DrvUART_Open &rArr; GetUartClk &rArr; DrvSYS_GetPLLClockFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvUART_Open
 <LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvUART_EnableInt
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvSYS_Open
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvGPIO_SetBit
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvGPIO_InitFunction
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvGPIO_ClrBit
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_s
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Init_GPIO
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[69]"></a>row_column</STRONG> (Thumb, 104 bytes, Stack size 32 bytes, control.o(i.row_column))
+<P><STRONG><a name="[69]"></a>row_column</STRONG> (Thumb, 118 bytes, Stack size 32 bytes, control.o(i.row_column))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152 + Unknown Stack Size
 <LI>Call Chain = row_column &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvUART_Write
+<BR>[Calls]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvUART_Write
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvSYS_Delay
 <LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvGPIO_SetBit
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvGPIO_GetBit
 <LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DrvGPIO_ClrBit
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_s
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2sprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_control

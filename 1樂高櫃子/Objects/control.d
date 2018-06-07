@@ -10,5 +10,5 @@
 .\objects\control.o: ..\..\..\Include\Driver\DrvGPIO.h
 .\objects\control.o: ..\..\..\Include\Driver\DrvSYS.h
 .\objects\control.o: ..\..\..\Include\Driver\DrvADC.h
-.\objects\control.o: ..\..\..\Include\NUC1xx-LB_002\LCD_Driver.h
 .\objects\control.o: Timer.h
+.\objects\control.o: ..\..\..\Include\NUC1xx-LB_002\LCD_Driver.h

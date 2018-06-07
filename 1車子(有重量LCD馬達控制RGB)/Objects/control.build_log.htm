@@ -26,9 +26,7 @@ Project File Date:  03/05/2018
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
-Rebuild target 'Target 1'
-compiling system_NUC1xx.c...
-assembling startup_NUC1xx.s...
+Build target 'Target 1'
 compiling control.c...
 LCD_i2c.h(4): warning:  #1295-D: Deprecated declaration init_LCD - give arg types
   void init_LCD();
@@ -44,10 +42,6 @@ control.c(82): warning:  #177-D: variable "j"  was declared but never referenced
   	uint8_t i,j,x=1;
 control.c(82): warning:  #177-D: variable "x"  was declared but never referenced
   	uint8_t i,j,x=1;
-control.c(595): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
-  	DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, WIFI_UART_INT_HANDLE);
-control.c(596): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
-  	DrvUART_EnableInt(UART_PORT1, DRVUART_RDAINT, RFID_UART_INT_HANDLE);
 control.c(639): warning:  #1-D: last line of file ends without a newline
   }
 control.c(547): warning:  #177-D: variable "i"  was declared but never referenced
@@ -59,33 +53,16 @@ control.c(548): warning:  #177-D: variable "f"  was declared but never reference
 control.c(550): warning:  #177-D: variable "bInChar"  was declared but never referenced
   	uint8_t bInChar[2];
 control.c: 19 warnings, 0 errors
-compiling core_cm0.c...
-compiling LCD_i2c.c...
-LCD_i2c.c(9): warning:  #177-D: variable "L"  was declared but never referenced
-  	uint8_t L,H;
-LCD_i2c.c(9): warning:  #177-D: variable "H"  was declared but never referenced
-  	uint8_t L,H;
-LCD_i2c.c(114): warning:  #223-D: function "strlen" declared implicitly
-  	tmp = strlen(data);
-LCD_i2c.c: 3 warnings, 0 errors
-compiling DrvADC.c...
-compiling Timer.c...
-Timer.c(78): warning:  #1-D: last line of file ends without a newline
-  }
-Timer.c: 1 warning, 0 errors
-compiling DrvGPIO.c...
-compiling LCD_Driver.c...
-compiling DrvSYS.c...
-compiling DrvUART.c...
-..\..\..\Src\Driver\DrvUART.c(900): warning:  #1-D: last line of file ends without a newline
-  }
-..\..\..\Src\Driver\DrvUART.c: 1 warning, 0 errors
-compiling Ascii_Table.C...
-compiling DrvI2C.c...
+riable "TEXT3"  was declared but never referenced
+  	char TEXT3[16] = "                ";
+control.c(595): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+  	DrvUART_EnableInt(UART_PORT0, DRVUART_RDAINT, WIFI_UART_INT_HANDLE);
+control.c(596): warning:  #167-D: argument of type "void (*)(void)" is incompatible with parameter of type "PFN_DRVUART_CALLBACK *"
+  	DrvUART_EnableInt(UART_PORT1, DRVUART_RDAINT, RFID_UART_INT_HANDLE);
 linking...
 Program Size: Code=12892 RO-data=252 RW-data=116 ZI-data=652  
-".\Objects\control.axf" - 0 Error(s), 19 Warning(s).
-Build Time Elapsed:  00:00:03
+".\Objects\control.axf" - 0 Error(s), 14 Warning(s).
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>
